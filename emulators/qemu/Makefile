@@ -115,6 +115,20 @@ MAKE_ARGS+=	ARCH=ppc64
 CONFIGURE_ARGS+=	--sparc_cpu=v9
 .endif
 
+# modif perso
+CONFIGURE_ARGS+=	--with-sdlabi=2.0 --with-gtkabi=3.0 --enable-spice --enable-xen \
+			--extra-cflags="-D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D__BSD_VISIBLE" \
+			--extra-ldflags="-L/usr/lib -L${LOCALBASE}/lib" \
+			--cxx=clang++40 --cc=clang40
+BUILD_DEPENDS+=	spice-protocol>=0.12.14:devel/spice-protocol \
+		clang40:devel/llvm40
+LIB_DEPENDS+=	libxenstore.so.3.0:sysutils/xen-tools47 \
+		libSDL2-2.0.so.0:devel/sdl20 \
+		libgtk-3.so.0:x11-toolkits/gtk30 \
+		libspice-server.so:devel/libspice-server \
+		libvirglrenderer.so:graphics/virglrenderer
+# end modif perso
+
 PLIST_SUB+=	LINUXBOOT_DMA=""
 
 # -lprocstat actually only _needs_ -lelf after r249666 or r250870 (MFC)

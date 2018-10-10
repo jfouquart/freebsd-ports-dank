@@ -14,7 +14,8 @@ LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	itstool:textproc/itstool \
-		appstream-util:devel/appstream-glib
+		appstream-util:devel/appstream-glib \
+		xgettext:devel/gettext-tools
 LIB_DEPENDS=	libgrilo-0.3.so:net/grilo \
 		libtracker-sparql-2.0.so:sysutils/tracker \
 		libmediaart-2.0.so:multimedia/libmediaart

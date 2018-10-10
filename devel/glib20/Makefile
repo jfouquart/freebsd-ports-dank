@@ -18,8 +18,10 @@ PORTSCOUT=	limitw:1,even
 
 .if !defined(REFERENCE_PORT)
 
+BUILD_DEPENDS+= bash:shells/bash
 LIB_DEPENDS+=	libpcre.so:devel/pcre \
-		libffi.so:devel/libffi
+		libffi.so:devel/libffi \
+		libdbus-1.so:devel/dbus
 
 # iconv:wchar_t - our iconv in base doesn't support utf-8 -> wchar_t (boooo)
 # (wchar_t is used by glibmm, rawtherapee triggered this)

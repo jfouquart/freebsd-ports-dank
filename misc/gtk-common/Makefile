@@ -16,15 +16,23 @@ COMMENT=	Common gettext files shared between gtk+ versions
 
 # most of these are build time only stuff... Fix bsd.gnome.mk!
 LIB_DEPENDS=	libepoxy.so:graphics/libepoxy \
+		libxkbcommon.so:x11/libxkbcommon \
+		libvulkan.so:graphics/vulkan-loader \
+		libcolord.so:graphics/colord \
 		libatk-bridge-2.0.so:accessibility/at-spi2-atk \
 		libgraphene-1.0.so:graphics/graphene
 
+BUILD_DEPENDS=	wayland-protocols>=0:graphics/wayland-protocols \
+		${LOCALBASE}/include/vulkan/vulkan.h:devel/vulkan-headers
+
 USES=		gettext gnome meson pkgconfig python:3.4+,build tar:xz
 USE_GNOME=	atk cairo gdkpixbuf2 glib20 pango
+USE_GSTREAMER1=	bad
 
 MESON_ARGS=	-Dprint-backends=file \
-		-Dwayland-backend=false \
-		-Dmedia=none \
+		-Dwayland-backend=true \
+		-Dmedia=gstreamer \
+		-Dvulkan=yes \
 		-Dintrospection=false
 #		-Dx11-backend=false \
 #X11_MESON_TRUE=         x11-backend
