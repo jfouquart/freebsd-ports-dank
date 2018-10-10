@@ -146,10 +146,12 @@
     SUBDIR += drawpile
     SUBDIR += driconf
     SUBDIR += drm-current-kmod
+    SUBDIR += drm-devel-kmod
     SUBDIR += drm-fbsd11.2-kmod
     SUBDIR += drm-fbsd12.0-kmod
     SUBDIR += drm-kmod
     SUBDIR += drm-legacy-kmod
+    SUBDIR += drm-stable-kmod
     SUBDIR += dspdfviewer
     SUBDIR += duhdraw
     SUBDIR += dynamechs
@@ -1045,6 +1047,7 @@
     SUBDIR += viewnior
     SUBDIR += vigra
     SUBDIR += vips
+    SUBDIR += virglrenderer
     SUBDIR += visprint
     SUBDIR += vkd3d
     SUBDIR += volpack

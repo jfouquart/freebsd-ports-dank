@@ -21,6 +21,7 @@ LIB_DEPENDS=	libcanberra-gtk.so:audio/libcanberra \
 RUN_DEPENDS=	rarian-sk-config:textproc/rarian
 
 INSTALL_TARGET=	install-strip
+USE_LOCALE=	en_US.UTF-8
 USE_GNOME=	gnomeprefix intlhack libbonobo gnomevfs2 referencehack
 USES+=		bison gettext gmake localbase libtool:keepla pathfix pkgconfig
 USE_XORG=	xpm
