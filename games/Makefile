@@ -1010,6 +1010,7 @@
     SUBDIR += vectoroids
     SUBDIR += vegastrike
     SUBDIR += vegastrike-data
+    SUBDIR += vcmi
     SUBDIR += violetland
     SUBDIR += viruskiller
     SUBDIR += vitetris
