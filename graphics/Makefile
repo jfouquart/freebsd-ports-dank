@@ -555,6 +555,7 @@
     SUBDIR += mapyrus
     SUBDIR += megapov
     SUBDIR += mesa-demos
+    SUBDIR += mesa-dev
     SUBDIR += mesa-dri
     SUBDIR += mesa-libs
     SUBDIR += meshviewer

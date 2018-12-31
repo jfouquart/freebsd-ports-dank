@@ -19,7 +19,7 @@ GH_ACCOUNT=	intel
 LDFLAGS+=	-lpthread # for pthread_getthreadid_np
 
 OPTIONS_DEFINE=	WAYLAND X11
-OPTIONS_DEFAULT=WAYLAND X11
+OPTIONS_DEFAULT=WAYLAND
 OPTIONS_SUB=	yes
 
 WAYLAND_LIB_DEPENDS=	libwayland-client.so:graphics/wayland
@@ -32,5 +32,13 @@ X11_MESON_YES=		with_x11 with_glx
 post-patch:	.SILENT
 # V4L2 is unused since http://github.com/intel/libva/commit/70074679333c
 	${REINPLACE_CMD} '/videodev2\.h/d' ${WRKSRC}/va/va_backend.h
+
+.include <bsd.port.options.mk>
+
+.if defined(LIBVA_SLAVE) && ${LIBVA_SLAVE} == "glx"
+OPTIONS_EXCLUDE=WAYLAND
+.else
+OPTIONS_EXCLUDE=X11
+.endif
 
 .include <bsd.port.mk>
