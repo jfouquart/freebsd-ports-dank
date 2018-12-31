@@ -982,6 +982,7 @@
     SUBDIR += showimage
     SUBDIR += silgraphite
     SUBDIR += simage
+    SUBDIR += simple-scan
     SUBDIR += simpleviewer
     SUBDIR += sk1
     SUBDIR += sk1libs
