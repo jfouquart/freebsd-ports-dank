@@ -18,7 +18,7 @@ LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 		libpng.so:graphics/png \
 		libwv.so:textproc/wv \
 		libfribidi.so:converters/fribidi \
-		libgoffice-0.10.so:devel/goffice \
+		libgoffice-0.10.so:devel/goffice010 \
 		libdbus-1.so:devel/dbus \
 		libgpg-error.so:security/libgpg-error \
 		libraptor2.so:textproc/raptor2 \
