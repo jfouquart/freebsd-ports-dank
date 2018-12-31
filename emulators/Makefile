@@ -182,6 +182,7 @@
     SUBDIR += xzx
     SUBDIR += yabause
     SUBDIR += yape
+    SUBDIR += yuzu
     SUBDIR += zsnes
 
 .include <bsd.port.subdir.mk>
