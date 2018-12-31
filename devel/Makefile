@@ -1786,6 +1786,7 @@
     SUBDIR += msp430-debug-stack
     SUBDIR += mspdebug
     SUBDIR += mtbl
+    SUBDIR += mull
     SUBDIR += myrepos
     SUBDIR += nana
     SUBDIR += nant
