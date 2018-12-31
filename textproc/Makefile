@@ -433,6 +433,7 @@
     SUBDIR += libmrss
     SUBDIR += libmwaw03
     SUBDIR += libnxml
+    SUBDIR += libnumbertext
     SUBDIR += libodfgen01
     SUBDIR += libparsifal
     SUBDIR += libqxp
