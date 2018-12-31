@@ -1813,6 +1813,7 @@
     SUBDIR += mspdebug
     SUBDIR += msrc0
     SUBDIR += mtbl
+    SUBDIR += mull
     SUBDIR += myrepos
     SUBDIR += nana
     SUBDIR += nant
