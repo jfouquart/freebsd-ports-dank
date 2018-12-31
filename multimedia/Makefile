@@ -223,6 +223,7 @@
     SUBDIR += libuvc
     SUBDIR += libv4l
     SUBDIR += libva
+    SUBDIR += libva-glx
     SUBDIR += libva-intel-driver
     SUBDIR += libva-intel-hybrid-driver
     SUBDIR += libva-intel-media-driver
