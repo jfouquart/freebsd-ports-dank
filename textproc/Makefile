@@ -1238,6 +1238,7 @@
     SUBDIR += php73-xmlreader
     SUBDIR += php73-xmlwriter
     SUBDIR += php73-xsl
+    SUBDIR += pict
     SUBDIR += plover
     SUBDIR += po4a
     SUBDIR += pocketreader
