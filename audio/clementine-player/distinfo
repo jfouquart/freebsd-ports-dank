@@ -1,3 +1,5 @@
-TIMESTAMP = 1527263085
-SHA256 (clementine-player-Clementine-v1.3.1-441-gc01b7bc_GH0.tar.gz) = 78082a523dc21b6ddf17fd7bd3ab7734634bce93dacdc1a50efb4dda4e346be6
-SIZE (clementine-player-Clementine-v1.3.1-441-gc01b7bc_GH0.tar.gz) = 8468459
+TIMESTAMP = 1546283735
+SHA256 (clementine-player-Clementine-g20181205-453270c8b5015f39a44fd34c659e811c6b8048cf_GH0.tar.gz) = e19ffb54b532caf2755cb0cf0999f743e4dec6a00996d265180e4a547231b4bc
+SIZE (clementine-player-Clementine-g20181205-453270c8b5015f39a44fd34c659e811c6b8048cf_GH0.tar.gz) = 8527453
+SHA256 (6f189d95.patch) = a4d0d811de1fd9425d91ce51d8f22499dcc5d69a5849d960901e1fa71123398d
+SIZE (6f189d95.patch) = 1427
