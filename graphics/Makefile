@@ -444,6 +444,7 @@
     SUBDIR += libgfx
     SUBDIR += libgltext
     SUBDIR += libgltf
+    SUBDIR += libglvnd
     SUBDIR += libgnomecanvas
     SUBDIR += libgnomecanvas-reference
     SUBDIR += libgnomecanvasmm26
@@ -530,6 +531,7 @@
     SUBDIR += mapyrus
     SUBDIR += megapov
     SUBDIR += mesa-demos
+    SUBDIR += mesa-dev
     SUBDIR += mesa-dri
     SUBDIR += mesa-libs
     SUBDIR += metacam
