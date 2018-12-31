@@ -438,6 +438,7 @@
     SUBDIR += libmwaw03
     SUBDIR += libnumbertext
     SUBDIR += libnxml
+    SUBDIR += libnumbertext
     SUBDIR += libodfgen01
     SUBDIR += libparsifal
     SUBDIR += libqxp
