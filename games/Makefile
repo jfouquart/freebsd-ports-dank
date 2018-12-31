@@ -219,6 +219,7 @@
     SUBDIR += doom-wolfendoom
     SUBDIR += doomlegacy
     SUBDIR += doomsday
+    SUBDIR += dose-response
     SUBDIR += drcreep
     SUBDIR += drm
     SUBDIR += duckmaze
