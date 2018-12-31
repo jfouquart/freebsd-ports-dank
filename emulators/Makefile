@@ -75,6 +75,7 @@
     SUBDIR += mame
     SUBDIR += mastergear
     SUBDIR += mednafen
+    SUBDIR += mesen
     SUBDIR += mess
     SUBDIR += mgba
     SUBDIR += mtools
