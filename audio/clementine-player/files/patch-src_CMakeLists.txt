@@ -10,9 +10,9 @@
    )
 @@ -1380,6 +1381,7 @@ add_executable(clementine
  
- if (${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
+ if (FREEBSD)
    target_link_libraries(clementine execinfo)
 +  set_target_properties(clementine PROPERTIES OUTPUT_NAME clementine-player)
- endif (${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
+ endif (FREEBSD)
  
  target_link_libraries(clementine
