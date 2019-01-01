@@ -2,14 +2,13 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-terminal
-PORTVERSION=	3.28.2
-PORTREVISION=	1
+PORTVERSION=	3.32.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Terminal component for the GNOME 3 Desktop
+COMMENT=	Terminal component for the GNOME Desktop
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
