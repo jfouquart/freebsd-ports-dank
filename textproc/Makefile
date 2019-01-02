@@ -967,6 +967,7 @@
     SUBDIR += p5-Text-TabularDisplay
     SUBDIR += p5-Text-Tags
     SUBDIR += p5-Text-Template
+    SUBDIR += p5-Text-Template-Simple
     SUBDIR += p5-Text-TestBase
     SUBDIR += p5-Text-Textile
     SUBDIR += p5-Text-Tmpl
