@@ -16,10 +16,14 @@ BUILD_DEPENDS=	valac:lang/vala
 LIB_DEPENDS=	libcogl.so:graphics/cogl \
 		libclutter-1.0.so:graphics/clutter \
 		libclutter-gtk-1.0.so:graphics/clutter-gtk3 \
+		libwayland-egl.so:graphics/wayland \
+		libxkbcommon.so:x11/libxkbcommon \
+		libjson-glib-1.0.so:devel/json-glib \
 		libsoup-2.4.so:devel/libsoup
 
-USES=		gettext-runtime gnome localbase:ldflags meson \
+USES=		gettext-runtime gnome gl localbase:ldflags meson \
 		pkgconfig sqlite tar:xz
+USE_GL=	gl
 USE_GNOME=	cairo gdkpixbuf2 gtk30 introspection:build
 USE_LDCONFIG=	yes
 MESON_ARGS=	-Dmemphis=false \
