@@ -180,6 +180,7 @@ STRIP_LIBS=	BugpointPasses.so \
 EXTRAS_COMMANDS+= \
 		clang-apply-replacements \
 		clang-change-namespace \
+		clang-doc \
 		clang-include-fixer \
 		clang-modernize \
 		clang-query \
@@ -192,6 +193,7 @@ EXTRAS_COMMANDS+= \
 EXTRAS_LIBS=	libclangApplyReplacements \
 		libclangChangeNamespace \
 		libclangDaemon \
+		libclangDoc \
 		libclangIncludeFixer \
 		libclangMove \
 		libclangQuery \
@@ -551,7 +553,6 @@ build-plist:
 	    if ($$0 ~ /${COMPILER_RT_PATTERN}/) \
 		{printf "%%%%COMPILER_RT%%%%"} \
 	    if ($$0 ~ /(${EXTRAS_PATTERN})/) {printf "%%%%EXTRAS%%%%"} \
-	    if ($$0 ~ /(libclangDoc.a)/) {printf "%%%%DOCS%%%%"} \
 	    if ($$0 ~ /(lld|wasm-ld)/ && $$0 !~ /(lldb)/) {printf "%%%%LLD%%%%"} \
 	    if ($$0 ~ /(argdumper|lldb|six.py)/) {printf "%%%%LLDB%%%%"} \
 	    if ($$0 ~ /(lib.*omp|omp.h|ompt.h)/) {printf "%%%%OPENMP%%%%"} \
