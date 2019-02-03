@@ -344,6 +344,8 @@
     SUBDIR += krfb
     SUBDIR += ksmtp
     SUBDIR += ktnef
+    SUBDIR += kube-controller-manager
+    SUBDIR += kube-scheduler
     SUBDIR += l2tpd
     SUBDIR += ladvd
     SUBDIR += lambdamoo
@@ -1023,6 +1025,7 @@
     SUBDIR += py-cjdns
     SUBDIR += py-cloudflare-scrape
     SUBDIR += py-coherence
+    SUBDIR += py-confluent-kafka
     SUBDIR += py-cymruwhois
     SUBDIR += py-dpkt
     SUBDIR += py-dugong
@@ -1035,6 +1038,7 @@
     SUBDIR += py-haproxy-log-analysis
     SUBDIR += py-haproxyctl
     SUBDIR += py-httpstat
+    SUBDIR += py-ifaddr
     SUBDIR += py-impacket
     SUBDIR += py-ipaddress
     SUBDIR += py-iplib
@@ -1438,6 +1442,7 @@
     SUBDIR += throttled
     SUBDIR += tigervnc
     SUBDIR += tightvnc
+    SUBDIR += timed
     SUBDIR += tintin++
     SUBDIR += tiny-network-utilities
     SUBDIR += tinyfugue
