@@ -1,9 +1,9 @@
 # $FreeBSD$
 
 PORTNAME=	libnumbertext
-PORTVERSION=	1.0.3
+PORTVERSION=	1.0.5
 CATEGORIES=	textproc
-MASTER_SITES=	https://github.com/Numbertext/libnumbertext/releases/download/${PORTVERSION:R}/
+MASTER_SITES=	https://github.com/Numbertext/libnumbertext/releases/download/${PORTVERSION}/
 
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Number to number name and money text conversion libraries
@@ -11,9 +11,9 @@ COMMENT=	Number to number name and money text conversion libraries
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=	libtool tar:xz
+USES=	gmake libtool tar:xz
 
-HAS_CONFIGURE=	yes
+GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>

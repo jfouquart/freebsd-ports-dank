@@ -16,4 +16,4 @@ lib/cmake/fmt/fmt-targets.cmake
 lib/libfmt.so
 lib/libfmt.so.%%SHL1%%
 lib/libfmt.so.%%SHL3%%
-share/pkgconfig/fmt.pc
+libdata/pkgconfig/fmt.pc

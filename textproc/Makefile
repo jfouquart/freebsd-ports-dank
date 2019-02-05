@@ -435,6 +435,7 @@
     SUBDIR += liblrdf
     SUBDIR += libmrss
     SUBDIR += libmwaw03
+    SUBDIR += libnumbertext
     SUBDIR += libnxml
     SUBDIR += libnumbertext
     SUBDIR += libodfgen01
