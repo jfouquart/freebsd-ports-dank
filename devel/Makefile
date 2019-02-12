@@ -5396,6 +5396,8 @@
     SUBDIR += pyrex
     SUBDIR += pyside
     SUBDIR += pyside-tools
+    SUBDIR += pyside2
+    SUBDIR += pyside2-tools
     SUBDIR += pyst
     SUBDIR += pysvn
     SUBDIR += pythk
@@ -6236,6 +6238,7 @@
     SUBDIR += shflags
     SUBDIR += shfmt
     SUBDIR += shiboken
+    SUBDIR += shiboken2
     SUBDIR += shmap
     SUBDIR += shtk
     SUBDIR += shtool
