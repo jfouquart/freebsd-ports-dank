@@ -771,6 +771,7 @@
     SUBDIR += gindent
     SUBDIR += gio-sharp
     SUBDIR += git
+    SUBDIR += git-absorb
     SUBDIR += git-bzr-ng
     SUBDIR += git-cinnabar
     SUBDIR += git-codereview
@@ -1475,6 +1476,7 @@
     SUBDIR += libgta
     SUBDIR += libgtop
     SUBDIR += libgudev
+    SUBDIR += libgusb
     SUBDIR += libgutenfetch
     SUBDIR += libhash
     SUBDIR += libhid
@@ -1812,6 +1814,7 @@
     SUBDIR += mspdebug
     SUBDIR += msrc0
     SUBDIR += mtbl
+    SUBDIR += mull
     SUBDIR += myrepos
     SUBDIR += nana
     SUBDIR += nant
@@ -5393,6 +5396,8 @@
     SUBDIR += pyrex
     SUBDIR += pyside
     SUBDIR += pyside-tools
+    SUBDIR += pyside2
+    SUBDIR += pyside2-tools
     SUBDIR += pyst
     SUBDIR += pysvn
     SUBDIR += pythk
@@ -6233,6 +6238,7 @@
     SUBDIR += shflags
     SUBDIR += shfmt
     SUBDIR += shiboken
+    SUBDIR += shiboken2
     SUBDIR += shmap
     SUBDIR += shtk
     SUBDIR += shtool

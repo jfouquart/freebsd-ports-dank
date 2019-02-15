@@ -75,6 +75,7 @@
     SUBDIR += mame
     SUBDIR += mastergear
     SUBDIR += mednafen
+    SUBDIR += mesen
     SUBDIR += mess
     SUBDIR += mgba
     SUBDIR += mtools
@@ -179,6 +180,7 @@
     SUBDIR += xzx
     SUBDIR += yabause
     SUBDIR += yape
+    SUBDIR += yuzu
     SUBDIR += zsnes
 
 .include <bsd.port.subdir.mk>

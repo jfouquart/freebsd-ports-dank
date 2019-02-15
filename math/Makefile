@@ -383,6 +383,7 @@
     SUBDIR += mumps-mpich
     SUBDIR += muparser
     SUBDIR += nanoflann
+    SUBDIR += nasc
     SUBDIR += naturalmath
     SUBDIR += nauty
     SUBDIR += ndiff
@@ -719,6 +720,8 @@
     SUBDIR += py-igraph
     SUBDIR += py-intspan
     SUBDIR += py-keras
+    SUBDIR += py-keras-applications
+    SUBDIR += py-keras-preprocessing
     SUBDIR += py-levmar
     SUBDIR += py-libpoly
     SUBDIR += py-luminol
@@ -880,7 +883,7 @@
     SUBDIR += wfmath
     SUBDIR += why3
     SUBDIR += wingz3
-    SUBDIR += wxMaxima
+    SUBDIR += wxmaxima
     SUBDIR += x12arima
     SUBDIR += xblas
     SUBDIR += xfce4-calculator-plugin

@@ -114,6 +114,12 @@ OPENGL_USE=			GL=egl,gbm,gl
 OPENGL_CONFIGURE_OFF=		--disable-gl
 OPENGL_IMPLIES=			X11
 
+VULKAN_BUILD_DEPENDS=		${LOCALBASE}/include/vulkan/vulkan.h:devel/vulkan-headers
+VULKAN_LIB_DEPENDS=		libvulkan.so:graphics/vulkan-loader \
+				libshaderc_shared.so:graphics/shaderc
+VULKAN_CONFIGURE_OFF=		--disable-vulkan
+VULKAN_IMPLIES=			X11
+
 PULSEAUDIO_LIB_DEPENDS=		libpulse.so:audio/pulseaudio
 PULSEAUDIO_CONFIGURE_OFF=	--disable-pulse
 

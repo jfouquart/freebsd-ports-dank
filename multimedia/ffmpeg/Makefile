@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	ffmpeg
-PORTVERSION=	4.1
-PORTREVISION=	5
+PORTVERSION=	4.1.1
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio ipv6 net
 MASTER_SITES=	https://ffmpeg.org/releases/
@@ -281,7 +280,7 @@ LIBBLURAY_LIB_DEPENDS=	libbluray.so:multimedia/libbluray
 LIBBLURAY_CONFIGURE_ENABLE=	libbluray
 
 # librsvg
-LIBRSVG2_LIB_DEPENDS=	librsvg-2.so:graphics/librsvg2
+LIBRSVG2_LIB_DEPENDS=	librsvg-2.so:graphics/librsvg2-rust
 LIBRSVG2_CONFIGURE_ENABLE=	librsvg
 
 # libxml

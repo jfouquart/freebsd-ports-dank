@@ -344,6 +344,7 @@
     SUBDIR += guilib
     SUBDIR += gwenview
     SUBDIR += hdr_tools
+    SUBDIR += hdrmerge
     SUBDIR += hiptext
     SUBDIR += hobbes-icons-xpm
     SUBDIR += hppsmtools
@@ -557,6 +558,7 @@
     SUBDIR += mapyrus
     SUBDIR += megapov
     SUBDIR += mesa-demos
+    SUBDIR += mesa-dev
     SUBDIR += mesa-dri
     SUBDIR += mesa-libs
     SUBDIR += meshviewer
@@ -861,6 +863,7 @@
     SUBDIR += py-photocollage
     SUBDIR += py-pillow
     SUBDIR += py-pivy
+    SUBDIR += py-pivy-devel
     SUBDIR += py-plotly
     SUBDIR += py-png
     SUBDIR += py-poppler
@@ -1002,6 +1005,7 @@
     SUBDIR += showimage
     SUBDIR += silgraphite
     SUBDIR += simage
+    SUBDIR += simple-scan
     SUBDIR += simpleviewer
     SUBDIR += sk1
     SUBDIR += sk1libs

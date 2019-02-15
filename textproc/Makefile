@@ -417,6 +417,7 @@
     SUBDIR += libcss
     SUBDIR += libcsv
     SUBDIR += libcue
+    SUBDIR += libcyaml
     SUBDIR += libdiff
     SUBDIR += libe-book
     SUBDIR += libebml
@@ -437,6 +438,7 @@
     SUBDIR += libmwaw03
     SUBDIR += libnumbertext
     SUBDIR += libnxml
+    SUBDIR += libnumbertext
     SUBDIR += libodfgen01
     SUBDIR += libparsifal
     SUBDIR += libqxp
@@ -1480,6 +1482,7 @@
     SUBDIR += rarian
     SUBDIR += rasqal
     SUBDIR += re_graph
+    SUBDIR += re-flex
     SUBDIR += redet
     SUBDIR += redland
     SUBDIR += redland-bindings
