@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libjson-c.so:devel/json-c
 
-USES=		compiler:c11 gmake gnome libtool localbase pkgconfig tar:xz
+USES=		autoreconf compiler:c11 gmake gnome libtool localbase pkgconfig python:2.7+,build tar:xz
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	mypaint
@@ -37,10 +37,12 @@ OPENMP_USES=		compiler:openmp
 OPENMP_USES_OFF=	compiler:c11
 OPENMP_CONFIGURE_ENABLE=	openmp
 
+BINARY_ALIAS+=	python2=${PYTHON_CMD}
+
 # Run bundled autogen.sh instead of relying on USES=autoreconf which
 # leads to errors like
 # config.status: error: po/Makefile.in.in was not created by intltoolize.
 pre-configure:
-				@cd ${WRKSRC} && ./autogen.sh
+				@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ./autogen.sh
 
 .include <bsd.port.mk>

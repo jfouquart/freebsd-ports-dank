@@ -482,6 +482,7 @@
     SUBDIR += libmng
     SUBDIR += libmorph
     SUBDIR += libmypaint
+    SUBDIR += libmypaint1
     SUBDIR += libnsbmp
     SUBDIR += libnsgif
     SUBDIR += libopenraw
@@ -580,6 +581,7 @@
     SUBDIR += mxp
     SUBDIR += mypaint
     SUBDIR += mypaint-brushes
+    SUBDIR += mypaint-brushes1
     SUBDIR += nathive
     SUBDIR += natron
     SUBDIR += netpbm

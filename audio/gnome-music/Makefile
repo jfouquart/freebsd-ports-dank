@@ -17,7 +17,8 @@ BUILD_DEPENDS=	itstool:textproc/itstool \
 		appstream-util:devel/appstream-glib
 LIB_DEPENDS=	libgrilo-0.3.so:net/grilo \
 		libtracker-sparql-2.0.so:sysutils/tracker \
-		libmediaart-2.0.so:multimedia/libmediaart
+		libmediaart-2.0.so:multimedia/libmediaart \
+		libgoa-1.0.so:net/gnome-online-accounts
 
 PORTSCOUT=	limitw:1,even
 
