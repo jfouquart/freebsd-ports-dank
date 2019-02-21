@@ -23,6 +23,7 @@ PORTSCOUT=	limitw:1,even
 
 USES=		compiler:c++11-lib gettext gnome localbase:ldflags meson \
 		pkgconfig python:3.4+,build shebangfix sqlite tar:xz
+USE_GCC=	8+
 USE_GNOME=	glib20 intltool introspection:build libxml2 
 USE_LDCONFIG=	yes
 

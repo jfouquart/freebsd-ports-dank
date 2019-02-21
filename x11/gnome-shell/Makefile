@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-shell
-PORTVERSION=	3.31.91
+PORTVERSION=	3.31.90
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -36,6 +36,8 @@ LIB_DEPENDS=	libstartup-notification-1.so:x11/startup-notification \
 		libgjs.so:lang/gjs
 RUN_DEPENDS=	gnome-control-center:sysutils/gnome-control-center
 
+PORTSCOUT=	limitw:1,even
+
 USES=		compiler:c11 cpe gettext gl gnome libtool localbase meson \
 		perl5 pkgconfig python:3.4+ shebangfix tar:xz
 #webplugin:native
@@ -46,7 +48,6 @@ USE_GL=		egl gbm
 USE_GSTREAMER1=	yes
 USE_PERL5=	build
 USE_LDCONFIG=	yes
-PORTSCOUT=	limitw:1,even
 SHEBANG_FILES=	src/gnome-shell-perf-tool.in \
 		src/gnome-shell-extension-tool.in
 

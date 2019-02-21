@@ -16,6 +16,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		gperf tar:bzip2
 
+.if !defined(REFERENCE_PORT)
+
 LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 		libuuid.so:misc/e2fsprogs-libuuid \
 		libexpat.so:textproc/expat2
@@ -86,3 +88,5 @@ post-install-DOCS-on:
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/doc/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
+
+.endif

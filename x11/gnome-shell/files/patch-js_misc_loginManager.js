@@ -13,9 +13,17 @@ Date: Thu, 24 Apr 2014 17:55:56 +0200
 Subject: loginManager: Kill ConsoleKit support
 
 
---- js/misc/loginManager.js.orig	2019-02-07 01:45:13 UTC
-+++ js/misc/loginManager.js
-@@ -16,6 +16,34 @@ const SystemdLoginManager = Gio.DBusProxy.makeProxyWra
+--- js/misc/loginManager.js.orig	2019-02-07 02:45:13.000000000 +0100
++++ js/misc/loginManager.js	2019-02-28 09:38:47.821649000 +0100
+@@ -2,6 +2,7 @@
+ 
+ const GLib = imports.gi.GLib;
+ const Gio = imports.gi.Gio;
++const Lang = imports.lang;
+ const Mainloop = imports.mainloop;
+ const Shell = imports.gi.Shell;
+ const Signals = imports.signals;
+@@ -16,6 +17,34 @@
  const SystemdLoginSession = Gio.DBusProxy.makeProxyWrapper(SystemdLoginSessionIface);
  const SystemdLoginUser = Gio.DBusProxy.makeProxyWrapper(SystemdLoginUserIface);
  
@@ -50,7 +58,7 @@ Subject: loginManager: Kill ConsoleKit support
  function haveSystemd() {
      return GLib.access("/run/systemd/seats", 0) >= 0;
  }
-@@ -45,7 +73,7 @@ function canLock() {
+@@ -45,7 +74,7 @@
                                                 -1, null);
  
          let version = result.deep_unpack()[0].deep_unpack();
@@ -59,7 +67,7 @@ Subject: loginManager: Kill ConsoleKit support
      } catch(e) {
          return false;
      }
-@@ -63,7 +91,7 @@ function getLoginManager() {
+@@ -63,7 +92,7 @@
          if (haveSystemd())
              _loginManager = new LoginManagerSystemd();
          else
@@ -68,7 +76,7 @@ Subject: loginManager: Kill ConsoleKit support
      }
  
      return _loginManager;
-@@ -81,6 +109,9 @@ var LoginManagerSystemd = class {
+@@ -81,6 +110,9 @@
                                    this._prepareForSleep.bind(this));
      }
  
@@ -78,7 +86,7 @@ Subject: loginManager: Kill ConsoleKit support
      getCurrentSessionProxy(callback) {
          if (this._currentSession) {
              callback (this._currentSession);
-@@ -179,11 +210,33 @@ var LoginManagerSystemd = class {
+@@ -179,11 +211,33 @@
  };
  Signals.addSignalMethods(LoginManagerSystemd.prototype);
  
@@ -116,7 +124,7 @@ Subject: loginManager: Kill ConsoleKit support
      }
  
      canSuspend(asyncCallback) {
-@@ -203,4 +256,4 @@ var LoginManagerDummy = class {
+@@ -203,4 +257,4 @@
          callback(null);
      }
  };

@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-music
-PORTVERSION=	3.31.1
+PORTVERSION=	3.31.92
 CATEGORIES=	audio gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -14,11 +14,14 @@ LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	itstool:textproc/itstool \
-		appstream-util:devel/appstream-glib
+		appstream-util:devel/appstream-glib \
+		grilo-plugins>=0.3.2:net/grilo-plugins
 LIB_DEPENDS=	libgrilo-0.3.so:net/grilo \
 		libtracker-sparql-2.0.so:sysutils/tracker \
-		libmediaart-2.0.so:multimedia/libmediaart
-
+		libmediaart-2.0.so:multimedia/libmediaart \
+		libgoa-1.0.so:net/gnome-online-accounts \
+		libdazzle-1.0.so:x11-toolkits/libdazzle
+RUN_DEPENDS=	grilo-plugins>=0.3.2:net/grilo-plugins
 PORTSCOUT=	limitw:1,even
 
 USES=		desktop-file-utils gettext gnome localbase meson pkgconfig \
