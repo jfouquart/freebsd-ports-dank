@@ -62,6 +62,8 @@ LDFLAGS+=		-B${LOCALBASE}/bin
 # libva is a circular dep
 MESON_ARGS=	--native-file "${WRKSRC}/llvm.ini" \
 		-Dglx-tls="false"\
+		-Dvulkan-overlay-layer="true" \
+		-Dgallium-drivers=r300,r600,radeonsi,nouveau,virgl,svga,swrast,swr,iris \
 		-Dgallium-opencl="icd" \
 		-Dgallium-omx="disabled" \
 		-Dgallium-nine="true" \
