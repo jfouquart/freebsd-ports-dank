@@ -1663,7 +1663,6 @@
     SUBDIR += llvm-devel
     SUBDIR += llvm35
     SUBDIR += llvm40
-    SUBDIR += llvm50
     SUBDIR += llvm60
     SUBDIR += llvm70
     SUBDIR += llvm80
@@ -4144,7 +4143,6 @@
     SUBDIR += pmd
     SUBDIR += pmdk
     SUBDIR += poco
-    SUBDIR += poco-ssl
     SUBDIR += popt
     SUBDIR += poslib
     SUBDIR += powerpc64-binutils
@@ -4612,6 +4610,7 @@
     SUBDIR += py-freezegun
     SUBDIR += py-frozendict
     SUBDIR += py-fs
+    SUBDIR += py-fs2
     SUBDIR += py-fsm
     SUBDIR += py-fudge
     SUBDIR += py-funcparserlib
@@ -4951,6 +4950,7 @@
     SUBDIR += py-ptrace
     SUBDIR += py-ptvsd
     SUBDIR += py-pudb
+    SUBDIR += py-purl
     SUBDIR += py-py
     SUBDIR += py-py-ubjson
     SUBDIR += py-py_interface
@@ -5464,6 +5464,7 @@
     SUBDIR += radian
     SUBDIR += ragel
     SUBDIR += raknet
+    SUBDIR += rang
     SUBDIR += range-v3
     SUBDIR += rapidjson
     SUBDIR += raylib
