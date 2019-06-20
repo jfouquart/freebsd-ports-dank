@@ -1,0 +1,10 @@
+--- meson.build.orig	2020-04-04 18:21:28 UTC
++++ meson.build
+@@ -267,7 +267,6 @@ elif cc.get_id() == 'gcc' or cc.get_id() == 'clang'
+     '-Werror=array-bounds',
+     '-Werror=empty-body',
+     '-Werror=implicit',
+-    '-Werror=implicit-fallthrough',
+     '-Werror=init-self',
+     '-Werror=int-to-pointer-cast',
+     '-Werror=main',
