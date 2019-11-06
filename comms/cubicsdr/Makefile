@@ -12,8 +12,8 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	${PYNUMPY} \
-		${LOCALBASE}/lib/libEGL.so:graphics/mesa-libs \
-		${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/mesa-dri
+		${LOCALBASE}/lib/libEGL.so:${MESA_LIBS_PORT} \
+		${LOCALBASE}/libdata/pkgconfig/dri.pc:${MESA_DRI_PORT}
 LIB_DEPENDS=	libSoapySDR.so:misc/soapysdr \
 		libliquid.so:comms/liquid-dsp \
 		libpulse.so:audio/pulseaudio \
