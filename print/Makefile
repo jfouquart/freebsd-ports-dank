@@ -76,6 +76,7 @@
     SUBDIR += ghostscript9-x11
     SUBDIR += gimp-gutenprint
     SUBDIR += gl2ps
+    SUBDIR += gnomephotoprinter
     SUBDIR += gsfonts
     SUBDIR += gspdf
     SUBDIR += gtklp
