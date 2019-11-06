@@ -42,6 +42,8 @@ USES+=		gnome python:build
 USE_GNOME=	glib20:build introspection:build
 NO_BUILD=	yes
 
+BINARY_ALIAS=	python3=${PYTHON_CMD}
+
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/include/pygobject-3.0/
 	${INSTALL_DATA} ${WRKSRC}/gi/pygobject.h \
