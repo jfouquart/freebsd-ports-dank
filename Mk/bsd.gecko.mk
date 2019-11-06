@@ -187,6 +187,9 @@ MOZ_OPTIONS+=	\
 		--with-system-zlib \
 		--with-system-bz2
 
+.if defined(WITH_CCACHE_BUILD)
+MOZ_OPTIONS+=	--with-ccache=${LOCALBASE}/bin/ccache
+.endif
 # API keys from www/chromium 
 # http://www.chromium.org/developers/how-tos/api-keys
 # Note: these are for FreeBSD use ONLY. For your own distribution,
