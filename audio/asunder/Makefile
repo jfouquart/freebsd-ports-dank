@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	asunder
-PORTVERSION=	2.8
+PORTVERSION=	2.9.3
 CATEGORIES=	audio
 MASTER_SITES=	http://littlesvr.ca/asunder/releases/
 
@@ -15,8 +15,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libcddb.so:audio/libcddb
 RUN_DEPENDS=	${LOCALBASE}/bin/cdparanoia:audio/cdparanoia
 
-OPTIONS_DEFINE=	LAME OGG FLAC OPUS WAVPACK APE WINDOWS_CHARS NLS DOCS
-OPTIONS_DEFAULT=	OGG FLAC
+OPTIONS_DEFINE=	LAME OGG FLAC FDK_AAC OPUS WAVPACK APE WINDOWS_CHARS NLS DOCS
+OPTIONS_DEFAULT=	OGG FLAC FDK_AAC
 OPTIONS_SUB=	yes
 
 WINDOWS_CHARS_DESC=	Allow Windows special chars in filenames
@@ -27,9 +27,12 @@ USE_GNOME=	gtk20 glib20 intltool intlhack
 
 PORTDOCS=	AUTHORS ChangeLog INSTALL NEWS README TODO
 
+FDK_AAC_DESC=	FDK AAC audio encoder support
+
 LAME_RUN_DEPENDS=	lame:audio/lame
 OGG_RUN_DEPENDS=	oggenc:audio/vorbis-tools
 FLAC_RUN_DEPENDS=	flac:audio/flac
+FDK_AAC_RUN_DEPENDS=	fdkaac:audio/fdkaac
 OPUS_RUN_DEPENDS=	opusenc:audio/opus-tools
 WAVPACK_RUN_DEPENDS=	wavpack:audio/wavpack
 APE_RUN_DEPENDS=	mac:audio/mac
