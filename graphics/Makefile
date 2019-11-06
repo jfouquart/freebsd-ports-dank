@@ -1041,6 +1041,7 @@
     SUBDIR += viewnior
     SUBDIR += vigra
     SUBDIR += vips
+    SUBDIR += virglrenderer
     SUBDIR += visprint
     SUBDIR += vkd3d
     SUBDIR += volpack
