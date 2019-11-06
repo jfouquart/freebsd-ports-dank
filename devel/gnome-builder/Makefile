@@ -38,7 +38,8 @@ USE_LDCONFIG=	yes
 
 INSTALLS_ICONS=	yes
 CPE_VENDOR=	gnome
-BINARY_ALIAS=	python3=${PYTHON_VERSION}
+BINARY_ALIAS=	llvm-config=llvm-config${LLVM_DEFAULT} \
+		python3=${PYTHON_CMD}
 
 SHEBANG_FILES=	src/plugins/gradle/gradle_plugin.py \
 		src/plugins/maven/maven_plugin.py
