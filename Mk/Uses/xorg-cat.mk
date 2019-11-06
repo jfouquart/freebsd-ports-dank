@@ -177,7 +177,7 @@ CONFIGURE_ARGS+=	--with-xkb-path=${LOCALBASE}/share/X11/xkb \
 libtool_ARGS?=	# empty
 .include "${USESDIR}/libtool.mk"
 .    endif
-LIB_PC_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/mesa-dri
+LIB_PC_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/dri.pc:${MESA_DRI_PORT}
 USE_XORG+=	fontutil
 
 .  endif # ${_XORG_CAT} == <category>
