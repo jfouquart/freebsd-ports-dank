@@ -78,50 +78,47 @@ Subject: loginManager: Kill ConsoleKit support
      getCurrentSessionProxy(callback) {
          if (this._currentSession) {
              callback (this._currentSession);
-@@ -176,11 +207,38 @@ var LoginManagerSystemd = class {
+@@ -176,13 +207,34 @@ var LoginManagerSystemd = class {
  };
  Signals.addSignalMethods(LoginManagerSystemd.prototype);
  
 -var LoginManagerDummy = class {
+-    getCurrentSessionProxy(callback) {
+-        // we could return a DummySession object that fakes whatever callers
+-        // expect (at the time of writing: connect() and connectSignal()
+-        // methods), but just never calling the callback should be safer
 +var LoginManagerConsoleKit = class {
 +    constructor() {
 +        this._proxy = new ConsoleKitManager(Gio.DBus.system,
 +                                            'org.freedesktop.ConsoleKit',
 +                                            '/org/freedesktop/ConsoleKit/Manager');
-+    }
-+
+     }
+
 +    // Having this function is a bit of a hack since the Systemd and ConsoleKit
 +    // session objects have different interfaces - but in both cases there are
 +    // Lock/Unlock signals, and that's all we count upon at the moment.
-     getCurrentSessionProxy(callback) {
--        // we could return a DummySession object that fakes whatever callers
--        // expect (at the time of writing: connect() and connectSignal()
--        // methods), but just never calling the callback should be safer
++    getCurrentSessionProxy(callback) {
 +        if (this._currentSession) {
 +            callback (this._currentSession);
 +            return;
 +        }
 +
-+        let sessionId = GLib.getenv('XDG_SESSION_ID')
-+        if (!sessionId) {
-+            log('Unset XDG_SESSION_ID, getCurrentSessionProxy() called outside a user session.');
++        let [currentSessionId] = this._proxy.GetCurrentSessionSync();
++        if (!currentSessionId) {
++            log('Unable to retrieve the current session id.');
 +            return;
 +        }
 +
-+        this._proxy.GetSessionRemote(sessionId, (result, error) => {
-+                if (error) {
-+                    logError(error, 'Could not get a proxy for the current session');
-+                } else {
-+                    this._currentSession = new ConsoleKitSession(Gio.DBus.system,
-+                                                                 'org.freedesktop.ConsoleKit',
-+                                                                 result[0]);
-+                    callback(this._currentSession);
-+                }
-+            });
-     }
- 
++        this._currentSession = new ConsoleKitSession(Gio.DBus.system,
++                                                     'org.freedesktop.ConsoleKit',
++                                                     currentSessionId);
++        callback(this._currentSession);
++   }
++
      canSuspend(asyncCallback) {
-@@ -200,4 +258,4 @@ var LoginManagerDummy = class {
+         asyncCallback(false, false);
+     }
+@@ -200,4 +252,4 @@ var LoginManagerDummy = class {
          callback(null);
      }
  };
