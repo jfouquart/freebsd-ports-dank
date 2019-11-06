@@ -41,6 +41,7 @@
     SUBDIR += aubio
     SUBDIR += aucatctl
     SUBDIR += audacity
+    SUBDIR += audex
     SUBDIR += audiere
     SUBDIR += audiocd-kio
     SUBDIR += aumix
@@ -149,6 +150,7 @@
     SUBDIR += faustlive
     SUBDIR += fcplay
     SUBDIR += fdk-aac
+    SUBDIR += fdkaac
     SUBDIR += fdmf
     SUBDIR += festalon
     SUBDIR += festival
