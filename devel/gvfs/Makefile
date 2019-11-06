@@ -25,6 +25,7 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libgpg-error.so:security/libgpg-error \
 		libcdio.so:sysutils/libcdio \
 		libjson-glib-1.0.so:devel/json-glib
+
 PORTSCOUT=	limitw:1,even
 
 USES=		gettext gmake gnome libarchive libtool localbase \
@@ -32,14 +33,8 @@ USES=		gettext gmake gnome libarchive libtool localbase \
 USE_GNOME=	glib20 intlhack libxslt:build
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-bluray \
-		--disable-gudev \
-		--disable-libsystemd-login \
 		--disable-udisks2 \
 		--disable-gdu \
-		--disable-udev \
-		--disable-goa \
-		--disable-libmtp \
-		--disable-gtk \
 		--disable-libsystemd-login \
 		--disable-admin
 
@@ -48,13 +43,14 @@ INSTALL_TARGET=	install-strip
 GLIB_SCHEMAS=	org.gnome.system.gvfs.enums.xml
 
 OPTIONS_SUB=	yes
-OPTIONS_DEFINE=	AVAHI SAMBA GPHOTO2 CDDA HAL FUSE AFC GOOGLE
+OPTIONS_DEFINE=	AVAHI SAMBA GPHOTO2 CDDA HAL FUSE AFC GOOGLE MTP
 OPTIONS_DEFAULT=AVAHI SAMBA GPHOTO2 CDDA HAL FUSE GOOGLE
 CDDA_DESC=	CDDA (enables HAL)
 GPHOTO2_DESC=	Gphoto 2 camera support (enables HAL) for PTP support
 SAMBA_DESC=	Samba support
 AFC_DESC=	Apple device support
 GOOGLE_DESC=	Google backend
+MTP_DESC=	MTP support
 
 FUSE_USES=	fuse
 FUSE_CONFIGURE_ENABLE=	fuse
@@ -76,9 +72,14 @@ AFC_LIB_DEPENDS=	libimobiledevice.so:comms/libimobiledevice \
 			libplist.so:devel/libplist
 AFC_CONFIGURE_ENABLE=	afc
 
-GOOGLE_CONFIGURE_ENABLE=	google
+GOOGLE_CONFIGURE_ENABLE=	google goa
 GOOGLE_LIB_DEPENDS=	libgdata.so:devel/libgdata \
 			libgoa-1.0.so:net/gnome-online-accounts
+
+MTP_LIB_DEPENDS=	libmtp.so:multimedia/libmtp \
+			libudev.so:devel/libudev-devd \
+			libgudev-1.0.so:devel/libgudev
+MTP_CONFIGURE_ENABLE=	gudev udev gtk libmtp
 
 .include <bsd.port.options.mk>
 
@@ -90,7 +91,7 @@ GLIB_SCHEMAS+=	org.gnome.system.smb.gschema.xml
 GLIB_SCHEMAS+=	org.gnome.system.dns_sd.gschema.xml
 .endif
 
-.if ${PORT_OPTIONS:MHAL} || ${PORT_OPTIONS:MGPHOTO2} || ${PORT_OPTIONS:MCDDA}
+.if ${PORT_OPTIONS:MHAL} || ( ( ${PORT_OPTIONS:MGPHOTO2} || ${PORT_OPTIONS:MCDDA} ) && ! ${PORT_OPTIONS:MMTP} )
 LIB_DEPENDS+=	libhal.so:sysutils/hal
 RUN_DEPENDS+=	gnome-mount:sysutils/gnome-mount
 PLIST_SUB+=	HAL=""
