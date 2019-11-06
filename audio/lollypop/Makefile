@@ -21,6 +21,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>=2.7.8:databases/py-sqlite3@${PY_FLA
 LIB_DEPENDS=	libnotify.so:devel/libnotify \
 		libappstream-glib.so:devel/appstream-glib \
 		libtotem-plparser.so:multimedia/totem-pl-parser
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>=2.7.8:databases/py-sqlite3@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pylast>=1.4.0:audio/py-pylast@${PY_FLAVOR}
 
 USES=		python:3.5+ pkgconfig gnome gettext meson shebangfix sqlite desktop-file-utils
 USE_GITLAB=	yes
