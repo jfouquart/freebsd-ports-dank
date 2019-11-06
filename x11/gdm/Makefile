@@ -2,14 +2,15 @@
 # $FreeBSD$
 
 PORTNAME=	gdm
-PORTVERSION=	3.28.4
-PORTREVISION=	1
+PORTVERSION=	3.30.3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 3 display manager
+
+LICENSE=	GPLv2
 
 BUILD_DEPENDS=	zenity>=3.0.0:x11/zenity \
 		itstool:textproc/itstool \
@@ -158,9 +159,8 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/locale.conf \
 		${STAGEDIR}${PREFIX}/etc/gdm/locale.conf.sample
 
-	@${RM} ${STAGEDIR}${PREFIX}/lib/udev/rules.d/61-gdm.rules
-	@${RMDIR} ${STAGEDIR}${PREFIX}/lib/udev/rules.d
-	@${RMDIR} ${STAGEDIR}${PREFIX}/lib/udev
+	@${RM} ${STAGEDIR}/rules.d/61-gdm.rules
+	@${RMDIR} ${STAGEDIR}/rules.d
 
 	@${SED} -e 's|%%PREFIX%%|${PREFIX}|g' < ${PKGDIR}/pkg-message \
 		| /usr/bin/fmt 75 79 > ${PKGMESSAGE}
