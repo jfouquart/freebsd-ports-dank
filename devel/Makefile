@@ -781,6 +781,7 @@
     SUBDIR += ghub
     SUBDIR += gindent
     SUBDIR += gio-sharp
+    SUBDIR += gir-to-d
     SUBDIR += git
     SUBDIR += git-absorb
     SUBDIR += git-bug
