@@ -14,6 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USES=		go:modules
 USE_GITHUB=	yes
 GH_ACCOUNT=	cjbassi
+GH_TAGNAME=	2cd92e147e6b7f60d76693f93f3a52e66a2fa9d1
 GH_TUPLE=	docopt:docopt.go:ee0de3b:docopt/src/github.com/docopt/docopt-go \
 		shirou:gopsutil:v2.19.01:gopsutil/src/github.com/shirou/gopsutil \
 		golang:sys:37707fd:sys/src/golang.org/x/sys
