@@ -29,6 +29,7 @@ LIB_DEPENDS=	libmusicbrainz5.so:audio/libmusicbrainz5 \
 		libjson-glib-1.0.so:devel/json-glib \
 		libsoup-gnome-2.4.so:devel/libsoup-gnome \
 		libsecret-1.so:security/libsecret \
+		libgudev-1.0.so:devel/libgudev \
 		libtdb.so:databases/tdb
 
 USES=		desktop-file-utils gmake gnome libtool localbase \
