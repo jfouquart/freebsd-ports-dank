@@ -13,10 +13,11 @@ PATCHFILES=	3df77e9bf1c8acee4b0bc0ce66766461a3318361.patch:-p1 \
 MAINTAINER=		acm@FreeBSD.org
 COMMENT=		The LLVM-based D compiler
 LICENSE=		BSD3CLAUSE
-USES= 			ninja cmake:insource compiler:c++14-lang
+USES= 			ninja cmake:insource
 
 OPTIONS_GROUP=		BOOTSTRAP
 BOOTSTRAP_DESC=		Force using ltsmaster to bootstrap
+
 OPTIONS_GROUP_BOOTSTRAP=LTSMASTER
 
 LLVM_VERSION=	90
@@ -68,7 +69,10 @@ BUILD_BOOTSTRAP=	no
 BUILD_BOOTSTRAP=        yes
 BOOTSTRAP_DIR=		${WRKDIRPREFIX}${.CURDIR}/work-bootstrap
 DC_HOST=		${BOOTSTRAP_DIR}/ltsmaster/bin/ldmd2
-BUILD_BOOTSTRAP=	yes
+LLVM_BOOTSTRAP_VER=	70
+BUILD_DEPENDS+=		llvm${LLVM_BOOTSTRAP_VER}>0:devel/llvm${LLVM_BOOTSTRAP_VER}
+RUN_DEPENDS+=		llvm${LLVM_BOOTSTRAP_VER}>0:devel/llvm${LLVM_BOOTSTRAP_VER}
+LIB_DEPENDS+=		libconfig.so:devel/libconfig
 .endif
 
 CMAKE_ARGS+=		-DLDC_INSTALL_PREFIX="${PREFIX}" \

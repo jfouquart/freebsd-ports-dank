@@ -18,6 +18,8 @@ USES=		gperf tar:xz
 
 .if !defined(REFERENCE_PORT)
 
+.if !defined(REFERENCE_PORT)
+
 LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 		libexpat.so:textproc/expat2
 

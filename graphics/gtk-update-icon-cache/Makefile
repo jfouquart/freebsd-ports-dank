@@ -19,13 +19,12 @@ RUN_DEPENDS+=	update-mime-database:misc/shared-mime-info \
 
 PORTSCOUT=	ignore:1
 
-USES=		gettext gmake gnome libtool localbase:ldflags pathfix perl5 \
-		pkgconfig tar:xz xorg
+USES=		gettext gmake gnome libtool localbase:ldflags pathfix perl5 pkgconfig tar:xz xorg
 USE_PERL5=	build
 MAKE_JOBS_UNSAFE=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	atk pango gdkpixbuf2 introspection:build
+USE_GNOME=	atk gdkpixbuf2 introspection:build pango
 USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes xdamage \
 		xcomposite
 PATCHDIR=	${.CURDIR}/../../x11-toolkits/gtk20/files

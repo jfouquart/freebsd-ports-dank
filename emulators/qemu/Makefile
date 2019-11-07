@@ -128,6 +128,14 @@ MAKE_ARGS+=	ARCH=ppc64
 CONFIGURE_ARGS+=	--sparc_cpu=v9
 .endif
 
+# modif perso
+CONFIGURE_ARGS+=	--enable-spice --enable-xen
+BUILD_DEPENDS+=	spice-protocol>=0.12.14:devel/spice-protocol
+LIB_DEPENDS+=	libxenstore.so.3.0:sysutils/xen-tools \
+		libspice-server.so:devel/libspice-server \
+		libvirglrenderer.so:graphics/virglrenderer
+# end modif perso
+
 PLIST_SUB+=	LINUXBOOT_DMA=""
 
 post-patch-CDROM_DMA-off:

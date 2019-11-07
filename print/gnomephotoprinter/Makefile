@@ -19,4 +19,6 @@ GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 
+LIBS+=		-lm
+
 .include <bsd.port.mk>

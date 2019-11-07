@@ -23,6 +23,7 @@ RUN_DEPENDS=	rarian-sk-config:textproc/rarian
 INSTALL_TARGET=	install-strip
 USES+=		bison gettext gmake gnome localbase libtool:keepla pathfix \
 		pkgconfig xorg
+USE_LOCALE=	en_US.UTF-8
 USE_GNOME=	gnomeprefix intlhack libbonobo gnomevfs2 referencehack
 USE_XORG=	xpm
 USE_LDCONFIG=	yes

@@ -26,7 +26,8 @@ BUILD_DEPENDS=	p5-Archive-Zip>=0:archivers/p5-Archive-Zip \
 		bash:shells/bash \
 		gsed:textproc/gsed \
 		${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
-		flex>=0.26:textproc/flex
+		flex>=0.26:textproc/flex \
+		git:devel/git-lite
 LIB_DEPENDS=	libapr-1.so:devel/apr1 \
 		libboost_date_time.so:devel/boost-libs \
 		libicutu.so:devel/icu \

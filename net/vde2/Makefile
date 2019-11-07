@@ -13,7 +13,7 @@ COMMENT=	User-mode virtual ethernet infrastructure
 LICENSE=	BSD3CLAUSE GPLv2 LGPL21
 LICENSE_COMB=	multi
 
-LIB_DEPENDS=	libpcap.so:net/libpcap
+# LIB_DEPENDS=	libpcap.so:net/libpcap
 
 USES=		gmake libtool pathfix shebangfix ssl
 USE_LDCONFIG=	yes

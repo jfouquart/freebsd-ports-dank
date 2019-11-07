@@ -37,6 +37,7 @@ PORTSCOUT=	limitw:1,even
 
 USES=		gettext gnome jpeg localbase:ldflags meson \
 		pathfix pkgconfig python:3.4+,build shebangfix sqlite tar:xz
+USE_GCC=	8+
 USE_GNOME=	cairo intltool libgsf libxml2
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes

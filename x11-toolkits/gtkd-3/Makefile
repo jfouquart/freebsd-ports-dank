@@ -27,7 +27,7 @@ LIB_DEPENDS=	libgnutls.so:security/gnutls \
 BUILD_DEPENDS=	girtod:devel/gir-to-d
 
 USES=		gettext-runtime gmake gnome zip
-USE_GNOME=	atk cairo gdkpixbuf2 glib20 gtk30 gtksourceview3 introspection \
+USE_GNOME=	atk cairo gdkpixbuf2 glib20 gtk30 gtksourceview4 introspection \
 		librsvg2 pango vte3
 USE_GSTREAMER1=	bad
 SSP_UNSAFE=	yes # not understood by ldc2

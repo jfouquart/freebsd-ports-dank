@@ -12,12 +12,15 @@ COMMENT=	OpenGL based interactive canvas library
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+BUILD_DEPENDS+=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto
 LIB_DEPENDS=	libjson-glib-1.0.so:devel/json-glib \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
 		libwayland-egl.so:graphics/wayland \
 		libxkbcommon.so:x11/libxkbcommon \
-		libcogl.so:graphics/cogl
+		libcogl.so:graphics/cogl \
+		libgdk-3.so:x11-toolkits/gtk30 \
+		libinput.so:x11/libinput
 
 PORTSCOUT=	limit:1,even
 
@@ -29,12 +32,22 @@ USE_XORG=	x11 xcomposite xdamage xext xfixes xi xrandr
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-x --enable-conformance=no \
-		--disable-evdev-input \
 		--enable-egl-backend=yes \
 		--enable-x11-backend=yes \
-		--enable-gdk-backend=no \
 		--enable-wayland-backend=yes \
-		--enable-wayland-compositor=no
+		--enable-wayland-compositor=yes \
+		--enable-gdk-backend=yes \
+		--enable-evdev-input=yes
 INSTALL_TARGET=	install-strip
+
+PLIST_FILES+=	include/clutter-1.0/clutter/wayland/clutter-wayland.h \
+		include/clutter-1.0/clutter/wayland/clutter-wayland-compositor.h \
+		include/clutter-1.0/clutter/wayland/clutter-wayland-surface.h \
+		include/clutter-1.0/clutter/evdev/clutter-evdev.h \
+		include/clutter-1.0/clutter/gdk/clutter-gdk.h \
+		lib/girepository-1.0/ClutterGdk-1.0.typelib \
+		libdata/pkgconfig/clutter-wayland-1.0.pc \
+		libdata/pkgconfig/clutter-wayland-compositor-1.0.pc \
+		libdata/pkgconfig/clutter-gdk-1.0.pc
 
 .include <bsd.port.mk>

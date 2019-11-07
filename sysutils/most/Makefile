@@ -14,6 +14,8 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	libslang.so:devel/libslang2
 
+MAKE_JOBS_UNSAFE=	yes
+
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-mmap
 
