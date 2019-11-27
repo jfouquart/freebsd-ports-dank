@@ -13481,7 +13481,6 @@ mail/opensmtpd-extras-filter-spamassassin||2019-11-15| Deprecated upstream
 mail/opensmtpd-extras-tool-stats||2019-11-15| Deprecated upstream
 x11-wm/compton-yshui|x11-wm/picom|2019-11-18|Project renamed
 lang/ponyc-static|lang/ponyc@llvm_static|2019-11-20|Flavored
-audio/gstreamer1-plugins-spc|audio/gstreamer1-plugins-gme|2019-11-20|spc was removed inflavour for the gme plugin
 devel/git-subversion|devel/git|2019-11-22|Subversion enabled by default in devel/git
 devel/libtrue||2019-11-22|Has expired: The joke is dead
 devel/rubygem-flipper-active_support_cache_store013|devel/rubygem-flipper-active_support_cache_store|2019-11-23|Obsolete, please use devel/rubygem-flipper-active_support_cache_store
@@ -13503,3 +13502,4 @@ misc/console-bridge|devel/ros-console_bridge|2019-11-24|Use devel/ros-console_br
 misc/urdfdom-headers|devel/ros-urdfdom_headers|2019-11-24|Use devel/ros-urdfdom_headers instead
 misc/urdfdom|devel/ros-urdfdom|2019-11-24|Use devel/ros-urdfdom instead
 sysutils/kdirstat|sysutils/k4dirstat|2019-11-25|Renamed to match the upstream name
+audio/gstreamer1-plugins-spc|audio/gstreamer1-plugins-gme|2019-11-25|spc was removed inflavour for the gme plugin
