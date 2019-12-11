@@ -24,7 +24,8 @@ USE_GNOME=	cairo gdkpixbuf2 gtk30 librsvg2 vte3
 USE_GITHUB=	yes
 GH_ACCOUNT=	gnunn1
 SSP_UNSAFE=	yes # not understood by ldc2 and not removed by meson yet
-LDFLAGS+=	-link-defaultlib-shared -L-Wl,--as-needed
+LDFLAGS+=	-link-defaultlib-shared -L-Wl,--as-needed \
+		`pkg-config --libs gmodule-2.0`
 SHEBANG_FILES=	data/scripts/tilix_int.sh
 GLIB_SCHEMAS=	com.gexperts.Tilix.gschema.xml
 
