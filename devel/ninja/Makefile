@@ -17,7 +17,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	ninja-build
 
 CONFLICTS=	irc/ninja-[0-9]*
-USES=		python
+USES=		python:3.6+
 
 PLIST_FILES=	bin/ninja
 PORTDOCS=	README.md manual.asciidoc

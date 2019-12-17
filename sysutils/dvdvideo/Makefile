@@ -17,7 +17,7 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 NO_ARCH=	yes
-USES=		python:3.4+ tar:tgz
+USES=		python:3.6+ tar:tgz
 USE_PYTHON=	autoplist distutils
 
 OPTIONS_DEFINE=	DVDCSS
