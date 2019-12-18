@@ -84,6 +84,7 @@ GCONF_VARS=		GCONF_SCHEMAS=ibus.schemas
 
 DCONF_USE=		GNOME=dconf,gconf2
 DCONF_CONFIGURE_ENABLE=	dconf
+DCONF_BUILD_DEPENDS=	bash:shells/bash
 DCONF_VARS=		GLIB_SCHEMAS=org.freedesktop.ibus.gschema.xml
 
 DOCS_CONFIGURE_ENABLE=	gtk-doc-html
