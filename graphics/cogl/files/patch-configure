@@ -1,0 +1,24 @@
+--- configure.orig	2019-12-18 19:15:46 UTC
++++ configure
+@@ -24157,7 +24157,9 @@ if test "x$ac_cv_header_EGL_eglext_h" = xyes; then :
+ #define HAVE_EGL_EGLEXT_H 1
+ _ACEOF
+  COGL_EGL_INCLUDES="$COGL_EGL_INCLUDE
+-#include <EGL/eglext.h>"
++#include <EGL/eglext.h>
++#include <EGL/eglmesaext.h>
++#include <EGL/eglextchromium.h>"
+ fi
+ 
+ done
+@@ -25565,7 +25567,9 @@ fi
+ fi
+ 
+         COGL_EGL_INCLUDES="#include <EGL/egl.h>
+-#include <EGL/eglext.h>"
++#include <EGL/eglext.h>
++#include <EGL/eglmesaext.h>
++#include <EGL/eglextchromium.h>"
+ 
+ 
+ fi
