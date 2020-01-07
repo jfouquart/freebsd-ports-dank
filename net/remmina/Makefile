@@ -23,9 +23,6 @@ GL_ACCOUNT=	Remmina
 GL_PROJECT=	Remmina
 GL_COMMIT=	d932484070fa4182666a55817dc00783a20785fa
 
-PATCH_SITES=	https://gitlab.com/Remmina/Remmina/commit/
-PATCHFILES=	32adac791b8d112a8d618ef770326674092f5af7.diff:-p1
-
 USE_GNOME=	atk cairo gdkpixbuf2 glib20 gtk30 pango
 USE_XORG=	ice sm x11 xext xkbfile
 INSTALLS_ICONS=	yes

@@ -23,9 +23,6 @@ CMAKE_ARGS+=    -DWITH_APPINDICATOR=OFF
 # set build directory
 CMAKE_ARGS+=    --build=build
 
-PATCH_SITES=	https://gitlab.com/Remmina/Remmina/commit/
-PATCHFILES=	32adac791b8d112a8d618ef770326674092f5af7.diff:-p1
-
 .include <bsd.port.pre.mk>
 
 PLIST=		${.CURDIR}/pkg-plist
