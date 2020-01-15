@@ -2,7 +2,7 @@
 
 PORTNAME=	tilix
 DISTVERSION=	1.9.5-38
-DISTVERSIONSUFFIX=	-gb6bcccf
+DISTVERSIONSUFFIX=	-gca83e11
 CATEGORIES=	x11
 
 MAINTAINER=	greg@unrelenting.technology
