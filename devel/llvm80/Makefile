@@ -84,9 +84,6 @@ CLANG_CMAKE_ON=		-DCLANG_DEFAULT_OPENMP_RUNTIME=libomp \
 CLANG_PORTDOCS=		clang
 CLANG_USE=		GNOME=libxml2
 COMPILER_RT_DESC=	Sanitizer libraries
-.if ${ARCH} == "aarch64"
-COMPILER_RT_EXTRA_PATCHES=${PATCHDIR}/compiler-rt
-.endif
 COMPILER_RT_DISTFILES=	compiler-rt-${DISTVERSION}.src${EXTRACT_SUFX}
 COMPILER_RT_PLIST_FILES=${_COMPILER_RT_LIBS:S|^|${_CRTLIBDIR}/|} \
 			${_COMPILER_RT_BLACKLISTS:S|^|${_CRTBLDIR}/|}
@@ -196,6 +193,10 @@ SHEBANG_FILES+=	tools/clang/tools/scan-view/bin/scan-view \
 		tools/clang/tools/clang-format/git-clang-format \
 		tools/clang/utils/hmaptool/hmaptool
 USES+=		gnome
+.endif
+
+.if ${ARCH} == "aarch64"
+COMPILER_RT_EXTRA_PATCHES=${PATCHDIR}/compiler-rt
 .endif
 
 .if ${PORT_OPTIONS:MCOMPILER_RT}
