@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	virglrenderer
-PORTVERSION=	0.8.0
+PORTVERSION=	0.8.1
 CATEGORIES=	graphics
 
 MAINTAINER=	moa
@@ -14,23 +14,23 @@ LICENSE=	MIT
 		go>=1.5.3:lang/go
 
 HAS_CONFIGURE=	yes
-USES=		autoreconf gmake pkgconfig libtool python
+USES=		autoreconf gl meson pkgconfig libtool python:3.7+
 
 LIB_DEPENDS=	libdrm.so:graphics/libdrm \
 		libepoxy.so:graphics/libepoxy
 
 USE_GL+=        gl egl gbm
 
-CONFIGURE_ARGS+= --with-glx
-
 USE_GITLAB=	yes
 GL_SITE=	https://gitlab.freedesktop.org
 GL_ACCOUNT=	virgl
 GL_PROJECT=	virglrenderer
 # Find the commit hash here: https://gitlab.freedesktop.org/virgl/virglrenderer/tags
-GL_COMMIT=	${PORTVERSION}
-COMMIT=		48cc96c9aebb9d0164830a157efc8916f08f00c0
+GL_COMMIT=	${PORTNAME}-${PORTVERSION}
+COMMIT=		66c57963aaf09a1c41056bd2a001da1d51957a14
 
 WRKSRC=		${WRKDIR}/${GL_PROJECT}-${GL_COMMIT}-${COMMIT}
+
+BINARY_ALIAS=	python3=${PYTHON_CMD}
 
 .include <bsd.port.mk>
