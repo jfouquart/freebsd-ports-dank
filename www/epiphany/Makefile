@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	epiphany
-PORTVERSION=	3.32.5
+PORTVERSION=	3.36.1
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -22,7 +22,6 @@ LIB_DEPENDS=	libwebkit2gtk-4.0.so:www/webkit2-gtk3 \
 		libsoup-2.4.so:devel/libsoup \
 		libgcr-3.so:security/gcr \
 		libstartup-notification-1.so:x11/startup-notification \
-		libnss3.so:security/nss \
 		libjson-glib-1.0.so:devel/json-glib \
 		libicuuc.so:devel/icu \
 		libavahi-gobject.so:net/avahi-app \
@@ -31,7 +30,7 @@ LIB_DEPENDS=	libwebkit2gtk-4.0.so:www/webkit2-gtk3 \
 		libnettle.so:security/nettle \
 		libsecret-1.so:security/libsecret \
 		libdazzle-1.0.so:x11-toolkits/libdazzle \
-		x11-toolkits/libhandy \
+		libhandy-0.0.so:x11-toolkits/libhandy \
 		libp11-kit.so:security/p11-kit
 RUN_DEPENDS=	iso-codes>=0:misc/iso-codes \
 		gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas \
@@ -44,7 +43,7 @@ USES=		compiler:c++11-lib cpe desktop-file-utils gettext gnome \
 		localbase:ldflags meson pkgconfig python:3.4+ shebangfix \
 		sqlite tar:xz xorg
 CPE_VENDOR=	gnome
-USE_GNOME=	cairo gnomedesktop3 intlhack libwnck3 libxml2 libxslt
+USE_GNOME=	cairo gnomedesktop3 intlhack libxml2 libxslt
 USE_XORG=	x11
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
