@@ -13,18 +13,21 @@ COMMENT=	C++ interfaces for glib-2.0
 
 LICENSE=	LGPL21
 
-USES=		compiler:c++11-lang gettext gmake gnome libtool pathfix \
+USES+=		tar:xz
+PORTSCOUT?=	limitw:1,even
+
+PLIST_SUB=	VERSION="2.4"
+
+.if !defined(REFERENCE_PORT)
+
+USES+= 		compiler:c++11-lang gettext gmake gnome libtool pathfix \
 		perl5 pkgconfig tar:xz
 USE_GNOME=	glib20 libsigc++20
-USE_LDCONFIG=	yes
-
 GNU_CONFIGURE=	yes
+USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--disable-documentation
 INSTALL_TARGET=	install-strip
 BINARY_WRAPPERS=	gm4
-
-PORTSCOUT?=	limitw:1,even
-PLIST_SUB=	VERSION="2.4"
 
 post-patch:
 .for d in docs examples tests
@@ -32,3 +35,5 @@ post-patch:
 .endfor
 
 .include <bsd.port.mk>
+
+.endif
