@@ -29,7 +29,9 @@ LIB_DEPENDS=	libgmime-2.6.so:mail/gmime26 \
 		libfolks.so:net-im/folks \
 		libpeas-1.0.so:devel/libpeas \
 		libhandy-0.0.so:x11-toolkits/libhandy \
-		libenchant-2.so:textproc/enchant2
+		libenchant-2.so:textproc/enchant2 \
+		libappstream-glib.so:devel/appstream-glib \
+		libgspell-1.so:textproc/gspell
 
 USES=		compiler:c11 desktop-file-utils gettext gmake gnome meson \
 		pkgconfig python:3.5+,build shebangfix sqlite tar:xz
