@@ -212,6 +212,7 @@
     SUBDIR += hlfl
     SUBDIR += hmap
     SUBDIR += hockeypuck
+    SUBDIR += honeytrap
     SUBDIR += honggfuzz
     SUBDIR += horcrux
     SUBDIR += hotssh

@@ -3,6 +3,7 @@
 
 PORTNAME=	guacamole-server
 DISTVERSION=	1.1.0
+PORTREVISION=	1
 CATEGORIES=	net
 
 MAINTAINER=	ultima@FreeBSD.org
@@ -16,7 +17,8 @@ LIB_DEPENDS=	libossp-uuid.so:misc/ossp-uuid \
 
 CONFLICTS_BUILD=pulseaudio-*+jack_* ffmpeg-*+jack_*
 
-USES=		autoreconf gnome jpeg libtool localbase pkgconfig shebangfix
+USES=		autoreconf compiler:c11 gnome jpeg libtool localbase pkgconfig \
+		shebangfix
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	apache
@@ -30,17 +32,23 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-guacd-conf=${ETCDIR}/guacd.conf
 INSTALL_TARGET=	install-strip
 
+GUACAMOLE_HOME?=	${PREFIX}/guacamole
 USERS=		guacamole
 GROUPS=		guacamole
 
 SUB_LIST=	GUACD_USER=${USERS} \
-		GUACD_GROUP=${GROUPS}
+		GUACD_GROUP=${GROUPS} \
+		GUACD_HOME=${GUACAMOLE_HOME}
+
+PLIST_SUB=	GUACD_USER=${USERS} \
+		GUACD_GROUP=${GROUPS} \
+		GUACD_HOME=${GUACAMOLE_HOME}
 
 OPTIONS_DEFINE=		GUACENC GUACLOG NLS SSL WEBP
 OPTIONS_DEFAULT=	GUACENC GUACLOG KUBERNETES PULSEAUDIO RDP \
 			SSH SSL VNC VORBIS WEBP
 OPTIONS_GROUP=		SP AUDIO
-OPTIONS_GROUP_SP=	RDP KUBERNETES SSH VNC
+OPTIONS_GROUP_SP=	KUBERNETES RDP SSH VNC
 OPTIONS_GROUP_AUDIO=	VORBIS PULSEAUDIO
 OPTIONS_SUB=		yes
 
@@ -85,7 +93,7 @@ post-patch:
 			 ${WRKSRC}/src/guacd/man/guacd.conf.5.in
 
 post-install:
-	@${MKDIR} ${STAGEDIR}${ETCDIR}
+	@${MKDIR} ${STAGEDIR}${ETCDIR} ${STAGEDIR}${GUACAMOLE_HOME}
 	${INSTALL_DATA} ${FILESDIR}/guacd.conf.sample ${STAGEDIR}${ETCDIR}
 
 .include <bsd.port.mk>

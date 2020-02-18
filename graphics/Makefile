@@ -147,6 +147,8 @@
     SUBDIR += dynamechs
     SUBDIR += ebsynth
     SUBDIR += edje_viewer
+    SUBDIR += egl-wayland
+    SUBDIR += eglexternalplatform
     SUBDIR += electricsheep
     SUBDIR += embree
     SUBDIR += enblend
@@ -795,6 +797,8 @@
     SUBDIR += py-djvulibre
     SUBDIR += py-editobj
     SUBDIR += py-exifread
+    SUBDIR += py-face_recognition
+    SUBDIR += py-face_recognition_models
     SUBDIR += py-fiona
     SUBDIR += py-freeimagepy
     SUBDIR += py-gdal
@@ -965,6 +969,7 @@
     SUBDIR += sdl_ttf
     SUBDIR += sdump
     SUBDIR += seejpeg
+    SUBDIR += seexpr
     SUBDIR += sekrit-twc-zimg
     SUBDIR += seom
     SUBDIR += separate
@@ -1040,7 +1045,6 @@
     SUBDIR += waifu2x-ncnn-vulkan
     SUBDIR += wayland
     SUBDIR += wayland-protocols
-    SUBDIR += wayland-protocols-devel
     SUBDIR += waylandpp
     SUBDIR += webp
     SUBDIR += webp-pixbuf-loader
