@@ -33,7 +33,6 @@ USES=		gettext gmake gnome libarchive libtool localbase \
 USE_GNOME=	glib20 intlhack libxslt:build
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-bluray \
-		--disable-udisks2 \
 		--disable-gdu \
 		--disable-libsystemd-login \
 		--disable-admin
@@ -43,7 +42,7 @@ INSTALL_TARGET=	install-strip
 GLIB_SCHEMAS=	org.gnome.system.gvfs.enums.xml
 
 OPTIONS_SUB=	yes
-OPTIONS_DEFINE=	AVAHI SAMBA GPHOTO2 CDDA HAL FUSE AFC GOOGLE MTP
+OPTIONS_DEFINE=	AVAHI SAMBA GPHOTO2 CDDA HAL FUSE AFC GOOGLE MTP UDISKS2
 OPTIONS_DEFAULT=AVAHI SAMBA GPHOTO2 CDDA HAL FUSE GOOGLE
 CDDA_DESC=	CDDA (enables HAL)
 GPHOTO2_DESC=	Gphoto 2 camera support (enables HAL) for PTP support
@@ -51,6 +50,7 @@ SAMBA_DESC=	Samba support
 AFC_DESC=	Apple device support
 GOOGLE_DESC=	Google backend
 MTP_DESC=	MTP support
+UDISKS2_DESC=	udisks2 volume monitor support
 
 FUSE_USES=	fuse
 FUSE_CONFIGURE_ENABLE=	fuse
@@ -80,6 +80,10 @@ MTP_LIB_DEPENDS=	libmtp.so:multimedia/libmtp \
 			libudev.so:devel/libudev-devd \
 			libgudev-1.0.so:devel/libgudev
 MTP_CONFIGURE_ENABLE=	gudev udev gtk libmtp
+
+UDISKS2_LIB_DEPENDS=	libudisks2.so:sysutils/libudisks
+UDISKS2_RUN_DEPENDS=	bsdisks:sysutils/bsdisks
+UDISKS2_CONFIGURE_ENABLE=	udisks2
 
 .include <bsd.port.options.mk>
 
