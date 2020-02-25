@@ -6337,6 +6337,7 @@
     SUBDIR += rubygem-sprockets2
     SUBDIR += rubygem-sprockets3
     SUBDIR += rubygem-spruz
+    SUBDIR += rubygem-stackprof
     SUBDIR += rubygem-state_machine
     SUBDIR += rubygem-state_machines
     SUBDIR += rubygem-statsd
