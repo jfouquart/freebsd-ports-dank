@@ -162,6 +162,7 @@
     SUBDIR += cfengine313
     SUBDIR += cfengine314
     SUBDIR += cfengine315
+    SUBDIR += checkrestart
     SUBDIR += chgrep
     SUBDIR += chyves
     SUBDIR += cinnamon-control-center
@@ -275,6 +276,7 @@
     SUBDIR += dtc
     SUBDIR += dtpstree
     SUBDIR += du2ps
+    SUBDIR += dua-cli
     SUBDIR += duff
     SUBDIR += dunst
     SUBDIR += dupd

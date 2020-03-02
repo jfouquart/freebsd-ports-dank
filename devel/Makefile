@@ -475,7 +475,6 @@
     SUBDIR += dfuife-curses
     SUBDIR += dia2code
     SUBDIR += dia2code+
-    SUBDIR += diffuse
     SUBDIR += ding-libs
     SUBDIR += directfb
     SUBDIR += dispy
@@ -497,7 +496,6 @@
     SUBDIR += doxygen
     SUBDIR += dparser
     SUBDIR += dragon
-    SUBDIR += dreampie
     SUBDIR += ds2
     SUBDIR += dsymbol
     SUBDIR += dub
@@ -885,7 +883,6 @@
     SUBDIR += gstreamer-plugins-soup
     SUBDIR += gstreamer1-plugins-soup
     SUBDIR += gtgt
-    SUBDIR += gtkparasite
     SUBDIR += gtranslator
     SUBDIR += guichan
     SUBDIR += guile-lib
@@ -1240,6 +1237,7 @@
     SUBDIR += liblouis
     SUBDIR += liblpm
     SUBDIR += libltdl
+    SUBDIR += libluksde
     SUBDIR += liblxqt
     SUBDIR += libmaa
     SUBDIR += libmatheval
@@ -2658,6 +2656,7 @@
     SUBDIR += p5-Log-TraceMessages
     SUBDIR += p5-Log-ger
     SUBDIR += p5-Logfile-Rotate
+    SUBDIR += p5-Long-Jump
     SUBDIR += p5-Luka
     SUBDIR += p5-Lvalue
     SUBDIR += p5-MCE
@@ -4225,6 +4224,7 @@
     SUBDIR += py-click-threading
     SUBDIR += py-click6
     SUBDIR += py-cliff
+    SUBDIR += py-cliff2
     SUBDIR += py-cligj
     SUBDIR += py-clikit
     SUBDIR += py-clint
@@ -4302,7 +4302,6 @@
     SUBDIR += py-deprecation
     SUBDIR += py-dexml
     SUBDIR += py-dialog
-    SUBDIR += py-dialog3
     SUBDIR += py-diazo
     SUBDIR += py-dill
     SUBDIR += py-dirspec
@@ -4369,6 +4368,8 @@
     SUBDIR += py-flatbuffers
     SUBDIR += py-flex
     SUBDIR += py-flexmock
+    SUBDIR += py-flit
+    SUBDIR += py-flit-core
     SUBDIR += py-fluent-logger
     SUBDIR += py-flufl.i18n
     SUBDIR += py-flufl.lock
@@ -4582,6 +4583,8 @@
     SUBDIR += py-magic
     SUBDIR += py-mailcap-fix
     SUBDIR += py-manuel
+    SUBDIR += py-marrow.mailer
+    SUBDIR += py-marrow.util
     SUBDIR += py-marshmallow
     SUBDIR += py-matrix-angular-sdk
     SUBDIR += py-mccabe
@@ -4649,7 +4652,6 @@
     SUBDIR += py-opster
     SUBDIR += py-optik
     SUBDIR += py-option_merge
-    SUBDIR += py-orbit
     SUBDIR += py-ordered-set
     SUBDIR += py-ordereddict
     SUBDIR += py-orderedmultidict
@@ -4660,6 +4662,7 @@
     SUBDIR += py-os-win
     SUBDIR += py-os-win4
     SUBDIR += py-osc-lib
+    SUBDIR += py-osc-lib1
     SUBDIR += py-oslo.cache
     SUBDIR += py-oslo.concurrency
     SUBDIR += py-oslo.config
@@ -4704,6 +4707,7 @@
     SUBDIR += py-pebble
     SUBDIR += py-pefile
     SUBDIR += py-pendulum
+    SUBDIR += py-pep517
     SUBDIR += py-pep8-naming
     SUBDIR += py-period
     SUBDIR += py-petname
@@ -4886,6 +4890,7 @@
     SUBDIR += py-python-subunit
     SUBDIR += py-python2-pythondialog
     SUBDIR += py-pythonbrew
+    SUBDIR += py-pythondialog
     SUBDIR += py-pytimeparse
     SUBDIR += py-pytools
     SUBDIR += py-pytrie
@@ -4957,7 +4962,6 @@
     SUBDIR += py-ruamel.ordereddict
     SUBDIR += py-ruamel.yaml
     SUBDIR += py-rubymarshal
-    SUBDIR += py-rwt
     SUBDIR += py-rx
     SUBDIR += py-rx1
     SUBDIR += py-sanetime
@@ -5917,6 +5921,7 @@
     SUBDIR += rubygem-font-awesome-rails-rails5
     SUBDIR += rubygem-font-awesome-rails-rails50
     SUBDIR += rubygem-font-awesome-rails-rails52
+    SUBDIR += rubygem-font-awesome-rails-rails60
     SUBDIR += rubygem-foreigner
     SUBDIR += rubygem-foreman
     SUBDIR += rubygem-formatador
@@ -5943,6 +5948,7 @@
     SUBDIR += rubygem-gettext_i18n_rails_js-rails5
     SUBDIR += rubygem-gettext_i18n_rails_js-rails50
     SUBDIR += rubygem-gettext_i18n_rails_js-rails52
+    SUBDIR += rubygem-gettext_i18n_rails_js-rails60
     SUBDIR += rubygem-gh
     SUBDIR += rubygem-gibbler
     SUBDIR += rubygem-gio2
@@ -5988,8 +5994,7 @@
     SUBDIR += rubygem-hashie2
     SUBDIR += rubygem-hashie3
     SUBDIR += rubygem-health_check
-    SUBDIR += rubygem-health_check26-rails5
-    SUBDIR += rubygem-health_check26-rails52
+    SUBDIR += rubygem-health_check26-rails60
     SUBDIR += rubygem-heapy
     SUBDIR += rubygem-highline
     SUBDIR += rubygem-hike
@@ -6159,6 +6164,7 @@
     SUBDIR += rubygem-peek-rails4
     SUBDIR += rubygem-peek-rails5
     SUBDIR += rubygem-peek-rails52
+    SUBDIR += rubygem-peek-rails60
     SUBDIR += rubygem-peek-rblineprof-rails5
     SUBDIR += rubygem-peek-rblineprof-rails52
     SUBDIR += rubygem-peek-redis-rails5
@@ -6203,6 +6209,7 @@
     SUBDIR += rubygem-rails-i18n-rails5
     SUBDIR += rubygem-rails-i18n-rails50
     SUBDIR += rubygem-rails-i18n-rails52
+    SUBDIR += rubygem-rails-i18n-rails60
     SUBDIR += rubygem-rails-observers
     SUBDIR += rubygem-rainbow
     SUBDIR += rubygem-rake
@@ -6229,6 +6236,7 @@
     SUBDIR += rubygem-redis-activesupport-rails5
     SUBDIR += rubygem-redis-activesupport-rails50
     SUBDIR += rubygem-redis-activesupport-rails52
+    SUBDIR += rubygem-redis-activesupport-rails60
     SUBDIR += rubygem-redis-store
     SUBDIR += rubygem-redmine_plugin_support
     SUBDIR += rubygem-reentrant_flock

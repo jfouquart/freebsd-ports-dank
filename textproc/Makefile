@@ -392,6 +392,7 @@
     SUBDIR += libxml++26-reference
     SUBDIR += libxml2
     SUBDIR += libxml2-reference
+    SUBDIR += libxmlbird
     SUBDIR += libxode
     SUBDIR += libxslt
     SUBDIR += libxslt-reference
@@ -1344,6 +1345,7 @@
     SUBDIR += py-python-slugify
     SUBDIR += py-python-xmp-toolkit
     SUBDIR += py-pytidylib
+    SUBDIR += py-pytoml
     SUBDIR += py-pyx12
     SUBDIR += py-qrcode
     SUBDIR += py-qt5-xml
@@ -1432,6 +1434,7 @@
     SUBDIR += re-flex
     SUBDIR += re_graph
     SUBDIR += redet
+    SUBDIR += redisearch
     SUBDIR += redland
     SUBDIR += redland-bindings
     SUBDIR += refdb

@@ -959,6 +959,7 @@
     SUBDIR += p5-Interchange6
     SUBDIR += p5-JE
     SUBDIR += p5-JSON-API
+    SUBDIR += p5-JSON-WebToken
     SUBDIR += p5-Jemplate
     SUBDIR += p5-Jifty
     SUBDIR += p5-LWP-Authen-Negotiate
@@ -1411,6 +1412,7 @@
     SUBDIR += py-aiohttp
     SUBDIR += py-aiohttp-wsgi
     SUBDIR += py-aiohttp2
+    SUBDIR += py-aiohttp_cors
     SUBDIR += py-albatross
     SUBDIR += py-amf
     SUBDIR += py-apachelog
@@ -1535,6 +1537,7 @@
     SUBDIR += py-django-otp
     SUBDIR += py-django-otp-yubikey
     SUBDIR += py-django-overextends
+    SUBDIR += py-django-pglocks
     SUBDIR += py-django-photologue
     SUBDIR += py-django-picklefield
     SUBDIR += py-django-pipeline
@@ -1935,7 +1938,7 @@
     SUBDIR += rubygem-gollum-rugged_adapter
     SUBDIR += rubygem-gon-rails5
     SUBDIR += rubygem-gon-rails50
-    SUBDIR += rubygem-gon-rails52
+    SUBDIR += rubygem-gon-rails60
     SUBDIR += rubygem-hackpad-cli
     SUBDIR += rubygem-haml
     SUBDIR += rubygem-haml-coderay
@@ -1985,15 +1988,18 @@
     SUBDIR += rubygem-kaminari-actionview-rails5
     SUBDIR += rubygem-kaminari-actionview-rails50
     SUBDIR += rubygem-kaminari-actionview-rails52
+    SUBDIR += rubygem-kaminari-actionview-rails60
     SUBDIR += rubygem-kaminari-activerecord
     SUBDIR += rubygem-kaminari-activerecord-rails5
     SUBDIR += rubygem-kaminari-activerecord-rails50
     SUBDIR += rubygem-kaminari-activerecord-rails52
+    SUBDIR += rubygem-kaminari-activerecord-rails60
     SUBDIR += rubygem-kaminari-core
     SUBDIR += rubygem-kaminari-rails4
     SUBDIR += rubygem-kaminari-rails5
     SUBDIR += rubygem-kaminari-rails50
     SUBDIR += rubygem-kaminari-rails52
+    SUBDIR += rubygem-kaminari-rails60
     SUBDIR += rubygem-kensa
     SUBDIR += rubygem-kubeclient
     SUBDIR += rubygem-layout_yullio_generator
@@ -2003,6 +2009,7 @@
     SUBDIR += rubygem-lograge
     SUBDIR += rubygem-lograge-rails5
     SUBDIR += rubygem-lograge-rails52
+    SUBDIR += rubygem-lograge-rails60
     SUBDIR += rubygem-maruku
     SUBDIR += rubygem-mechanize
     SUBDIR += rubygem-merb-assets
@@ -2082,6 +2089,7 @@
     SUBDIR += rubygem-redis-rails-rails5
     SUBDIR += rubygem-redis-rails-rails50
     SUBDIR += rubygem-redis-rails-rails52
+    SUBDIR += rubygem-redis-rails-rails60
     SUBDIR += rubygem-redmine_acts_as_taggable_on
     SUBDIR += rubygem-responders
     SUBDIR += rubygem-responders-rails5
@@ -2137,7 +2145,7 @@
     SUBDIR += rubygem-wasabi
     SUBDIR += rubygem-webdrivers
     SUBDIR += rubygem-webmock
-    SUBDIR += rubygem-webpack-rails-rails52
+    SUBDIR += rubygem-webpack-rails-rails60
     SUBDIR += rubygem-webrobots
     SUBDIR += rubygem-websocket
     SUBDIR += rubygem-websocket-driver

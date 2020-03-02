@@ -67,7 +67,6 @@
     SUBDIR += elixir-mongo
     SUBDIR += elixir-postgrex
     SUBDIR += elixir-timex_ecto
-    SUBDIR += emma
     SUBDIR += erlang-couchbeam
     SUBDIR += erlang-epgsql
     SUBDIR += erlang-eredis
@@ -966,7 +965,6 @@
     SUBDIR += rubygem-paranoia
     SUBDIR += rubygem-peek-mysql2-rails5
     SUBDIR += rubygem-peek-pg-rails5
-    SUBDIR += rubygem-peek-pg-rails52
     SUBDIR += rubygem-pg
     SUBDIR += rubygem-pg0
     SUBDIR += rubygem-pg018
@@ -983,6 +981,7 @@
     SUBDIR += rubygem-redis-actionpack-rails5
     SUBDIR += rubygem-redis-actionpack-rails50
     SUBDIR += rubygem-redis-actionpack-rails52
+    SUBDIR += rubygem-redis-actionpack-rails60
     SUBDIR += rubygem-redis-namespace
     SUBDIR += rubygem-seed-fu
     SUBDIR += rubygem-sqlite3

@@ -215,7 +215,6 @@
     SUBDIR += honeytrap
     SUBDIR += honggfuzz
     SUBDIR += horcrux
-    SUBDIR += hotssh
     SUBDIR += hpenc
     SUBDIR += hs-cryptol
     SUBDIR += hydra
@@ -845,6 +844,7 @@
     SUBDIR += py-argon2-cffi
     SUBDIR += py-artifacts
     SUBDIR += py-asyncssh
+    SUBDIR += py-authlib
     SUBDIR += py-backports.ssl_match_hostname
     SUBDIR += py-bcrypt
     SUBDIR += py-btchip-python
@@ -961,6 +961,7 @@
     SUBDIR += py-python-pam
     SUBDIR += py-python-registry
     SUBDIR += py-python3-openid
+    SUBDIR += py-python3-saml
     SUBDIR += py-pywinrm
     SUBDIR += py-rekall
     SUBDIR += py-rekall-core
@@ -1044,13 +1045,13 @@
     SUBDIR += rubygem-devise-two-factor
     SUBDIR += rubygem-devise-two-factor-rails5
     SUBDIR += rubygem-devise-two-factor30-rails52
+    SUBDIR += rubygem-devise-two-factor30-rails60
     SUBDIR += rubygem-devise_pam_authenticatable2
     SUBDIR += rubygem-digest-crc
     SUBDIR += rubygem-doorkeeper
     SUBDIR += rubygem-doorkeeper-openid_connect
     SUBDIR += rubygem-doorkeeper-rails5
     SUBDIR += rubygem-doorkeeper-rails50
-    SUBDIR += rubygem-doorkeeper43
     SUBDIR += rubygem-ed25519
     SUBDIR += rubygem-encryptor
     SUBDIR += rubygem-ezcrypto
@@ -1292,7 +1293,6 @@
     SUBDIR += yubioath-desktop
     SUBDIR += zebedee
     SUBDIR += zeek
-    SUBDIR += zenmap
     SUBDIR += zeronet
     SUBDIR += zxid
     SUBDIR += zzuf
