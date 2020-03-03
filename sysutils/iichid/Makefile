@@ -3,6 +3,7 @@
 
 PORTNAME=	iichid
 DISTVERSION=	0.0.1
+PORTREVISION=	3
 CATEGORIES=	sysutils
 
 MAINTAINER=	imp@FreeBSD.org
@@ -20,6 +21,7 @@ USES=	kmod uidfix
 USE_GITHUB=	yes
 
 GH_ACCOUNT=	wulf7
+GH_TAGNAME=	c1d112a
 
 # Strip -Werror from sys/conf/kmod.mk
 MAKE_ENV=	WERROR=""
@@ -28,7 +30,9 @@ PLIST_FILES=	${KMODDIR}/iichid.ko
 
 # USB backend is not yet complete and
 # interferes with existing USB drivers
-post-patch:
-	${REINPLACE_CMD} -e '/usbhid.c/s/^/#/' ${WRKSRC}/Makefile
+# post-patch:
+# 	${REINPLACE_CMD} -e '/usbhid.c/s/^/#/' ${WRKSRC}/Makefile
+
+# CFLAGS=-DUSBHID_BUS_PROBE_PRIO=-10
 
 .include <bsd.port.mk>
