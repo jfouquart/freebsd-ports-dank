@@ -1504,6 +1504,7 @@
     SUBDIR += mercurialeclipse
     SUBDIR += mergify
     SUBDIR += meson
+    SUBDIR += microsoft-gsl
     SUBDIR += mill
     SUBDIR += mimalloc
     SUBDIR += mime
@@ -1630,7 +1631,6 @@
     SUBDIR += opencvs
     SUBDIR += opendht
     SUBDIR += opengrok
-    SUBDIR += openmp
     SUBDIR += openocd
     SUBDIR += openwince-include
     SUBDIR += openzz
@@ -4045,6 +4045,7 @@
     SUBDIR += py-applicationinsights
     SUBDIR += py-apptools
     SUBDIR += py-apscheduler
+    SUBDIR += py-archinfo
     SUBDIR += py-argcomplete
     SUBDIR += py-argh
     SUBDIR += py-argparse
@@ -4214,6 +4215,7 @@
     SUBDIR += py-circuits
     SUBDIR += py-cjson
     SUBDIR += py-cld
+    SUBDIR += py-cle
     SUBDIR += py-cleo
     SUBDIR += py-cli-helpers
     SUBDIR += py-cliapp
@@ -4399,7 +4401,6 @@
     SUBDIR += py-fypp
     SUBDIR += py-game
     SUBDIR += py-game_sdl2
-    SUBDIR += py-gamin
     SUBDIR += py-gast
     SUBDIR += py-gdata
     SUBDIR += py-gdbgui
@@ -4444,7 +4445,6 @@
     SUBDIR += py-hash_ring
     SUBDIR += py-heapdict
     SUBDIR += py-hghooks
-    SUBDIR += py-hgsubversion
     SUBDIR += py-hgtools
     SUBDIR += py-holidays
     SUBDIR += py-http-prompt
@@ -4480,6 +4480,7 @@
     SUBDIR += py-iso8601
     SUBDIR += py-isodate
     SUBDIR += py-isort
+    SUBDIR += py-itanium_demangler
     SUBDIR += py-iterpipes
     SUBDIR += py-itypes
     SUBDIR += py-jaraco
@@ -4593,6 +4594,7 @@
     SUBDIR += py-meliae
     SUBDIR += py-memory-profiler
     SUBDIR += py-microversion_parse
+    SUBDIR += py-minidump
     SUBDIR += py-minimongo
     SUBDIR += py-minio
     SUBDIR += py-mock
@@ -4607,6 +4609,7 @@
     SUBDIR += py-mox
     SUBDIR += py-mox3
     SUBDIR += py-msgpack
+    SUBDIR += py-mulpyplexer
     SUBDIR += py-multi_key_dict
     SUBDIR += py-multipledispatch
     SUBDIR += py-multiprocess
@@ -6617,6 +6620,7 @@
     SUBDIR += tinycbor
     SUBDIR += tinygo
     SUBDIR += tinylaf
+    SUBDIR += tl-expected
     SUBDIR += tkcon
     SUBDIR += tkcvs
     SUBDIR += tkmerge

@@ -107,6 +107,7 @@
     SUBDIR += csb-aspell
     SUBDIR += csv2latex
     SUBDIR += csvdiff
+    SUBDIR += csvq
     SUBDIR += ctpl
     SUBDIR += ctpp2
     SUBDIR += cwtext
@@ -314,6 +315,7 @@
     SUBDIR += jrefentry
     SUBDIR += jshon
     SUBDIR += json-yaml
+    SUBDIR += jtc
     SUBDIR += kdiff3
     SUBDIR += kenlm
     SUBDIR += kf5-kcodecs
@@ -477,6 +479,7 @@
     SUBDIR += p5-Algorithm-RabinKarp
     SUBDIR += p5-Apache-ParseLog
     SUBDIR += p5-Apache-Solr
+    SUBDIR += p5-Template-AutoFilter
     SUBDIR += p5-BibTeX-Parser
     SUBDIR += p5-BigIP-ParseConfig
     SUBDIR += p5-Bloom-Filter
@@ -1464,9 +1467,9 @@
     SUBDIR += ruby-rdtool
     SUBDIR += ruby-rttool
     SUBDIR += ruby-xmlparser
-    SUBDIR += rubygem-actionpack-xml_parser
-    SUBDIR += rubygem-actionpack-xml_parser1
-    SUBDIR += rubygem-actionpack-xml_parser52
+    SUBDIR += rubygem-actionpack-xml_parser-rails5
+    SUBDIR += rubygem-actionpack-xml_parser-rails52
+    SUBDIR += rubygem-actionpack-xml_parser1-rails4
     SUBDIR += rubygem-actiontext60
     SUBDIR += rubygem-albino
     SUBDIR += rubygem-amatch
@@ -1474,6 +1477,7 @@
     SUBDIR += rubygem-asciidoctor-diagram
     SUBDIR += rubygem-asciidoctor-include-ext
     SUBDIR += rubygem-asciidoctor-plantuml
+    SUBDIR += rubygem-asciidoctor-plantuml0010
     SUBDIR += rubygem-autoprefixer-rails
     SUBDIR += rubygem-babel-source
     SUBDIR += rubygem-babel-transpiler
@@ -1742,6 +1746,7 @@
     SUBDIR += texi2html
     SUBDIR += texi2mdoc
     SUBDIR += textogif
+    SUBDIR += textql
     SUBDIR += the_silver_searcher
     SUBDIR += ti-hunspell
     SUBDIR += tidyp
