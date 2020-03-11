@@ -3,7 +3,7 @@
 
 PORTNAME=	iichid
 DISTVERSION=	0.0.1
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	sysutils
 
 MAINTAINER=	imp@FreeBSD.org
@@ -21,7 +21,7 @@ USES=	kmod uidfix
 USE_GITHUB=	yes
 
 GH_ACCOUNT=	wulf7
-GH_TAGNAME=	c1d112a
+GH_TAGNAME=	a8d3390
 
 # Strip -Werror from sys/conf/kmod.mk
 MAKE_ENV=	WERROR=""
