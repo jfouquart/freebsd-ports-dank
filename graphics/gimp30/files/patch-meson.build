@@ -1,0 +1,11 @@
+--- meson.build.orig	2020-03-12 22:42:30 UTC
++++ meson.build
+@@ -553,6 +553,8 @@ libunwind = ( get_option('libunwind')
+ )
+ conf.set('HAVE_LIBUNWIND', libunwind.found())
+ 
++## Check for libexecinfo
++libexecinfo = cc.find_library('execinfo', required: false)
+ 
+ ## Check for Dr. Mingw
+ drmingw = no_dep
