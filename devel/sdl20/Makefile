@@ -273,7 +273,7 @@ CONFIGURE_ARGS+=	ac_cv_lib_iconv_iconv_open=yes ac_cv_func_iconv=yes
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e '/ CheckInputEvents$$/d' \
+	@${REINPLACE_CMD} \
 		-e 's/-liconv/${ICONV_LIB}/g' ${WRKSRC}/configure
 # Clang does not provide _m_prefetch
 	@${REINPLACE_CMD} 's/_m_prefetch/__builtin_prefetch/' \
