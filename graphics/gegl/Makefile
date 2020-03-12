@@ -2,10 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	gegl
-PORTVERSION=	0.4.22
-PORTREVISION=	2
+DISTVERSION=	0.4.22-12
 CATEGORIES=	graphics
-MASTER_SITES=	GIMP
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Graph based image processing framework
@@ -23,9 +21,15 @@ LIB_DEPENDS=	libbabl-0.1.so:x11/babl \
 		libpng.so:graphics/png
 
 USES=		compiler:c++14-lang cpe gettext gnome jpeg localbase \
-		meson pathfix pkgconfig shebangfix uniquefiles tar:xz
+		meson pathfix pkgconfig shebangfix uniquefiles
 USE_GNOME=	glib20 intltool introspection:build
 USE_LDCONFIG=	yes
+
+USE_GITLAB= yes
+GL_SITE=	https://gitlab.gnome.org
+GL_ACCOUNT=	GNOME
+GL_COMMIT=	e864b00a7e01f7bde1e18cb577d6d28483f7c96d
+
 MESON_ARGS=	-Ddocs=false \
 		-Dworkshop=false \
 		-Dintrospection=true \
@@ -38,7 +42,7 @@ MESON_ARGS=	-Ddocs=false \
 		-Dvapigen=disabled \
 		-Dlua=disabled
 
-GEGL_SHLIB=	0.421.1
+GEGL_SHLIB=	0.422.1
 GEGL_VER=	0.4
 PLIST_SUB+=	GEGL_SHLIB=${GEGL_SHLIB} GEGL_VER=${GEGL_VER}
 
