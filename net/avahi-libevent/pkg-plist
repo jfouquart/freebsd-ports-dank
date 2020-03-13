@@ -1,0 +1,6 @@
+include/avahi-libevent/libevent-watch.h
+lib/libavahi-libevent.a
+lib/libavahi-libevent.so
+lib/libavahi-libevent.so.1
+lib/libavahi-libevent.so.1.0.0
+libdata/pkgconfig/avahi-libevent.pc

@@ -2,11 +2,16 @@
 # $FreeBSD$
 
 PORTNAME=	avahi
-PORTVERSION=	0.7
-PORTREVISION?=	3
+PORTVERSION=	0.8
+PORTREVISION?=	0
 CATEGORIES?=	net dns
-MASTER_SITES=	http://www.avahi.org/download/
+MASTER_SITES=	http://www.avahi.org/download/:tarball \
+		https://raw.githubusercontent.com/lathiat/avahi/v${PORTVERSION}/service-type-database/:serv
 PKGNAMESUFFIX?=	-app
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:tarball \
+		build-db:serv
+DIST_SUBDIR=  avahi
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER?=	gnome@FreeBSD.org
 COMMENT?=	Service discovery on a local network
@@ -90,6 +95,11 @@ CONFIGURE_ARGS+=--disable-qt5
 CONFIGURE_ARGS+=--enable-mono
 .else
 CONFIGURE_ARGS+=--disable-mono
+.endif
+.if ${AVAHI_SLAVE} == libevent
+ CONFIGURE_ARGS+=--enable-libevent
+.else
+ CONFIGURE_ARGS+=--disable-libevent
 .endif
 CONFIGURE_ARGS+=--disable-stack-protector
 
