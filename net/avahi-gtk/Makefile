@@ -1,7 +1,6 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
 
-PORTREVISION=	1
 CATEGORIES=	net
 PKGNAMESUFFIX=	-gtk
 
@@ -23,8 +22,6 @@ PLIST=		${.CURDIR}/pkg-plist
 AVAHI_SLAVE=	gtk
 AVAHI_PKGCONFIG=avahi-ui.pc
 
-MANPAGES=	bssh.1
-
 USE_GNOME+=	cairo gdkpixbuf2 libglade2
 
 do-build:
@@ -40,8 +37,6 @@ post-build:
 post-install:
 	@(cd ${WRKSRC}/avahi-discover-standalone && \
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET})
-	${LN} -sf bssh.1 ${STAGEDIR}${MANPREFIX}/man/man1/bvnc.1
-	${LN} -sf bssh.1 ${STAGEDIR}${MANPREFIX}/man/man1/bshell.1
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libavahi-ui.so.0
 
 .include "${MASTERDIR}/Makefile"
