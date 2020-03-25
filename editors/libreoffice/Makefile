@@ -1,6 +1,4 @@
-# $FreeBSD$
-
-PORTREVISION=	6
+# $FreeBSD: head/editors/libreoffice/Makefile 521982 2020-01-04 07:59:33Z lwhsu $
 
 .include "${.CURDIR}/Makefile.common"
 
@@ -20,7 +18,7 @@ BUILD_DEPENDS=	p5-Archive-Zip>=0:archivers/p5-Archive-Zip \
 		cppunit-config:devel/cppunit \
 		dmake:devel/dmake \
 		gperf>=3.1:devel/gperf \
-		mdds>=1.4:devel/mdds \
+		mdds>=1.5:devel/mdds \
 		ucpp:devel/ucpp \
 		${LOCALBASE}/include/sane/sane.h:graphics/sane-backends \
 		vigra-config:graphics/vigra \
@@ -34,7 +32,7 @@ LIB_DEPENDS=	libapr-1.so:devel/apr1 \
 		libicutu.so:devel/icu \
 		liblangtag.so:devel/liblangtag \
 		libltdl.so:devel/libltdl \
-		liborcus-0.14.so:devel/liborcus \
+		liborcus-0.15.so:devel/liborcus \
 		libplds4.so:devel/nspr \
 		libcurl.so:ftp/curl \
 		libcairo.so:graphics/cairo \
@@ -47,9 +45,9 @@ LIB_DEPENDS=	libapr-1.so:devel/apr1 \
 		libgltf-0.0.so:graphics/libgltf \
 		libwpg-0.3.so:graphics/libwpg03 \
 		libzmf-0.0.so:graphics/libzmf \
-		libGeneratedSaxParser.so:graphics/opencollada \
 		libpng.so:graphics/png \
 		libpoppler.so:graphics/poppler \
+		libqrcodegencpp.so:graphics/qr-code-generator \
 		libCoinMP.so:math/coinmp \
 		liblpsolve55.so:math/lp_solve \
 		libcmis-0.5.so:net/libcmis \
@@ -118,19 +116,17 @@ USES=		autoreconf:build bison compiler:c++14-lang cpe gl gmake gnome \
 		perl5 pkgconfig python shebangfix shared-mime-info ssl tar:xz \
 		xorg
 
-OPTIONS_DEFINE=	CUPS DOCS GNOME GTK2 GTK3 JAVA KDE5 MMEDIA PGSQL QT5 SDK \
-		SYSTRAY TEST WEBDAV
-OPTIONS_DEFAULT=	CUPS GTK2 MMEDIA
+OPTIONS_DEFINE=	CUPS DOCS GNOME GTK3 JAVA KF5 MMEDIA PGSQL QT5 SDK \
+		TEST WEBDAV
+OPTIONS_DEFAULT=	CUPS GTK3 MMEDIA
 
-GTK2_DESC=	GTK+ 2 GUI toolkit support
-GTK3_DESC=	GTK+ 3 GUI toolkit support (experimental)
+GTK3_DESC=	GTK+ 3 GUI toolkit support
 JAVA_DESC=	Add Java support (XML filters, macros, DB connections)
-KDE5_DESC=	KF5/Qt5 GUI toolkit support (require QT5)
+KF5_DESC=	KF5/Qt5 GUI toolkit support (implies QT5)
 MMEDIA_DESC=	Enable multimedia backend for Impress
 PGSQL_DESC=	Build with PostgreSQL-SDBC driver
 QT5_DESC=	Qt5 GUI toolkit support
 SDK_DESC=	Build with SDK
-SYSTRAY_DESC=	Enable systemtray quickstarter
 TEST_DESC=	Run all regression tests
 WEBDAV_DESC=	Enable WebDAV protocol
 
@@ -140,18 +136,13 @@ CUPS_LIB_DEPENDS=	libcups.so:print/cups
 DOCS_CONFIGURE_WITH=	help
 
 GNOME_CONFIGURE_ENABLE=	dbus dconf
-GNOME_IMPLIES=	GTK2
+GNOME_IMPLIES=	GTK3
 GNOME_LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib
 GNOME_USE=	GNOME=dconf
 
 GTK_USE_GNOME=	gtk-update-icon-cache
 GTK_USES=	desktop-file-utils
 GTK_VARS=	POST_PLIST=add-plist-gnome
-
-GTK2_CONFIGURE_ENABLE=	gtk
-GTK2_USE=	GNOME=gtk20,${GTK_USE_GNOME}
-GTK2_USES=	${GTK_USES}
-GTK2_VARS=	${GTK_VARS}
 
 GTK3_CONFIGURE_ENABLE=	gtk3
 GTK3_USE=	GNOME=gtk30,${GTK_USE_GNOME}
@@ -198,10 +189,10 @@ JAVA_DISTFILES=	17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip:src \
 JAVA_USE=	JAVA=yes
 JAVA_VARS=	JAVA_BUILD=yes
 
-KDE5_CONFIGURE_ENABLE=	kde5
-KDE5_USE=	kde=config,coreaddons,i18n,kio,windowsystem
-KDE5_USES=	kde:5
-KDE5_IMPLIES=	QT5
+KF5_CONFIGURE_ENABLE=	kf5
+KF5_USE=	kde=config,coreaddons,i18n,kio,windowsystem
+KF5_USES=	kde:5
+KF5_IMPLIES=	QT5
 
 MMEDIA_CONFIGURE_ENABLE=	gstreamer-1-0
 MMEDIA_USE=	GSTREAMER1=yes
@@ -220,8 +211,6 @@ SDK_CONFIGURE_OFF=	--without-doxygen
 SDK_CONFIGURE_ON=	--with-doxygen=${LOCALBASE}/bin/doxygen
 SDK_DISTFILES=	185d60944ea767075d27247c3162b3bc-unowinreg.dll:ext
 
-SYSTRAY_CONFIGURE_ENABLE=	systray
-
 TEST_ALL_TARGET_OFF=	build-nocheck
 TEST_CONFIGURE_ENABLE=	cve-tests
 
@@ -230,12 +219,6 @@ WEBDAV_LIB_DEPENDS=	libneon.so:www/neon
 
 CPPFLAGS+=	-isystem ${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-
-COLLADA_MODS=	COLLADABaseUtils COLLADAFramework \
-		COLLADASaxFrameworkLoader GeneratedSaxParser
-COLLADA_CFLAGS=	${COLLADA_MODS:S|^|-isystem ${LOCALBASE}/include/opencollada/|}
-COLLADA_LIBS=	-L${LOCALBASE}/lib/opencollada \
-		${COLLADA_MODS:S|^COLLADA|OpenCOLLADA|:S|^|-l|}
 
 CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--disable-epm \
@@ -248,7 +231,6 @@ CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--enable-release-build \
 		--disable-pdfium \
 		--exec-prefix=${PREFIX} \
-		--with-alloc=system \
 		--with-boost=${LOCALBASE} \
 		--with-build-version="FreeBSD ports ${PKGVERSION}" \
 		--with-external-dict-dir=${LOCALBASE}/share/hunspell \
@@ -262,7 +244,6 @@ CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--with-system-dicts \
 		--with-system-libs \
 		--with-system-libxml \
-		--with-system-opencollada \
 		--with-system-ucpp \
 		--with-system-zlib \
 		--with-vendor="FreeBSD ports" \
@@ -275,8 +256,6 @@ CONFIGURE_ENV=	DMAKE=${LOCALBASE}/bin/dmake \
 		GPERF=${LOCALBASE}/bin/gperf \
 		ICU_CFLAGS="`icu-config --cflags`" \
 		ICU_LIBS="`icu-config --ldflags`" \
-		OPENCOLLADA_CFLAGS="${COLLADA_CFLAGS}" \
-		OPENCOLLADA_LIBS="${COLLADA_LIBS}" \
 		PYTHON_CFLAGS="`${PYTHON_VERSION}-config --cflags`" \
 		PYTHON_LIBS="`${PYTHON_VERSION}-config --libs`" \
 		ac_cv_path_SED=${LOCALBASE}/bin/gsed
@@ -326,9 +305,6 @@ post-install-SDK-on:
 	@cd ${STAGEDIR}${PREFIX} && \
 	${FIND} -s ${subdir}/libreoffice -not -type d >> ${TMPPLIST}
 .endfor
-
-post-install-GTK3-on:
-	@${ECHO_CMD} "share/gir-1.0/LOKDocView-0.1.gir" >> ${TMPPLIST}
 
 add-plist-gnome:
 .for subdir in gnome hicolor locolor
