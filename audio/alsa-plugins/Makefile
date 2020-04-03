@@ -2,13 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	alsa-plugins
-PORTVERSION=	1.1.1
-PORTREVISION=	6
+PORTVERSION=	1.2.2
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.alsa-project.org/pub/plugins/ \
 		GENTOO
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	greg@unrelenting.technology
 COMMENT=	ALSA compatibility library plugins
 
 LICENSE=	LGPL21+
@@ -17,11 +16,12 @@ LIB_DEPENDS=	libasound.so:audio/alsa-lib
 
 USES=		alias libtool:keepla localbase pkgconfig tar:bzip2
 GNU_CONFIGURE=	yes
+MAKE_ARGS+=	RM="${RM}"
 EXTRA_PATCHES+=	${FILESDIR}/alsa-plugins.patch
 INSTALL_TARGET=	install-strip
 CPPFLAGS+=	-I${.CURDIR}/../alsa-lib/files
 
-OPTIONS_DEFAULT=BUFSZ_P2 IO_PTR
+OPTIONS_DEFAULT=PULSEAUDIO BUFSZ_P2 IO_PTR
 OPTIONS_DEFINE=	JACK FFMPEG PULSEAUDIO SAMPLERATE SPEEX
 OPTIONS_SUB=	yes
 
