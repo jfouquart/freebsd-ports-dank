@@ -2,13 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	alsa-lib
-PORTVERSION=	1.1.2
-PORTREVISION=	2
+PORTVERSION=	1.2.2
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.alsa-project.org/pub/lib/ \
 		GENTOO
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	greg@unrelenting.technology
 COMMENT=	ALSA compatibility library
 
 LICENSE=	LGPL21+
@@ -27,12 +26,12 @@ CPPFLAGS+=	-I${FILESDIR}
 OPTIONS_DEFINE=	PYTHON
 OPTIONS_SUB=	yes
 
-PYTHON_CONFIGURE_ENABLE=python
+PYTHON_CONFIGURE_ENABLE=python mixer-pymods
 PYTHON_USES=	python
 
 post-patch:	.SILENT
 	${REINPLACE_CMD} -e '/LIBS/ { s/-ldl//g; s/-lrt//g; }' \
-		-e 's/python-config/${PYTHON_CMD:T}-config/g' \
+		-e 's/python3-config/${PYTHON_CMD:T}-config/g' \
 		-e '/pythonlibs/s/--libs/--ldflags/' \
 		-e '/_GNU_SOURCE/d' \
 		-e '/lt_cv_dlopen/s/-ldl//g' ${WRKSRC}/configure
