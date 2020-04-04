@@ -1,0 +1,10 @@
+--- meson.build.orig	2020-04-04 18:09:51 UTC
++++ meson.build
+@@ -87,7 +87,6 @@ elif cc.get_id() == 'gcc' or cc.get_id() == 'clang'
+     '-Wno-uninitialized',
+     '-Wno-shadow',
+     '-Werror=implicit',
+-    '-Werror=implicit-fallthrough',
+     '-Werror=nonnull',
+     '-Werror=init-self',
+     '-Werror=main',
