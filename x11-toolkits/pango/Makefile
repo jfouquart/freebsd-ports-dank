@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	pango
-PORTVERSION=	1.44.5
+PORTVERSION=	1.44.7
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -23,14 +23,13 @@ RUN_DEPENDS=	xorg-fonts-truetype>0:x11-fonts/xorg-fonts-truetype \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		compiler:c11 gettext gnome localbase meson pkgconfig tar:xz
+USES=		compiler:c11 gettext gnome localbase meson pkgconfig tar:xz xorg
 USE_LDCONFIG=	yes
 USE_GNOME=	cairo glib20 introspection:build
 USE_XORG=	x11 xft xrender
 
-VERSION=	1.8.0
-LIBVERSION=	0.4400.5
-PLIST_SUB+=     VERSION=${VERSION} LIBVERSION=${LIBVERSION}
+LIBVERSION=	0.4400.7
+PLIST_SUB+=     LIBVERSION=${LIBVERSION}
 
 FONTSCALE=	${LOCALBASE}/share/fonts/TTF/luximb.ttf
 FONTENCOD=	${LOCALBASE}/share/fonts/encodings/encodings.dir
