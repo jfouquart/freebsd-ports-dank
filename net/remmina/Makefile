@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	remmina
-DISTVERSION=	1.3.9
+DISTVERSION=	1.4.1
 CATEGORIES=	net gnome
 
 MAINTAINER=	woodsb02@FreeBSD.org
@@ -21,7 +21,7 @@ USES=		cmake compiler:c11 desktop-file-utils gettext gnome localbase:ldflags pat
 USE_GITLAB=	yes
 GL_ACCOUNT=	Remmina
 GL_PROJECT=	Remmina
-GL_COMMIT=	0606fee3f396e28d18dedf202fedcb064ce27ee6
+GL_COMMIT=	d932484070fa4182666a55817dc00783a20785fa
 
 USE_GNOME=	atk cairo gdkpixbuf2 glib20 gtk30 pango
 USE_XORG=	ice sm x11 xext xkbfile
