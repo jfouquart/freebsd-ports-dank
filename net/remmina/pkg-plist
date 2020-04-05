@@ -94,6 +94,7 @@ share/icons/hicolor/scalable/panel/remmina-panel.svg
 %%NLS%%share/locale/fr/LC_MESSAGES/remmina.mo
 %%NLS%%share/locale/gl/LC_MESSAGES/remmina.mo
 %%NLS%%share/locale/he/LC_MESSAGES/remmina.mo
+%%NLS%%share/locale/hi/LC_MESSAGES/remmina.mo
 %%NLS%%share/locale/hr/LC_MESSAGES/remmina.mo
 %%NLS%%share/locale/hu/LC_MESSAGES/remmina.mo
 %%NLS%%share/locale/id/LC_MESSAGES/remmina.mo
@@ -106,6 +107,7 @@ share/icons/hicolor/scalable/panel/remmina-panel.svg
 %%NLS%%share/locale/ko/LC_MESSAGES/remmina.mo
 %%NLS%%share/locale/lt/LC_MESSAGES/remmina.mo
 %%NLS%%share/locale/lv/LC_MESSAGES/remmina.mo
+%%NLS%%share/locale/mr/LC_MESSAGES/remmina.mo
 %%NLS%%share/locale/ms/LC_MESSAGES/remmina.mo
 %%NLS%%share/locale/my/LC_MESSAGES/remmina.mo
 %%NLS%%share/locale/nb/LC_MESSAGES/remmina.mo
