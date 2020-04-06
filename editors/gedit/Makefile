@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gedit
-PORTVERSION=	3.32.2
+PORTVERSION=	3.36.1
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -19,6 +19,7 @@ BUILD_DEPENDS=	iso-codes>=0:misc/iso-codes \
 		itstool:textproc/itstool
 LIB_DEPENDS=	libenchant.so:textproc/enchant \
 		libpeas-gtk-1.0.so:devel/libpeas \
+		libtepl-4.so:x11-toolkits/tepl \
 		libgspell-1.so:textproc/gspell \
 		libsoup-2.4.so:devel/libsoup
 RUN_DEPENDS=	iso-codes>=0:misc/iso-codes \
@@ -37,7 +38,7 @@ SHEBANG_FILES=	plugins/externaltools/data/send-to-fpaste.tool.in \
 		plugins/externaltools/scripts/gedit-tool-merge.pl
 USE_XORG=	sm x11
 USE_LDCONFIG=	yes
-PLIST_SUB=	VERSION="3.14"
+PLIST_SUB=	VERSION="3.36"
 
 BINARY_ALIAS=	python3=${PYTHON_VERSION}
 
@@ -47,6 +48,7 @@ GLIB_SCHEMAS=	org.gnome.gedit.enums.xml \
 		org.gnome.gedit.plugins.filebrowser.enums.xml \
 		org.gnome.gedit.plugins.filebrowser.gschema.xml \
 		org.gnome.gedit.plugins.pythonconsole.gschema.xml \
+		org.gnome.gedit.plugins.spell.gschema.xml \
 		org.gnome.gedit.plugins.time.enums.xml \
 		org.gnome.gedit.plugins.time.gschema.xml
 
