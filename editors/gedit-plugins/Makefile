@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gedit-plugins
-PORTVERSION=	3.32.2
+PORTVERSION=	3.36.1
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -23,12 +23,11 @@ RUN_DEPENDS=	gedit>=0:editors/gedit
 
 PORTSCOUT=	limitw:1,even
 
-USES=		compiler:c11 gettext gmake gnome libtool localbase pathfix pkgconfig \
-		python:3.4+ tar:xz
+USES=		compiler:c11 gettext gnome libtool meson pathfix pkgconfig \
+		python:3.4+ shebangfix tar:xz
 USE_GNOME=	cairo gdkpixbuf2 gtk30 gtksourceview4 introspection
 USE_CSTD=	c11
 USE_LDCONFIG=	yes
-GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.gnome.gedit.plugins.drawspaces.gschema.xml \
@@ -40,13 +39,9 @@ LIB_DEPENDS+=	libgucharmap_2_90.so:deskutils/gucharmap
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}dbus>=0:devel/py-dbus@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}libpeas>=0:devel/py-libpeas@${PY_FLAVOR}
 USE_GNOME+=	vte3
-CONFIGURE_ARGS+=--enable-python
 GLIB_SCHEMAS+=	org.gnome.gedit.plugins.terminal.gschema.xml \
 		org.gnome.gedit.plugins.translate.gschema.xml
-
-post-patch:
-	@${REINPLACE_CMD} -e 's| \\t\\r\\n\\f|[:space:]|g' \
-		${WRKSRC}/configure
+SHEBANG_FILES=  plugins/synctex/synctex/evince_dbus.py
 
 PLUGINDIRS=	${PREFIX}/lib/gedit/plugins ${PREFIX}/share/gedit/plugins
 
