@@ -39,3 +39,5 @@ post-patch:
 .endfor
 
 .include <bsd.port.mk>
+
+.endif
