@@ -30,10 +30,9 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libudev.so:devel/libudev-devd
 
 WRKSRC=		${WRKDIR}/ConsoleKit2-${PORTVERSION}
-USES=		gettext gmake gnome libtool localbase pathfix pkgconfig \
+USES=		autoreconf gettext gmake gnome libtool localbase pathfix pkgconfig \
 		tar:bzip2
 USE_CSTD=	gnu99
-USE_XORG=	x11
 USE_GNOME=	glib20 libxslt introspection:build
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
@@ -51,6 +50,13 @@ CONFIGURE_ARGS=	--with-pid-file=/var/run/${PORTNAME}.pid \
 		--disable-libcgmanager \
 		--without-systemdsystemunitdir
 INSTALL_TARGET=	install-strip
+
+OPTIONS_DEFINE=		X11
+OPTIONS_DEFAULT=	X11
+OPTIONS_SUB=		yes
+
+X11_USES=		xorg
+X11_USE=		XORG=x11
 
 post-install:
 .for script in ck-system-hibernate ck-system-hybridsleep \

@@ -1,0 +1,12 @@
+--- configure.ac.orig	2017-12-13 12:33:48 UTC
++++ configure.ac
+@@ -96,7 +96,8 @@ AC_DEFINE(GLIB_VERSION_MAX_ALLOWED, GLIB_VERSION_2_40,
+ 
+ 
+ # Check for X11 installed
+-XDT_CHECK_LIBX11_REQUIRE()
++XDT_CHECK_LIBX11()
++AM_CONDITIONAL([USE_LIBX11], [test "x$HAVE_LIBX11" = x1])
+ 
+ # Check for Polkit/PolicyKit
+ XDT_CHECK_OPTIONAL_PACKAGE([POLKIT], [polkit-gobject-1], [polkit_minimum_version],
