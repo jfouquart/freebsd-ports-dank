@@ -11,11 +11,9 @@ COMMENT=	Manage color profiles to accurately color input/output devices
 
 LICENSE=	GPLv2
 
-BUILD_DEPENDS=	spotread:graphics/argyllcms
 LIB_DEPENDS=	libpolkit-gobject-1.so:sysutils/polkit \
 		libdbus-1.so:devel/dbus \
 		liblcms2.so:graphics/lcms2
-RUN_DEPENDS=	spotread:graphics/argyllcms
 
 USERS=		colord
 GROUPS=		colord
@@ -40,12 +38,16 @@ INSTALL_TARGET=	install-strip
 GLIB_SCHEMAS=	org.freedesktop.ColorHelper.gschema.xml
 
 OPTIONS_SUB=	yes
-OPTIONS_DEFINE=	MANPAGES PPROFILES VALA
+OPTIONS_DEFINE=	ARGYLLCMS MANPAGES PPROFILES VALA
 OPTIONS_DEFAULT=VALA
 
+ARGYLLCMS_DESC=	Build ArgyllCMS sensor module
 PPROFILES_DESC=	Build extra print profiles (long build time)
 VALA_DESC=	Build Vala language bindings
 
+ARGYLLCMS_CONFIGURE_ENABLE=	argyllcms-sensor
+ARGYLLCMS_BUILD_DEPENDS=	spotread:graphics/argyllcms
+ARGYLLCMS_RUN_DEPENDS=		spotread:graphics/argyllcms
 MANPAGES_BUILD_DEPENDS=		docbook2html:textproc/docbook-utils \
 				docbook-sgml>0:textproc/docbook-sgml
 PPROFILES_CONFIGURE_ENABLE=	print-profiles
