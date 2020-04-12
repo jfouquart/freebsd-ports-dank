@@ -23,16 +23,22 @@ RUN_DEPENDS=	xorg-fonts-truetype>0:x11-fonts/xorg-fonts-truetype \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		compiler:c11 gettext gnome localbase meson pkgconfig tar:xz xorg
+USES=		compiler:c11 gettext gnome localbase meson pkgconfig tar:xz
 USE_LDCONFIG=	yes
 USE_GNOME=	cairo glib20 introspection:build
-USE_XORG=	x11 xft xrender
 
 LIBVERSION=	0.4400.7
 PLIST_SUB+=     LIBVERSION=${LIBVERSION}
 
 FONTSCALE=	${LOCALBASE}/share/fonts/TTF/luximb.ttf
 FONTENCOD=	${LOCALBASE}/share/fonts/encodings/encodings.dir
+
+OPTIONS_DEFINE=		X11
+OPTIONS_DEFAULT=	X11
+OPTIONS_SUB=		yes
+
+X11_USES=		xorg
+X11_USE=		XORG=x11,xft,xrender
 
 pre-configure:
 # .if !exists() evaluates too early before cairo has a chance to be installed
