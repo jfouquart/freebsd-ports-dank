@@ -275,7 +275,7 @@ gst_gl_USES=	gl
 gst_gl_USE_GL=	gl glu glesv2 egl
 gst_gl_BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto
 gst_gl_LIB_DEPENDS=	libgraphene-1.0.so:graphics/graphene
-gst_gl_CONFIGURE_ARGS=	--enable-gl --enable-glx \
+gst_gl_CONFIGURE_ARGS=	--enable-gl --disable-glx \
 			--enable-egl --enable-gles2
 gst_gl_GST_PLUGIN_DIR=	gst-libs/gst/gl ext/gl
 gst_gl_PLIST_FILES=		#
@@ -329,8 +329,8 @@ gst_libmms_LIB_DEPENDS=	libmms.so:net/libmms
 gst_libmms_PLIST_FILES=	${GST_LIB_DIR}/libgstmms.so
 
 # librfb
-gst_librfb_USES=	xorg
-gst_librfb_USE_XORG=	x11
+# gst_librfb_USES=	xorg
+# gst_librfb_USE_XORG=	x11
 
 # liblv2
 gst_lv2_USES=		pkgconfig
@@ -504,21 +504,21 @@ gst_webrtcdsp_LIB_DEPENDS=	libwebrtc_audio_processing.so:audio/webrtc-audio-proc
 
 # X ximage and xvimage sinks aka output
 .if ${DIST} == base
-gst_x_USES=		xorg
-gst_x_USE_XORG=		x11 xv xext
-gst_x_CONFIGURE_ARGS=	--enable-xvideo --enable-xshm
-gst_x_GST_PLUGIN_DIR=	sys/ximage sys/xvimage
-gst_x_PLIST_FILES=	${GST_LIB_DIR}/libgstximagesink.so \
-			${GST_LIB_DIR}/libgstxvimagesink.so
+# gst_x_USES=		xorg
+# gst_x_USE_XORG=		x11 xv xext
+gst_x_CONFIGURE_ARGS=	--disable-xvideo --disable-xshm
+# gst_x_GST_PLUGIN_DIR=	sys/ximage sys/xvimage
+# gst_x_PLIST_FILES=	${GST_LIB_DIR}/libgstximagesink.so \
+# 			${GST_LIB_DIR}/libgstxvimagesink.so
 .endif
 
 .if ${DIST} == good
 # Ximagesrc
-gst_x_USES=		xorg
-gst_x_USE_XORG=		x11 xfixes xdamage xext
-gst_x_CONFIGURE_ARGS=	--enable-x
-gst_x_GST_PLUGIN_DIR=	sys/ximage
-gst_x_PLIST_FILES=	${GST_LIB_DIR}/libgstximagesrc.so
+# gst_x_USES=		xorg
+# gst_x_USE_XORG=		x11 xfixes xdamage xext
+gst_x_CONFIGURE_ARGS=	--disable-x
+# gst_x_GST_PLUGIN_DIR=	sys/ximage
+# gst_x_PLIST_FILES=	${GST_LIB_DIR}/libgstximagesrc.so
 .endif
 
 # x264
