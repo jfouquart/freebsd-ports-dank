@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	adwaita-icon-theme
-PORTVERSION=	3.28.0
+PORTVERSION=	3.36.0
 CATEGORIES=	x11-themes gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -12,10 +12,10 @@ COMMENT=	GNOME Symbolic Icons
 
 NO_ARCH=	yes
 USES=		gettext-tools gmake gnome pathfix pkgconfig tar:xz
-USE_GNOME=	intltool gtk-update-icon-cache
+USE_GNOME=	intltool
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_path_GTK_ENCODE_SYMBOLIC_SVG="false"
-INSTALLS_ICONS=	yes
+# INSTALLS_ICONS=	yes # <DankBSD> this is a dep of gtk3, which is what provides gtk-update-icon-cache for us
 
 post-install:
 	@${RM} -r ${STAGEDIR}${PREFIX}/lib/locale
