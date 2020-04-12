@@ -22,8 +22,7 @@ LIB_DEPENDS=	libudev.so:devel/libudev-devd \
 		libwayland-egl.so:graphics/wayland \
 		libinput.so:x11/libinput \
 		libxkbcommon.so:x11/libxkbcommon
-RUN_DEPENDS=	libudev-devd>=0.4.1:devel/libudev-devd \
-		mesa-dri>0:graphics/mesa-dri
+RUN_DEPENDS=	libudev-devd>=0.4.1:devel/libudev-devd
 
 USES=		compiler:c11 gl meson pkgconfig xorg
 USE_GITHUB=	yes
