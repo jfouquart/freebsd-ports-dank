@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	eog
-PORTVERSION=	3.32.0
+PORTVERSION=	3.36.1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -16,6 +16,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	itstool:textproc/itstool \
 		gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas
 LIB_DEPENDS=	libpeas-gtk-1.0.so:devel/libpeas \
+		libexempi.so:textproc/exempi \
 		liblcms2.so:graphics/lcms2
 RUN_DEPENDS=	gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas
 
