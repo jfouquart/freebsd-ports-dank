@@ -48,10 +48,10 @@ OPENBLAS_USES=		blaslapack:openblas
 
 OPENMP_USES=		compiler:openmp
 OPENMP_MAKE_ENV_OFF=	CFOPENMP=
-.if !exists(/usr/include/omp.h)
+# .if !exists(/usr/include/omp.h)
 # XXX ports/199603: LLVM openmp in base doesn't support aarch64, armv6, armv7 yet
-OPENMP_VARS=		OPENMP=gcc-
-.endif
+# OPENMP_VARS=		OPENMP=gcc-
+# .endif
 
 TBB_DESC=		Intel threading building blocks
 TBB_LIB_DEPENDS=	libtbb.so:devel/tbb
