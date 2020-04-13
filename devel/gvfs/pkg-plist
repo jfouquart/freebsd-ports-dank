@@ -25,6 +25,8 @@ lib/gvfs/libgvfsdaemon.so
 %%AFC%%libexec/gvfs-afc-volume-monitor
 %%GPHOTO2%%libexec/gvfs-gphoto2-volume-monitor
 %%HAL%%libexec/gvfs-hal-volume-monitor
+libexec/gvfs-mtp-volume-monitor
+libexec/gvfs-udisks2-volume-monitor
 libexec/gvfsd-afp
 libexec/gvfsd-afp-browse
 %%AFC%%libexec/gvfsd-afc
@@ -42,6 +44,7 @@ libexec/gvfsd-ftp
 libexec/gvfsd-http
 libexec/gvfsd-localtest
 libexec/gvfsd-metadata
+libexec/gvfsd-mtp
 libexec/gvfsd-network
 libexec/gvfsd-sftp
 %%SAMBA%%libexec/gvfsd-smb
@@ -94,7 +97,9 @@ share/polkit-1/actions/org.gtk.vfs.file-operations.policy
 share/polkit-1/rules.d/org.gtk.vfs.file-operations.rules
 %%AFC%%share/dbus-1/services/org.gtk.vfs.AfcVolumeMonitor.service
 %%GPHOTO2%%share/dbus-1/services/org.gtk.vfs.GPhoto2VolumeMonitor.service
+share/dbus-1/services/org.gtk.vfs.MTPVolumeMonitor.service
 %%HAL%%share/dbus-1/services/org.gtk.vfs.HalVolumeMonitor.service
+share/dbus-1/services/org.gtk.vfs.UDisks2VolumeMonitor.service
 %%AFC%%%%DATADIR%%/mounts/afc.mount
 share/gvfs/mounts/afp-browse.mount
 share/gvfs/mounts/afp.mount
@@ -111,6 +116,7 @@ share/gvfs/mounts/afp.mount
 %%GPHOTO2%%%%DATADIR%%/mounts/gphoto2.mount
 %%DATADIR%%/mounts/http.mount
 %%DATADIR%%/mounts/localtest.mount
+%%DATADIR%%/mounts/mtp.mount
 %%DATADIR%%/mounts/network.mount
 %%DATADIR%%/mounts/sftp.mount
 %%SAMBA%%%%DATADIR%%/mounts/smb-browse.mount
@@ -118,7 +124,9 @@ share/gvfs/mounts/afp.mount
 %%DATADIR%%/mounts/trash.mount
 %%AFC%%%%DATADIR%%/remote-volume-monitors/afc.monitor
 %%GPHOTO2%%%%DATADIR%%/remote-volume-monitors/gphoto2.monitor
+%%DATADIR%%/remote-volume-monitors/mtp.monitor
 %%HAL%%%%DATADIR%%/remote-volume-monitors/hal.monitor
+%%DATADIR%%/remote-volume-monitors/udisks2.monitor
 share/locale/af/LC_MESSAGES/gvfs.mo
 share/locale/ar/LC_MESSAGES/gvfs.mo
 share/locale/as/LC_MESSAGES/gvfs.mo

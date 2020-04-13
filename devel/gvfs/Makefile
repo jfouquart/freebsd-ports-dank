@@ -24,6 +24,10 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libp11-kit.so:security/p11-kit \
 		libgpg-error.so:security/libgpg-error \
 		libcdio.so:sysutils/libcdio \
+		libudisks2.so:sysutils/libudisks \
+		libgudev-1.0.so:devel/libgudev \
+		libudev.so:devel/libudev-devd \
+		libmtp.so:multimedia/libmtp \
 		libjson-glib-1.0.so:devel/json-glib
 PORTSCOUT=	limitw:1,even
 
@@ -32,13 +36,13 @@ USES=		gettext gmake gnome libarchive libtool localbase \
 USE_GNOME=	glib20 intlhack libxslt:build
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-bluray \
-		--disable-gudev \
+		--enable-gudev \
 		--disable-libsystemd-login \
-		--disable-udisks2 \
+		--enable-udisks2 \
 		--disable-gdu \
-		--disable-udev \
+		--enable-udev \
 		--disable-goa \
-		--disable-libmtp \
+		--enable-libmtp \
 		--disable-gtk \
 		--disable-libsystemd-login \
 		--disable-admin
@@ -48,10 +52,10 @@ INSTALL_TARGET=	install-strip
 GLIB_SCHEMAS=	org.gnome.system.gvfs.enums.xml
 
 OPTIONS_SUB=	yes
-OPTIONS_DEFINE=	AVAHI SAMBA GPHOTO2 CDDA HAL FUSE AFC GOOGLE
-OPTIONS_DEFAULT=AVAHI SAMBA GPHOTO2 CDDA HAL FUSE GOOGLE
-CDDA_DESC=	CDDA (enables HAL)
-GPHOTO2_DESC=	Gphoto 2 camera support (enables HAL) for PTP support
+OPTIONS_DEFINE=	AVAHI SAMBA GPHOTO2 CDDA FUSE AFC GOOGLE
+OPTIONS_DEFAULT=AVAHI SAMBA GPHOTO2 CDDA FUSE GOOGLE
+CDDA_DESC=	CDDA support
+GPHOTO2_DESC=	Gphoto 2 camera support for PTP support
 SAMBA_DESC=	Samba support
 AFC_DESC=	Apple device support
 GOOGLE_DESC=	Google backend
@@ -90,7 +94,7 @@ GLIB_SCHEMAS+=	org.gnome.system.smb.gschema.xml
 GLIB_SCHEMAS+=	org.gnome.system.dns_sd.gschema.xml
 .endif
 
-.if ${PORT_OPTIONS:MHAL} || ${PORT_OPTIONS:MGPHOTO2} || ${PORT_OPTIONS:MCDDA}
+.if ${PORT_OPTIONS:MHAL}
 LIB_DEPENDS+=	libhal.so:sysutils/hal
 RUN_DEPENDS+=	gnome-mount:sysutils/gnome-mount
 PLIST_SUB+=	HAL=""
