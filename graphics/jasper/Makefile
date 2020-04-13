@@ -16,7 +16,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 OPTIONS_DEFINE=	OPENGL DOCS
-OPTIONS_DEFAULT=	OPENGL
 OPTIONS_SUB=	yes
 
 USE_LDCONFIG=	yes
