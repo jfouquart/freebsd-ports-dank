@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	3.28.5
-PORTREVISION=	5
+PORTVERSION=	3.36.1
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,6 +16,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	vapigen:lang/vala
 LIB_DEPENDS=	libsoup-2.4.so:devel/libsoup \
 		libfribidi.so:converters/fribidi \
+		libharfbuzz.so:print/harfbuzz \
 		libgcr-base-3.so:security/gcr \
 		libgoa-1.0.so:net/gnome-online-accounts \
 		libgdata.so:devel/libgdata \
@@ -40,6 +40,7 @@ USE_LDCONFIG=	yes
 
 CMAKE_ARGS=	-DENABLE_VALA_BINDINGS=ON \
 		-DENABLE_INTROSPECTION=ON \
+		-DENABLE_CANBERRA=OFF \
 		-DENABLE_UOA=OFF
 
 CMAKE_ARGS+=	-DWITH_LIBDB_CFLAGS=-I${LOCALBASE}/include/db5 \
@@ -52,11 +53,9 @@ GLIB_SCHEMAS=	org.gnome.evolution-data-server.addressbook.gschema.xml \
 		org.gnome.evolution.eds-shell.gschema.xml \
 		org.gnome.evolution.shell.network-config.gschema.xml
 
-PLIST_SUB=	EVO_VERSION="1.2"
-
 OPTIONS_SUB=	yes
 OPTIONS_DEFINE=	WEATHER KERBEROS LDAP
-OPTIONS_DEFAULT=WEATHER KERBEROS LDAP
+OPTIONS_DEFAULT=WEATHER LDAP
 
 KERBEROS_CMAKE_ON=	-DWITH_KRB5=/usr
 KERBEROS_CMAKE_OFF=	-DWITH_KRB5=OFF
