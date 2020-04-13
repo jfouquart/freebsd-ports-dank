@@ -1848,6 +1848,15 @@ PKG_DEPENDS+=	${LOCALBASE}/sbin/pkg:${PKG_ORIGIN}
 .include "${PORTSDIR}/Mk/bsd.gcc.mk"
 .endif
 
+# <DankBSD> since we use llvm from ports only..
+# Required by e.g. devel/p5-Locale-libintl, dns/libidn2, lang/tcl86 (via DTrace), print/texinfo, sysutils/ssid, textproc/flex, textproc/p5-XML-Parser, textproc/par 
+.if defined(CC)
+BINARY_ALIAS+=	cc="${CC}"
+.endif
+.if defined(LD)
+BINARY_ALIAS+=	ld="${LD}"
+.endif
+
 .if defined(LLD_UNSAFE) && ${/usr/bin/ld:L:tA} == /usr/bin/ld.lld
 LDFLAGS+=	-fuse-ld=bfd
 BINARY_ALIAS+=	ld=${LD}
