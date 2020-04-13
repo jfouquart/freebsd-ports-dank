@@ -55,7 +55,8 @@ DOCS_VARS_OFF=		_RUST_BUILD_DOCS=false
 DOCS_VARS=		_RUST_BUILD_DOCS=true
 GDB_RUN_DEPENDS=	${LOCALBASE}/bin/gdb:devel/gdb
 WASM_VARS_OFF=		_RUST_BUILD_WASM=false
-WASM_VARS=		_RUST_BUILD_WASM=true
+WASM_VARS=		_RUST_BUILD_WASM=true \
+			_RUST_TARGETS+=wasm32-unknown-unknown
 
 # See WRKSRC/src/stage0.txt for the date and version values.
 BOOTSTRAPS_DATE?=		2020-02-29
@@ -71,6 +72,7 @@ CARGO_VENDOR_DIR?=		${WRKSRC}/vendor
 _RUST_ARCH_amd64=	x86_64
 _RUST_ARCH_i386=	i686
 _RUST_TARGET=		${_RUST_ARCH_${ARCH}:U${ARCH}}-unknown-${OPSYS:tl}
+_RUST_TARGETS=		${_RUST_TARGET}
 
 _RUSTC_BOOTSTRAP=	${BOOTSTRAPS_DATE_${ARCH}:U${BOOTSTRAPS_DATE}}/rustc-${RUST_BOOTSTRAP_VERSION_${ARCH}:U${RUST_BOOTSTRAP_VERSION}}-${_RUST_TARGET}
 _RUST_STD_BOOTSTRAP=	${BOOTSTRAPS_DATE_${ARCH}:U${BOOTSTRAPS_DATE}}/rust-std-${RUST_BOOTSTRAP_VERSION_${ARCH}:U${RUST_BOOTSTRAP_VERSION}}-${_RUST_TARGET}
@@ -144,9 +146,7 @@ do-configure:
 	@${ECHO_CMD} 'python="${PYTHON_CMD}"' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'docs=${_RUST_BUILD_DOCS}' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'verbose=2' >> ${WRKSRC}/config.toml
-.if ${PORT_OPTIONS:MWASM}
-	@${ECHO_CMD} 'target=["${_RUST_TARGET}","wasm32-unknown-unknown"]' >> ${WRKSRC}/config.toml
-.endif
+	@${ECHO_CMD} 'target=[${_RUST_TARGETS:@.target.@"${.target.}"@:ts,}]' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} '[install]' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'prefix="${PREFIX}"' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'sysconfdir="${PREFIX}/etc"' >> ${WRKSRC}/config.toml
@@ -161,7 +161,9 @@ do-configure:
 .else
 	@${ECHO_CMD} 'ccache=false' >> ${WRKSRC}/config.toml
 .endif
-	@${ECHO_CMD} '[target.${_RUST_TARGET}]' >> ${WRKSRC}/config.toml
+.for _target in ${_RUST_TARGETS}
+	@${ECHO_CMD} '[target.${_target}]' >> ${WRKSRC}/config.toml
+	@${ECHO_CMD} 'ar="${AR}"' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'cc="${CC}"' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'cxx="${CXX}"' >> ${WRKSRC}/config.toml
 .if ${ARCH} == armv6
@@ -172,6 +174,7 @@ do-configure:
 .else
 	@${ECHO_CMD} 'linker="${CC}"' >> ${WRKSRC}/config.toml
 .endif
+.endfor
 	@${ECHO_CMD} '[dist]' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'src-tarball=false' >> ${WRKSRC}/config.toml
 	@${REINPLACE_CMD} 's,%CC%,${CC},g' \
