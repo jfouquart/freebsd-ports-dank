@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-maps
-PORTVERSION=	3.31.4
+PORTVERSION=	3.36.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -36,7 +36,6 @@ USES=		desktop-file-utils gettext gl gnome meson \
 USE_GNOME=	cairo gtk30 intltool libxml2
 USE_GL=		egl
 USE_LDCONFIG=	yes
-USE_XORG=	x11 xcomposite xdamage xext xfixes xi xrandr
 INSTALLS_ICONS=	yes
 
 GLIB_SCHEMAS=	org.gnome.Maps.gschema.xml
