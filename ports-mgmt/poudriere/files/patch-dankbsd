@@ -1,0 +1,17 @@
+--- src/share/poudriere/common.sh.orig	2020-04-10 18:42:02.935984000 +0300
++++ src/share/poudriere/common.sh	2020-04-12 23:51:08.820031000 +0300
+@@ -2539,7 +2539,13 @@
+ 		PORTBUILD_UID=${portbuild_uid}
+ 		PORTBUILD_GID=$(injail id -g ${PORTBUILD_USER})
+ 	fi
+-	injail service ldconfig start >/dev/null || \
++
++	# injail service ldconfig start >/dev/null || \
++	#     err 1 "Failed to set ldconfig paths."
++
++	mkdir -p "${tomnt}/usr/local/etc/runit/core-services/"
++	cp -v /usr/local/etc/runit/core-services/41-ldconfig.sh "${tomnt}/usr/local/etc/runit/core-services/"
++	injail sh /usr/local/etc/runit/core-services/41-ldconfig.sh >/dev/null || \
+ 	    err 1 "Failed to set ldconfig paths."
+ 
+ 	setup_ccache "${tomnt}"
