@@ -18,7 +18,7 @@ LIB_DEPENDS=	libsoup-2.4.so:devel/libsoup \
 		libjson-glib-1.0.so:devel/json-glib \
 		libp11-kit.so:security/p11-kit \
 		libgoa-1.0.so:net/gnome-online-accounts \
-		libgcr-3.so:security/gcr \
+		libgcr-base-3.so:security/gcr \
 		liboauth.so:net/liboauth
 
 USES=		gettext gmake gnome libtool localbase pathfix pkgconfig tar:xz

@@ -1,0 +1,16 @@
+--- gcr/meson.build.orig	2020-04-15 18:06:50 UTC
++++ gcr/meson.build
+@@ -125,12 +125,12 @@ gcr_oids = custom_target('gcr-oids',
+ )
+ 
+ gcr_base_sources = [
++  gcr_oids,
+   gcr_base_private_sources,
+   gcr_base_public_sources,
+   gcr_enums_gen,
+   gcr_marshal_gen,
+   gcr_dbus_gen,
+-  gcr_oids,
+ ]
+ 
+ gcr_base_deps = [

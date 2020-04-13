@@ -27,7 +27,7 @@ LIB_DEPENDS=	libstartup-notification-1.so:x11/startup-notification \
 		libpolkit-agent-1.so:sysutils/polkit \
 		libp11-kit.so:security/p11-kit \
 		libical.so:devel/libical \
-		libgcr-3.so:security/gcr \
+		libgcr-base-3.so:security/gcr \
 		libicuuc.so:devel/icu \
 		libpulse.so:audio/pulseaudio \
 		libcroco-0.6.so:textproc/libcroco \

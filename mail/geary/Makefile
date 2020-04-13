@@ -24,7 +24,7 @@ LIB_DEPENDS=	libgmime-3.0.so:mail/gmime30 \
 		libgoa-1.0.so:net/gnome-online-accounts \
 		libytnef.so:converters/ytnef \
 		libgee-0.8.so:devel/libgee \
-		libgcr-3.so:security/gcr \
+		libgcr-base-3.so:security/gcr \
 		libsecret-1.so:security/libsecret \
 		libfolks.so:net-im/folks \
 		libpeas-1.0.so:devel/libpeas \

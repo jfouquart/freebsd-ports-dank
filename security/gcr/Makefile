@@ -2,31 +2,36 @@
 # $FreeBSD$
 
 PORTNAME=	gcr
-PORTVERSION=	3.28.0
+PORTVERSION=	3.36.0
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
+
+PATCH_SITES=	https://gitlab.gnome.org/GNOME/${PORTNAME}/commit/
+PATCHFILES+=	0031224c8a2f017f76040bf007707287902e2a94.patch:-p1 # https://gitlab.gnome.org/GNOME/gcr/-/merge_requests/54
+PATCHFILES+=	8122da3ec6c2c330a22631fbf5675d42b09085b7.patch:-p1 # https://gitlab.gnome.org/GNOME/gcr/-/merge_requests/54
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library for bits of crypto UI and parsing
 
+LICENSE=	GPLv2
 BUILD_DEPENDS=	gtk-doc>0:textproc/gtk-doc \
+		gpg2:security/gnupg \
 		vapigen:lang/vala
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libgpg-error.so:security/libgpg-error \
 		libp11-kit.so:security/p11-kit \
 		libgcrypt.so:security/libgcrypt
 
+BINARY_ALIAS=	python3=${PYTHON_CMD}
+
 CONFLICTS=	gnome-keyring-2.[0-9]*
 PORTSCOUT=	limitw:1,even
 
 USE_GNOME=	cairo gtk30 intlhack introspection:build
-USES=		desktop-file-utils gettext gmake gnome libtool pathfix \
-		pkgconfig shared-mime-info tar:xz
-GNU_CONFIGURE=	yes
+USES=		desktop-file-utils gettext gnome libtool meson \
+		pkgconfig python:3.5+ shared-mime-info tar:xz
 USE_LDCONFIG=	yes
-CONFIGURE_ARGS=	--disable-valgrind
 INSTALLS_ICONS=	yes
-INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.gnome.crypto.pgp.gschema.xml
 

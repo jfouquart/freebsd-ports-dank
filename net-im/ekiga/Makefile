@@ -122,7 +122,7 @@ PLIST_SUB+=	GCONF=""
 
 .if ${PORT_OPTIONS:MEVOLUTION}
 USE_GNOME+=	evolutiondataserver3
-LIB_DEPENDS+=	libgcr-3.so:security/gcr
+LIB_DEPENDS+=	libgcr-base-3.so:security/gcr
 CONFIGURE_ARGS+=--enable-eds
 PLIST_SUB+=	EVOLUTION=""
 WITH_PLUGINS=	1

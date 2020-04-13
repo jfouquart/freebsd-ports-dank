@@ -20,7 +20,7 @@ LIB_DEPENDS=	libwebkit2gtk-4.0.so:www/webkit2-gtk3 \
 		libsoup-2.4.so:devel/libsoup \
 		libsoup-gnome-2.4.so:devel/libsoup-gnome \
 		libsoup-2.4.so:devel/libsoup \
-		libgcr-3.so:security/gcr \
+		libgcr-base-3.so:security/gcr \
 		libstartup-notification-1.so:x11/startup-notification \
 		libjson-glib-1.0.so:devel/json-glib \
 		libicuuc.so:devel/icu \

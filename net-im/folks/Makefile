@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	vapigen:lang/vala \
 		${LOCALBASE}/bin/egrep:textproc/gnugrep
 LIB_DEPENDS=	libgee-0.8.so:devel/libgee \
-		libgcr-3.so:security/gcr \
+		libgcr-base-3.so:security/gcr \
 		libtelepathy-glib.so:net-im/telepathy-glib \
 		libnspr4.so:devel/nspr \
 		libssl3.so:security/nss \

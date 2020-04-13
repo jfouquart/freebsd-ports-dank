@@ -38,7 +38,7 @@ LIB_DEPENDS=	libenchant.so:textproc/enchant \
 		libtelepathy-logger.so:net-im/telepathy-logger \
 		libfolks-telepathy.so:net-im/folks \
 		libnotify.so:devel/libnotify \
-		libgcr-3.so:security/gcr \
+		libgcr-base-3.so:security/gcr \
 		libcanberra.so:audio/libcanberra \
 		libcanberra-gtk3.so:audio/libcanberra-gtk3 \
 		libclutter-gtk-1.0.so:graphics/clutter-gtk3 \
