@@ -30,7 +30,7 @@ RUN_DEPENDS=	eog:graphics/eog
 PORTSCOUT=	limitw:1,even
 
 USE_GNOME=	cairo gdkpixbuf2 gtk30 introspection libxml2
-USES=		gettext gl gmake gnome libtool localbase pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libtool localbase pathfix pkgconfig tar:xz
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 
@@ -45,8 +45,6 @@ CHAMPLAIN_LIB_DEPENDS=	libcogl.so:graphics/cogl \
 			libclutter-1.0.so:graphics/clutter \
 			libclutter-gtk-1.0.so:graphics/clutter-gtk3 \
 			libchamplain-0.12.so:graphics/libchamplain
-CHAMPLAIN_USES=		gl xorg
-CHAMPLAIN_USE=		GL=egl XORG=x11,xcomposite,xdamage,xext,xfixes,xi,xrandr
 
 PYTHON_CONFIGURE_ENABLE=python
 PYTHON_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}libpeas>=0:devel/py-libpeas@${PY_FLAVOR}
