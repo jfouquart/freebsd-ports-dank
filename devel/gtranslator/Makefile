@@ -2,10 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	gtranslator
-PORTVERSION=	2.91.7
-PORTREVISION=	2
+PORTVERSION=	3.32.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME application for creating GNU gettext translation files
@@ -16,30 +16,21 @@ BUILD_DEPENDS=	iso-codes>=0:misc/iso-codes \
 		itstool:textproc/itstool \
 		gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas
 LIB_DEPENDS=	libpeas-1.0.so:devel/libpeas \
-		libgdl-3.so:x11-toolkits/gdl \
+		libgettextpo.so:devel/gettext-tools \
+		libgspell-1.so:textproc/gspell \
 		libjson-glib-1.0.so:devel/json-glib
 RUN_DEPENDS=	iso-codes>=0:misc/iso-codes \
 		gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas
 
-USE_GNOME=	intlhack gnomeprefix gtk30 libgda5 gtksourceview3 libxml2 \
-		introspection:build
-USES=		desktop-file-utils gettext gmake gnome libtool pathfix \
-		pkgconfig python tar:xz
-USE_PYTHON=	py3kplist
-GNU_CONFIGURE=	yes
+USES=		desktop-file-utils gettext gnome localbase:ldflags meson \
+		pkgconfig python:3.5+,build tar:xz
+USE_GNOME=	cairo gtk30 libgda5 gtksourceview4 libxml2 introspection
+
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
-CONFIGURE_ARGS=	--disable-debug \
-		--with-gda=5.0 \
-		--without-dictionary \
-		--enable-compile-warnings=no
-INSTALL_TARGET=	install-strip
+BINARY_ALIAS=	python3=${PYTHON_VERSION}
 
-GLIB_SCHEMAS=	org.gnome.gtranslator.gschema.xml \
-		org.gnome.gtranslator.plugins.codeview.gschema.xml \
-		org.gnome.gtranslator.plugins.open-tran.gschema.xml \
+GLIB_SCHEMAS=	org.gnome.Gtranslator.gschema.xml \
 		org.gnome.gtranslator.plugins.translation-memory.gschema.xml
 
 .include <bsd.port.mk>

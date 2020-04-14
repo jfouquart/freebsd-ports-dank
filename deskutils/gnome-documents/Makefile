@@ -2,14 +2,13 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-documents
-PORTVERSION=	3.28.2
-PORTREVISION=	2
+PORTVERSION=	3.32.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Document manager application designed to work with GNOME 3
+COMMENT=	Document manager application designed to work with GNOME
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -38,7 +37,6 @@ USE_LDCONFIG=	yes
 BINARY_ALIAS=	python3=${PYTHON_VERSION}
 
 GLIB_SCHEMAS=	org.gnome.Documents.enums.xml \
-		org.gnome.books.gschema.xml \
 		org.gnome.documents.gschema.xml
 
 .include <bsd.port.mk>

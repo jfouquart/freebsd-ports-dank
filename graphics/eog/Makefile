@@ -2,11 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	eog
-PORTVERSION=	3.28.4
-PORTREVISION=	2
+PORTVERSION=	3.32.0
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Eye Of Gnome image viewer
@@ -46,13 +45,5 @@ EXIF_LIB_DEPENDS=	libexif.so:graphics/libexif
 EXEMPI_DESC=	XMP support
 EXEMPI_MESON_TRUE=	xmp
 EXEMPI_LIB_DEPENDS=	libexempi.so:textproc/exempi
-
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MEXIF} != "" || ${PORT_OPTIONS:MEXEMPI} != ""
-PLIST_SUB+=	EXIFEXEMPI=""
-.else
-PLIST_SUB+=	EXIFEXEMPI="@comment "
-.endif
 
 .include <bsd.port.mk>

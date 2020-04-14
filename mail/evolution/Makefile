@@ -2,11 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	evolution
-PORTVERSION=	3.28.5
-PORTREVISION=	5
+PORTVERSION=	3.32.5
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Integrated mail, calendar and address book distributed suite
@@ -53,6 +52,7 @@ INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 CMAKE_ARGS=	-DENABLE_TEXT_HIGHLIGHT=YES \
 		-DWITH_ENCHANT_VERSION=2 \
+		-DMAN_INSTALL_DIR=${PREFIX}/man \
 		-DVERSION_COMMENT="FreeBSD GNOME Team"
 
 GLIB_SCHEMAS=	org.gnome.evolution.addressbook.gschema.xml \

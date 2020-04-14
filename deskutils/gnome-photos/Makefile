@@ -2,14 +2,13 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-photos
-PORTVERSION=	3.28.1
-PORTREVISION=	3
+PORTVERSION=	3.32.1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Photo application for GNOME 3
+COMMENT=	Photo application for GNOME
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -36,15 +35,18 @@ LIB_DEPENDS=	libexempi.so:textproc/exempi \
 		libgdata.so:devel/libgdata
 RUN_DEPENDS=	geoclue>=0:net/geoclue
 
-PORTSCOUT=	limitw:1,even
+USES=		compiler:c11 gettext gnome jpeg \
+		localbase meson pkgconfig python:3.4+,build tar:xz
 
-USES=		compiler:c11 gettext gmake gnome jpeg libtool \
-		localbase pathfix pkgconfig tar:xz
 USE_GNOME=	cairo gnomedesktop3 gtk30 libxml2
 USE_LDCONFIG=	yes
-GNU_CONFIGURE=	yes
+PORTSCOUT=	limitw:1,even
 INSTALLS_ICONS=	yes
-INSTALL_TARGET=	install-strip
+
+# wut, otherwise git is needed ..., maybe this is fixed for stable releases
+MESON_BUILDTYPE=	plain
+
+BINARY_ALIAS=	python3=${PYTHON_VERSION}
 
 GLIB_SCHEMAS=	org.gnome.photos.gschema.xml
 

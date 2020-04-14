@@ -2,11 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-shell
-PORTVERSION=	3.28.3
-PORTREVISION=	6
+PORTVERSION=	3.32.2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Next generation GNOME desktop shell
@@ -19,7 +18,7 @@ BUILD_DEPENDS=	docbook-xsl>=0:textproc/docbook-xsl \
 		gnome-control-center:sysutils/gnome-control-center
 LIB_DEPENDS=	libstartup-notification-1.so:x11/startup-notification \
 		libdrm.so:graphics/libdrm \
-		libmutter-2.so:x11-wm/mutter \
+		libmutter-4.so:x11-wm/mutter \
 		libatk-bridge-2.0.so:accessibility/at-spi2-atk \
 		libsoup-2.4.so:devel/libsoup \
 		libjson-glib-1.0.so:devel/json-glib \
@@ -37,11 +36,9 @@ LIB_DEPENDS=	libstartup-notification-1.so:x11/startup-notification \
 		libgjs.so:lang/gjs
 RUN_DEPENDS=	gnome-control-center:sysutils/gnome-control-center
 
-PORTSCOUT=	limitw:1,even
-
 USES=		compiler:c11 cpe gettext gl gnome libtool localbase meson \
-		pathfix perl5 pkgconfig python:3.4+ shebangfix tar:xz \
-		webplugin:native xorg
+		perl5 pkgconfig python:3.4+ shebangfix tar:xz xorg
+#webplugin:native
 USE_GNOME=	cairo evolutiondataserver3 gdkpixbuf2 introspection \
 		libxslt:build libxml2
 USE_XORG=	x11 xcomposite xdamage xext xfixes xi xrandr xtst
@@ -49,18 +46,16 @@ USE_GL=		egl gbm
 USE_GSTREAMER1=	yes
 USE_PERL5=	build
 USE_LDCONFIG=	yes
+PORTSCOUT=	limitw:1,even
 SHEBANG_FILES=	src/gnome-shell-perf-tool.in \
 		src/gnome-shell-extension-tool.in
-
-WEBPLUGIN_NAME=	libgnome-shell-browser-plugin.so
-WEBPLUGIN_DIR=	${PREFIX}/lib/mozilla/plugins/
-WEBPLUGIN_FILES=libgnome-shell-browser-plugin.so
 
 MESON_ARGS=	-Dsystemd=false \
 		-Dnetworkmanager=false
 CPE_VENDOR=	gnome
 
-GLIB_SCHEMAS=	org.gnome.shell.gschema.xml
+GLIB_SCHEMAS=	00_org.gnome.shell.gschema.override \
+		org.gnome.shell.gschema.xml
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|python3|${PYTHON_VERSION}|g' \

@@ -2,11 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-session
-PORTVERSION=	3.28.1
-PORTREVISION=	3
+PORTVERSION=	3.32.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Session component for the GNOME 3 desktop
@@ -21,10 +20,8 @@ LIB_DEPENDS=	libjson-glib-1.0.so:devel/json-glib \
 RUN_DEPENDS=	${LOCALBASE}/sbin/console-kit-daemon:sysutils/consolekit2 \
 		dbus-daemon:devel/dbus
 
-PORTSCOUT=	limitw:1,even
-
-USES=		compiler:c11 gettext gl gnome localbase:ldflags meson \
-		pkgconfig python:3.6+,build tar:xz xorg
+USES=		compiler:c11 gettext gl gnome localbase:ldflags meson pkgconfig \
+		python:3.6+,build tar:xz xorg
 USE_GNOME=	gnomedesktop3 gtk30
 USE_XORG=	ice sm x11 xcomposite xtrans
 USE_GL=		egl gl glesv2
@@ -32,7 +29,9 @@ INSTALLS_ICONS=	yes
 MESON_ARGS=	-Dsystemd=false \
 		-Dsystemd_journal=false \
 		-Dconsolekit=true
+
 BINARY_ALIAS=	python3=${PYTHON_VERSION}
+PORTSCOUT=	limitw:1,even
 
 GLIB_SCHEMAS=	org.gnome.SessionManager.gschema.xml
 

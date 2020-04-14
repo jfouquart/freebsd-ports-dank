@@ -1,0 +1,65 @@
+CHANGES:
+gnome-shell switched ES6 classes, this breaks _all_ plugins
+rename gnome-games -> meta
+gnome-system-log got retired, upstream had hard dependancy on systemd
+
+gnome-control-center now has device name and OS name fields filled in.
+There is still a issue with the hashtable....
+
+Vino, vinagre and ekiga where dropped from the gnome3 meta port, they aren't really maintained upstream atm.
+
+Drop obsolete usage of gnome-icon-theme and -symbolic.
+
+gnome-books was split off from gnome-documents
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+=-=- GNOME 3.32 support -=-=
+gnome-shell-extension-dash-to-dock
+=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+spidermonkey60 needs more work + i386 fixes
+pango: make patches for xft split and upstream
+gsd: fix build with gudev (includes not passed around)
+evince: upstream patch
+mutter: sort out options and meson args, wayland support and such
+shell: what to do with the browser plugin..
+pygobject3*: switch to default python3.
+gnome-photos: git workaround and mesonbuild type?
++ somewhere ....
+file-roller: with password protected zips
+
+find out where gnome-icon-theme (3.12) is used and axe it
+find out where nome-icon-theme-extras (3.12) is used and axe it
+find out where gconf2 is used in GNOME 3 and see if it axeable
+
+figure out what to do with vinagre and vino (former still works?, latter drop from meta) drop ekiga if it isn't already
+
+Update gnome-shell extensions + bump gnome-shell requirements
+
+- gnome-builder patches upstream
+- epiphany
+
+files from evolution moved to eds
+
+
+# rework the following ports: (patches upstream)
+mutter
+shell..??
+settings-daemon
+atomix, gnome-tetravex
+seahorse
+gedit
+
+rework libgda5 ports (prework for libgda6)
+
+is brasero still needed?
+
+/// FUTURE
+
+Can't remove gconf2 from the meta port just yet.
+
+gnome-usage disk uage is broken
+
+add amtk to stage-qa script (USE_GNOME)
+libdazzle etc too?

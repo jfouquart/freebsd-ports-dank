@@ -322,7 +322,7 @@
     SUBDIR += gnarr
     SUBDIR += gnome-2048
     SUBDIR += gnome-chess
-    SUBDIR += gnome-games
+    SUBDIR += gnome-games-meta
     SUBDIR += gnome-klotski
     SUBDIR += gnome-mahjongg
     SUBDIR += gnome-mines
@@ -478,6 +478,7 @@
     SUBDIR += libkmahjongg
     SUBDIR += liblcf
     SUBDIR += libmaitretarot
+    SUBDIR += libmanette
     SUBDIR += libmt_client
     SUBDIR += libshhcards
     SUBDIR += libtmcg

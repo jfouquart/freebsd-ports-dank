@@ -28,7 +28,7 @@ USE_GNOME=	glib20
 BINARY_ALIAS=	python3=${PYTHON_VERSION}
 
 # While this ports supports both gnutls and openssl. Base (default for USES=ssl)
-# doesn't have a pkgconfig file. And Meson doesn't have pkg-config overwrites
+# doesn't have a pkgconfig file. And Meson doesn't have pkg-config overwrites 
 # like autoconf has.
 
 #OPTIONS_SUB=	yes

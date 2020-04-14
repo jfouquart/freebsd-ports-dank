@@ -13,43 +13,36 @@ Date: Thu, 24 Apr 2014 17:55:56 +0200
 Subject: loginManager: Kill ConsoleKit support
 
 
---- js/misc/loginManager.js.orig	2018-04-05 22:23:32.831383000 +0200
-+++ js/misc/loginManager.js	2018-04-05 22:30:34.647201000 +0200
-@@ -40,15 +40,38 @@ const SystemdLoginSessionIface = '<node> \
- <signal name="Lock" /> \
- <signal name="Unlock" /> \
- <property name="Active" type="b" access="read" /> \
--<method name="SetLockedHint"> \
--    <arg type="b" direction="in"/> \
--</method> \
- </interface> \
- </node>';
- 
- const SystemdLoginManager = Gio.DBusProxy.makeProxyWrapper(SystemdLoginManagerIface);
+--- js/misc/loginManager.js.orig	2019-03-11 23:04:59 UTC
++++ js/misc/loginManager.js
+@@ -13,6 +13,34 @@ const SystemdLoginManager = Gio.DBusProxy.makeProxyWra
  const SystemdLoginSession = Gio.DBusProxy.makeProxyWrapper(SystemdLoginSessionIface);
+ const SystemdLoginUser = Gio.DBusProxy.makeProxyWrapper(SystemdLoginUserIface);
  
-+const ConsoleKitManagerIface = '<node> \
-+<interface name="org.freedesktop.ConsoleKit.Manager"> \
-+<method name="CanRestart"> \
-+    <arg type="b" direction="out"/> \
-+</method> \
-+<method name="CanStop"> \
-+    <arg type="b" direction="out"/> \
-+</method> \
-+<method name="Restart" /> \
-+<method name="Stop" /> \
-+<method name="GetCurrentSession"> \
-+    <arg type="o" direction="out" /> \
-+</method> \
-+</interface> \
-+</node>';
++const ConsoleKitManagerIface = `
++<node>
++<interface name="org.freedesktop.ConsoleKit.Manager">
++<method name="CanRestart">
++    <arg type="b" direction="out"/>
++</method>
++<method name="CanStop">
++    <arg type="b" direction="out"/>
++</method>
++<method name="Restart" />
++<method name="Stop" />
++<method name="GetCurrentSession">
++    <arg type="o" direction="out" />
++</method>
++</interface>
++</node>`;
 +
-+const ConsoleKitSessionIface = '<node> \
-+<interface name="org.freedesktop.ConsoleKit.Session"> \
-+<signal name="Lock" /> \
-+<signal name="Unlock" /> \
-+</interface> \
-+</node>';
++const ConsoleKitSessionIface = `
++<node>
++<interface name="org.freedesktop.ConsoleKit.Session">
++<signal name="Lock" />
++<signal name="Unlock" />
++</interface>
++</node>`;
 +
 +const ConsoleKitSession = Gio.DBusProxy.makeProxyWrapper(ConsoleKitSessionIface);
 +const ConsoleKitManager = Gio.DBusProxy.makeProxyWrapper(ConsoleKitManagerIface);
@@ -57,7 +50,7 @@ Subject: loginManager: Kill ConsoleKit support
  function haveSystemd() {
      return GLib.access("/run/systemd/seats", 0) >= 0;
  }
-@@ -78,7 +101,7 @@ function canLock() {
+@@ -42,7 +70,7 @@ function canLock() {
                                                 -1, null);
  
          let version = result.deep_unpack()[0].deep_unpack();
@@ -66,7 +59,7 @@ Subject: loginManager: Kill ConsoleKit support
      } catch(e) {
          return false;
      }
-@@ -96,7 +119,7 @@ function getLoginManager() {
+@@ -60,7 +88,7 @@ function getLoginManager() {
          if (haveSystemd())
              _loginManager = new LoginManagerSystemd();
          else
@@ -75,9 +68,9 @@ Subject: loginManager: Kill ConsoleKit support
      }
  
      return _loginManager;
-@@ -113,6 +136,9 @@ var LoginManagerSystemd = new Lang.Class({
+@@ -78,6 +106,9 @@ var LoginManagerSystemd = class {
                                    this._prepareForSleep.bind(this));
-     },
+     }
  
 +    // Having this function is a bit of a hack since the Systemd and ConsoleKit
 +    // session objects have different interfaces - but in both cases there are
@@ -85,20 +78,17 @@ Subject: loginManager: Kill ConsoleKit support
      getCurrentSessionProxy(callback) {
          if (this._currentSession) {
              callback (this._currentSession);
-@@ -188,13 +214,35 @@ var LoginManagerSystemd = new Lang.Class({
- });
+@@ -176,11 +207,38 @@ var LoginManagerSystemd = class {
+ };
  Signals.addSignalMethods(LoginManagerSystemd.prototype);
  
--var LoginManagerDummy = new Lang.Class({
--    Name: 'LoginManagerDummy',
-+const LoginManagerConsoleKit = new Lang.Class({
-+    Name: 'LoginManagerConsoleKit',
- 
-+    _init: function() {
+-var LoginManagerDummy = class {
++var LoginManagerConsoleKit = class {
++    constructor() {
 +        this._proxy = new ConsoleKitManager(Gio.DBus.system,
 +                                            'org.freedesktop.ConsoleKit',
 +                                            '/org/freedesktop/ConsoleKit/Manager');
-+    },
++    }
 +
 +    // Having this function is a bit of a hack since the Systemd and ConsoleKit
 +    // session objects have different interfaces - but in both cases there are
@@ -112,8 +102,13 @@ Subject: loginManager: Kill ConsoleKit support
 +            return;
 +        }
 +
-+        this._proxy.GetCurrentSessionRemote(Lang.bind(this,
-+            function(result, error) {
++        let sessionId = GLib.getenv('XDG_SESSION_ID')
++        if (!sessionId) {
++            log('Unset XDG_SESSION_ID, getCurrentSessionProxy() called outside a user session.');
++            return;
++        }
++
++        this._proxy.GetSessionRemote(sessionId, (result, error) => {
 +                if (error) {
 +                    logError(error, 'Could not get a proxy for the current session');
 +                } else {
@@ -122,13 +117,13 @@ Subject: loginManager: Kill ConsoleKit support
 +                                                                 result[0]);
 +                    callback(this._currentSession);
 +                }
-+            }));
-     },
++            });
+     }
  
      canSuspend(asyncCallback) {
-@@ -214,4 +262,4 @@ var LoginManagerDummy = new Lang.Class({
+@@ -200,4 +258,4 @@ var LoginManagerDummy = class {
          callback(null);
      }
- });
+ };
 -Signals.addSignalMethods(LoginManagerDummy.prototype);
 +Signals.addSignalMethods(LoginManagerConsoleKit.prototype);

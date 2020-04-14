@@ -2,10 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-tweaks
-PORTVERSION=	3.28.1
-PORTREVISION=	1
+PORTVERSION=	3.32.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Allows to tweak some hidden settings in GNOME3
@@ -17,7 +17,8 @@ LICENSE_FILE_CC0-1.0=	${WRKSRC}/LICENSES/CC0-1.0
 
 BUILD_DEPENDS=	gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas
 RUN_DEPENDS=	gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas \
-		gnome-shell>=3.28:x11/gnome-shell
+		freedesktop-sound-theme>=0:audio/freedesktop-sound-theme \
+		gnome-shell>=3.31.90:x11/gnome-shell
 
 PORTSCOUT=	limitw:1,even
 

@@ -2,9 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-contacts
-PORTVERSION=	3.28.2
+PORTVERSION=	3.32
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Contacts manager for gnome
@@ -21,6 +22,7 @@ LIB_DEPENDS=	libchamplain-0.12.so:graphics/libchamplain \
 		libexpat.so:textproc/expat2 \
 		libfolks.so:net-im/folks \
 		libgee-0.8.so:devel/libgee \
+		libhandy-0.0.so:x11-toolkits/libhandy \
 		libgeocode-glib.so:net/geocode-glib \
 		libgoa-1.0.so:net/gnome-online-accounts \
 		libgstreamer-1.0.so:multimedia/gstreamer1 \
@@ -33,15 +35,18 @@ LIB_DEPENDS=	libchamplain-0.12.so:graphics/libchamplain \
 
 PORTSCOUT=	limitw:1,even
 
+USES=		gettext gl gnome localbase meson perl5 pkgconfig \
+		python:3.4+,build shebangfix sqlite tar:xz xorg
 USE_GL=		egl
 USE_GNOME=	cairo evolutiondataserver3 gdkpixbuf2 gnomedesktop3 gtk30 \
 		intlhack introspection:build
 USE_XORG=	x11 xcomposite xdamage xext xfixes xi xrandr
-USES=		gettext gl gnome localbase meson perl5 pkgconfig \
-		python:3.4+,build shebangfix sqlite tar:xz xorg
-SHEBANG_FILES=	meson_post_install.py
+
+#SHEBANG_FILES=	meson_post_install.py
 
 GLIB_SCHEMAS=	org.gnome.Contacts.gschema.xml
+
+BINARY_ALIAS=	python3=${PYTHON_VERSION}
 
 OPTIONS_SUB=	yes
 OPTIONS_DEFINE=	MANPAGES
@@ -52,13 +57,13 @@ OPTIONS_DEFINE_amd64=	CHEESE
 OPTIONS_DEFAULT_i386=	CHEESE
 OPTIONS_DEFAULT_amd64=	CHEESE
 
-MANPAGES_MESON_TRUE=	with-manpage
+MANPAGES_MESON_TRUE=	manpage
 MANPAGES_USE=		GNOME=libxslt:build
 MANPAGES_BUILD_DEPENDS=	docbook-xml>=0:textproc/docbook-xml \
 			docbook-xsl>=0:textproc/docbook-xsl
 
 CHEESE_DESC=		Cheese webcam support
-CHEESE_MESON_YES=	with-cheese
+CHEESE_MESON_TRUE=	cheese
 CHEESE_LIB_DEPENDS=	libcheese-gtk.so:multimedia/cheese
 
 .include <bsd.port.mk>

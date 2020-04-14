@@ -85,17 +85,20 @@ _USE_GNOME_ALL+= atk cairo \
 		vte
 
 # GNOME 3 components
-_USE_GNOME_ALL+=dconf evolutiondataserver3 gnomecontrolcenter3 gnomedesktop3 \
+_USE_GNOME_ALL+=amtk dconf evolutiondataserver3 gnomecontrolcenter3 gnomedesktop3 \
 		gnomemenus3 gsound gtk30 gtkhtml4 gtksourceview3 \
 		gtksourceview4 libgda5 \
 		libgda5-ui libwnck3 metacity nautilus3 \
 		pygobject3 vte3
 
+# GTK/GNOME 4 components
+_USE_GNOME_ALL+=gtk40
+
 # C++ bindings
 _USE_GNOME_ALL+=atkmm cairomm cairomm116 gconfmm26 glibmm gtkmm20 gtkmm24 \
 		gtkmm30 gtksourceviewmm3 libgdamm5 \
 		libgtksourceviewmm libxml++26 libsigc++12 libsigc++20 \
-		pangomm
+		libsigc++30 pangomm
 
 # glib-mkenums often fails with C locale
 # https://gitlab.gnome.org/GNOME/glib/issues/1430
@@ -117,6 +120,8 @@ gnomeprefix_CONFIGURE_ARGS=--localstatedir=${GNOME_LOCALSTATEDIR} \
 			   --with-html-dir=${GNOME_HTML_DIR} \
 			   --disable-gtk-doc \
 			   --with-gconf-source=${GCONF_CONFIG_SOURCE}
+
+amtk_LIB_DEPENDS=	libamtk-5.so:x11-toolkits/amtk
 
 atkmm_LIB_DEPENDS=	libatkmm-1.6.so:accessibility/atkmm
 atkmm_USE_GNOME_IMPL=	glibmm atk
@@ -164,6 +169,8 @@ libsigc++12_LIB_DEPENDS=	libsigc-1.2.so:devel/libsigc++12
 
 libsigc++20_LIB_DEPENDS=	libsigc-2.0.so:devel/libsigc++20
 
+libsigc++30_LIB_DEPENDS=	libsigc-3.0.so:devel/libsigc++30
+
 pangomm_LIB_DEPENDS=	libpangomm-1.4.so:x11-toolkits/pangomm
 pangomm_USE_GNOME_IMPL=	pango glibmm cairomm
 
@@ -201,6 +208,10 @@ GTK2_VERSION=		2.10.0
 gtk30_LIB_DEPENDS=	libgtk-3.so:x11-toolkits/gtk30
 gtk30_USE_GNOME_IMPL=	atk pango
 GTK3_VERSION=		3.0.0
+
+gtk40_BUILD_DEPENDS=	gtk4>=0:x11-toolkits/gtk40
+gtk40_LIB_DEPENDS=	libgtk-4.so:x11-toolkits/gtk40
+gtk40_RUN_DEPENDS=	gtk4>=0:x11-toolkits/gtk40
 
 libidl_LIB_DEPENDS=	libIDL-2.so:devel/libIDL
 libidl_USE_GNOME_IMPL=	glib20

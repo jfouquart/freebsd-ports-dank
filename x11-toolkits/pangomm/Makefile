@@ -29,7 +29,6 @@ CONFIGURE_ARGS=	--disable-documentation \
 INSTALL_TARGET=	install-strip
 BINARY_WRAPPERS=	gm4
 
-PORTSCOUT=	limitw:1,even
 PLIST_SUB=	VERSION="2.4" API_VERSION="1.4"
 
 post-patch:
@@ -40,4 +39,6 @@ post-patch:
 
 .include <bsd.port.mk>
 
+.else
+PORTSCOUT=	ignore:1
 .endif

@@ -2,12 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	libgda
-PORTVERSION?=	5.2.5
-PORTREVISION?=	1
+PORTVERSION?=	5.2.9
+PORTREVISION?=	0
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX?=	5
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome
 
 MAINTAINER?=	gnome@FreeBSD.org
 COMMENT?=	Provides uniform access to different kinds of data sources
@@ -23,11 +23,13 @@ SHEBANG_FILES=	libgda-report/RML/*/*.py
 
 .if !defined(REFERENCE_PORT)
 
-BUILD_DEPENDS=	itstool:textproc/itstool
+BUILD_DEPENDS=	itstool:textproc/itstool \
+		valac:lang/vala
 LIB_DEPENDS=	libsecret-1.so:security/libsecret \
+		libgee-0.8.so:devel/libgee \
 		libsoup-2.4.so:devel/libsoup \
 
-USES+=		gettext gmake gnome libtool localbase pathfix pkgconfig
+USES+=		gettext gmake gnome libtool localbase pathfix pkgconfig sqlite
 USE_GNOME=	glib20 libxslt intlhack introspection:build referencehack
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

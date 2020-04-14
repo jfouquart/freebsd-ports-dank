@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	itstool:textproc/itstool \
 		UCD>=11:textproc/UCD
-LIB_DEPENDS+=	libfreetype.so:print/freetype2
+LIB_DEPENDS=	libfreetype.so:print/freetype2
 
 USES=		desktop-file-utils gettext gmake gnome \
 		libtool localbase pathfix pkgconfig tar:xz
