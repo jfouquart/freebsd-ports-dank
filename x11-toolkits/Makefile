@@ -11,7 +11,6 @@
     SUBDIR += bwidget
     SUBDIR += c++-gtk-utils
     SUBDIR += ctk
-    SUBDIR += flowcanvas
     SUBDIR += fltk
     SUBDIR += fox14
     SUBDIR += fox16

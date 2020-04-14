@@ -323,6 +323,7 @@
     SUBDIR += gtkam
     SUBDIR += gts
     SUBDIR += guetzli
+    SUBDIR += guile-cairo
     SUBDIR += guilib
     SUBDIR += gwenview
     SUBDIR += hdr_tools
@@ -342,6 +343,7 @@
     SUBDIR += ida
     SUBDIR += iec16022
     SUBDIR += iiview
+    SUBDIR += ikona
     SUBDIR += ilmbase
     SUBDIR += imageindex
     SUBDIR += imageviewer
@@ -545,6 +547,7 @@
     SUBDIR += mxp
     SUBDIR += mypaint
     SUBDIR += mypaint-brushes
+    SUBDIR += mypaint-brushes2
     SUBDIR += nanosvg
     SUBDIR += netpbm
     SUBDIR += nip2
@@ -806,6 +809,7 @@
     SUBDIR += py-gizeh
     SUBDIR += py-glewpy
     SUBDIR += py-glfw
+    SUBDIR += py-glooey
     SUBDIR += py-gphoto2
     SUBDIR += py-graph-core
     SUBDIR += py-graphviz
@@ -844,6 +848,7 @@
     SUBDIR += py-pyganim
     SUBDIR += py-pygeoapi
     SUBDIR += py-pyglet
+    SUBDIR += py-pyglet150
     SUBDIR += py-pygooglechart
     SUBDIR += py-pygraphviz
     SUBDIR += py-pyinsane2
@@ -862,13 +867,14 @@
     SUBDIR += py-scikit-image
     SUBDIR += py-seqdiag
     SUBDIR += py-sorl-thumbnail
-    SUBDIR += py-soya3d
     SUBDIR += py-spectra
     SUBDIR += py-stltools
+    SUBDIR += py-svg.path
     SUBDIR += py-svgwrite
     SUBDIR += py-termtosvg
     SUBDIR += py-toyplot
     SUBDIR += py-traitsui
+    SUBDIR += py-vecrec
     SUBDIR += py-visvis
     SUBDIR += py-wand
     SUBDIR += py-webcolors
@@ -952,7 +958,6 @@
     SUBDIR += sampleicc
     SUBDIR += sane-backends
     SUBDIR += sane-epkowa
-    SUBDIR += sane-frontends
     SUBDIR += scale2x
     SUBDIR += scantailor
     SUBDIR += scr2png
@@ -998,6 +1003,7 @@
     SUBDIR += sxiv
     SUBDIR += synaesthesia
     SUBDIR += synfigstudio
+    SUBDIR += tachyon
     SUBDIR += telak
     SUBDIR += tesseract
     SUBDIR += tesseract-data
@@ -1015,6 +1021,7 @@
     SUBDIR += tkpng
     SUBDIR += togl
     SUBDIR += ttygif
+    SUBDIR += ttyplot
     SUBDIR += tumble
     SUBDIR += tweeny
     SUBDIR += ufraw

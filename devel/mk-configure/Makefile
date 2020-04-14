@@ -15,9 +15,12 @@ BUILD_DEPENDS=	${BMAKE}:devel/bmake
 RUN_DEPENDS:=	${BUILD_DEPENDS} \
 		bmkdep:devel/bmkdep
 
+MAKE_JOBS_UNSAFE=	yes
+
 BMAKE?=		${LOCALBASE}/bin/bmake
 INSTALL_TARGET=	installdirs install install-doc
 
+PORTDATA=	*
 PORTEXAMPLES=	*
 
 OPTIONS_DEFINE=	DOCS EXAMPLES

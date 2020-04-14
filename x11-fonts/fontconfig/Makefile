@@ -2,11 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	fontconfig
-PORTVERSION=	2.13.1
-PORTREVISION?=	0
+PORTVERSION=	2.13.92
+PORTREVISION?=	1
 PORTEPOCH?=	1
 CATEGORIES=	x11-fonts
-MASTER_SITES=	http://www.freedesktop.org/software/fontconfig/release/
+MASTER_SITES=	https://www.freedesktop.org/software/fontconfig/release/
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	XML-based font configuration API for X Windows
@@ -14,10 +14,11 @@ COMMENT=	XML-based font configuration API for X Windows
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		gperf tar:bzip2
+USES=		gperf tar:xz
+
+.if !defined(REFERENCE_PORT)
 
 LIB_DEPENDS=	libfreetype.so:print/freetype2 \
-		libuuid.so:misc/e2fsprogs-libuuid \
 		libexpat.so:textproc/expat2
 
 USES+=		cpe gmake libtool pathfix pkgconfig
@@ -39,8 +40,6 @@ CONFIGURE_ARGS=	--with-configdir=${PREFIX}/etc/fonts/conf.d \
 # D6155: static linked library linking added to support statically linked
 # 	 applications, e.g. x11/xforward static option
 CONFIGURE_ARGS+=	--enable-static
-# Python is not required, because fc-blanks.h is available in distfile
-CONFIGURE_ENV=	PYTHON=":"
 
 PKGINSTALL=	${WRKDIR}/pkg-install
 INSTALL_TARGET=install-strip
@@ -48,7 +47,7 @@ INSTALL_TARGET=install-strip
 PLIST_SUB=	PREFERRED_HINTING=${PREFERRED_HINTING}
 PORTDOCS=	fontconfig-user.html fontconfig-user.pdf fontconfig-user.txt
 
-OPTIONS_DEFINE=	DOCS NO_BITMAPS NLS
+OPTIONS_DEFINE=	DOCS NLS NO_BITMAPS
 OPTIONS_DEFAULT=HINTING_SLIGHT
 OPTIONS_SUB=	yes
 
@@ -86,3 +85,5 @@ post-install-DOCS-on:
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/doc/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
+
+.endif

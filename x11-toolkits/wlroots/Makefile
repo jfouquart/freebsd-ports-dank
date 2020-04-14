@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	wlroots
-DISTVERSION=	0.10.0
-PORTREVISION=	5
+DISTVERSION=	0.10.1
 CATEGORIES=	x11-toolkits
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -34,7 +33,7 @@ USE_LDCONFIG=	yes
 GH_ACCOUNT=	swaywm
 MESON_ARGS=	-Dexamples=false
 
-# XXX Drop after FreeBSD 12.0 EOL
+# XXX Drop after FreeBSD 11.3 EOL (aarch64)
 .if exists(/usr/lib/clang/8.0.0)
 # https://github.com/swaywm/wlroots/issues/1450
 LLD_UNSAFE=	yes
