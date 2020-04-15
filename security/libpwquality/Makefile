@@ -1,10 +1,10 @@
 # $FreeBSD$
 
 PORTNAME=	libpwquality
-PORTVERSION=	1.4.0
-PORTREVISION=	1
+PORTVERSION=	1.4.2
 CATEGORIES=	security
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/${PORTNAME}-${PORTVERSION}/
+LICENSE=	BSD3CLAUSE
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library for generating random passwords and quality checking
