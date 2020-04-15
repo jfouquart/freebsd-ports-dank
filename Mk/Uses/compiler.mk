@@ -112,12 +112,12 @@ ALT_COMPILER_TYPE=	gcc
 
 CHOSEN_COMPILER_TYPE=	${COMPILER_TYPE}
 
-.if ${_COMPILER_ARGS:Mopenmp}
-.if ${COMPILER_TYPE} == clang
-USE_GCC=	yes
-CHOSEN_COMPILER_TYPE=	gcc
-.endif
-.endif
+# .if ${_COMPILER_ARGS:Mopenmp}
+# .if ${COMPILER_TYPE} == clang
+# USE_GCC=	yes
+# CHOSEN_COMPILER_TYPE=	gcc
+# .endif
+# .endif
 
 .if ${_COMPILER_ARGS:Mnestedfct}
 .if ${COMPILER_TYPE} == clang
