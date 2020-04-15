@@ -18,21 +18,15 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libharfbuzz.so:print/harfbuzz \
 		libinput.so:x11/libinput \
 		libpng.so:graphics/png \
-		libxcb.so:x11/libxcb \
-		libxcb-image.so:x11/xcb-util-image \
-		libxcb-keysyms.so:x11/xcb-util-keysyms \
-		libxcb-render-util.so:x11/xcb-util-renderutil \
-		libxcb-icccm.so:x11/xcb-util-wm \
 		libxkbcommon.so:x11/libxkbcommon
 RUN_DEPENDS=	xdg-open:devel/xdg-utils \
 		${LOCALBASE}/include/vulkan/vulkan.h:devel/vulkan-headers
 
 USES=		compiler:c++11-lang gl gnome jpeg localbase qmake:no_env \
-		qt-dist:5,base xorg
-USE_GL=		gl egl
+		qt-dist:5,base
+USE_GL=		gl egl gbm
 USE_GNOME=	glib20
 USE_QT=		core dbus network qmake_build buildtools_build
-USE_XORG=	ice sm x11 xi xrender
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	-no-eglfs \
 		-no-libudev \
@@ -66,11 +60,29 @@ MORE_WRKSRCS+=	src/openglextensions
 
 QT_BINARIES=	yes
 QT_DEFINES=	ACCESSIBILITY DBUS FONTCONFIG FREETYPE GLIB \
-		IMAGEFORMAT_PNG OPENGL SHAPE XCB XKB XKBCOMMON XRENDER
+		IMAGEFORMAT_PNG OPENGL SHAPE XKB XKBCOMMON
 QT_CONFIG=	accessibility accessibility-atspi-bridge dbus \
 		fontconfig glib opengl png system-freetype \
-		system-jpeg system-png xcb xcb-glx xcb-render \
-		xcb-xlib xinput2 xlib xrender
+		system-jpeg system-png
+
+OPTIONS_DEFINE=		X11
+OPTIONS_DEFAULT=	X11
+OPTIONS_SUB=		yes
+
+X11_USES=	xorg
+X11_USE=	XORG=ice,sm,x11,xi,xrender
+X11_LIB_DEPENDS=libxcb.so:x11/libxcb \
+		libxcb-image.so:x11/xcb-util-image \
+		libxcb-keysyms.so:x11/xcb-util-keysyms \
+		libxcb-render-util.so:x11/xcb-util-renderutil \
+		libxcb-icccm.so:x11/xcb-util-wm
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MX11}
+QT_DEFINES+=	XCB XRENDER
+QT_CONFIG+=	xcb xcb-glx xcb-render xcb-xlib xinput2 xlib xrender
+.endif
 
 # Inherited from Qt 4.
 .if defined(PACKAGE_BUILDING)
