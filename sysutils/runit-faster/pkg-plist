@@ -10,7 +10,7 @@ bin/svmod
 %%RUNITDIR%%/core-services/11-set-defaults.sh
 @sample %%RUNITDIR%%/core-services/12-console.sh.sample
 @sample %%RUNITDIR%%/core-services/30-geli.sh.sample
-%%RUNITDIR%%/core-services/31-fsck.sh
+@comment %%RUNITDIR%%/core-services/31-fsck.sh
 %%RUNITDIR%%/core-services/31-mount.sh
 %%RUNITDIR%%/core-services/31-zfs-mount.sh
 %%RUNITDIR%%/core-services/33-init-var.sh
@@ -38,7 +38,7 @@ bin/svmod
 %%RUNITDIR%%/core-services/99-binmisc.sh
 %%RUNITDIR%%/core-services/99-linux.sh
 %%RUNITDIR%%/core-services/99-os-release.sh
-%%RUNITDIR%%/core-services/99-ports-env.sh
+@comment %%RUNITDIR%%/core-services/99-ports-env.sh
 %%RUNITDIR%%/core-services/99-start-jails.sh
 %%RUNITDIR%%/ctrlaltdel
 %%RUNITDIR%%/functions

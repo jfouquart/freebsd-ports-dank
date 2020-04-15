@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	iichid
-DISTVERSION=	0.0.1
+DISTVERSION=	0.0.1-184
+DISTVERSIONSUFFIX=	-g19117f9
 CATEGORIES=	sysutils
 
 MAINTAINER=	imp@FreeBSD.org
@@ -28,7 +29,9 @@ PLIST_FILES=	${KMODDIR}/iichid.ko
 
 # USB backend is not yet complete and
 # interferes with existing USB drivers
-post-patch:
-	${REINPLACE_CMD} -e '/usbhid.c/s/^/#/' ${WRKSRC}/Makefile
+# post-patch:
+# 	${REINPLACE_CMD} -e '/usbhid.c/s/^/#/' ${WRKSRC}/Makefile
+
+CFLAGS	+= -DUSBHID_BUS_PROBE_PRIO=-10
 
 .include <bsd.port.mk>
