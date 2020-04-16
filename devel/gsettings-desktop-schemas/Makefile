@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gsettings-desktop-schemas
-PORTVERSION=	3.32.0
+PORTVERSION=	3.36.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -31,8 +31,8 @@ GLIB_SCHEMAS=	org.gnome.desktop.a11y.applications.gschema.xml \
 		org.gnome.desktop.app-folders.gschema.xml \
 		org.gnome.desktop.background.gschema.xml \
 		org.gnome.desktop.calendar.gschema.xml \
-		org.gnome.desktop.default-applications.gschema.xml \
 		org.gnome.desktop.datetime.gschema.xml \
+		org.gnome.desktop.default-applications.gschema.xml \
 		org.gnome.desktop.enums.xml \
 		org.gnome.desktop.input-sources.gschema.xml \
 		org.gnome.desktop.interface.gschema.xml \
