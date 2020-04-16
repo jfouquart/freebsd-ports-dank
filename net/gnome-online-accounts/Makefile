@@ -2,9 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-online-accounts
-PORTVERSION=	3.32.0
+PORTVERSION=	3.36.0
 CATEGORIES=	net
-MASTER_SITES=	GNOME
+# MASTER_SITES=	GNOME
+# XXX: no meson in tarball
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -25,17 +26,20 @@ LIB_DEPENDS=	libwebkit2gtk-4.0.so:www/webkit2-gtk3 \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		compiler:c++11-lib gettext gmake gnome libtool \
-		localbase pathfix pkgconfig tar:xz
+USES=		compiler:c++11-lib gettext gmake gnome \
+		localbase meson pkgconfig python:3.5+ tar:xz
+USE_GITLAB=	yes
+GL_SITE=	https://gitlab.gnome.org
+GL_ACCOUNT=	GNOME
+GL_COMMIT=	a0931a8253e09e18768270f97b5e093e9df82fa8
 USE_GNOME=	cairo gtk30 introspection:build libxml2 libxslt:build
-GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
-CONFIGURE_ARGS=	--enable-lastfm
+MESON_ARGS=	-Dlastfm=true \
+		-Dkerberos=false
+BINARY_ALIAS=	python3=${PYTHON_VERSION}
 
 GLIB_SCHEMAS=	org.gnome.online-accounts.gschema.xml
-
-CONFIGURE_ARGS+=--enable-kerberos=no
 
 .include <bsd.port.mk>
