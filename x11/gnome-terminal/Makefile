@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-terminal
-PORTVERSION=	3.32.0
+PORTVERSION=	3.36.1.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -19,6 +19,7 @@ BUILD_DEPENDS=	gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas \
 LIB_DEPENDS=	libuuid.so:misc/e2fsprogs-libuuid \
 		libgnutls.so:security/gnutls \
 		libfribidi.so:converters/fribidi \
+		libharfbuzz.so:print/harfbuzz \
 		libpcre2-8.so:devel/pcre2
 RUN_DEPENDS=	gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas
 
