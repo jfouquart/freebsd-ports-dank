@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	libsoup
-PORTVERSION=	2.66.4
+PORTVERSION=	2.70.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -26,7 +26,7 @@ USE_GNOME=	glib20 libxml2 introspection:build
 USE_LDCONFIG=	yes
 
 MESON_ARGS=	-Db_lundef=false
-LIBVERSION=	1.8.0
+LIBVERSION=	1.9.0
 PLIST_SUB=	VERSION="2.4" LIBVERSION=${LIBVERSION}
 
 .if defined(SOUP_SLAVE)

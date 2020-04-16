@@ -16,6 +16,9 @@ include/libsoup-%%VERSION%%/libsoup/soup-date.h
 include/libsoup-%%VERSION%%/libsoup/soup-enum-types.h
 include/libsoup-%%VERSION%%/libsoup/soup-form.h
 include/libsoup-%%VERSION%%/libsoup/soup-headers.h
+include/libsoup-%%VERSION%%/libsoup/soup-hsts-enforcer-db.h
+include/libsoup-%%VERSION%%/libsoup/soup-hsts-enforcer.h
+include/libsoup-%%VERSION%%/libsoup/soup-hsts-policy.h
 include/libsoup-%%VERSION%%/libsoup/soup-logger.h
 include/libsoup-%%VERSION%%/libsoup/soup-message-body.h
 include/libsoup-%%VERSION%%/libsoup/soup-message-headers.h
@@ -47,6 +50,9 @@ include/libsoup-%%VERSION%%/libsoup/soup-uri.h
 include/libsoup-%%VERSION%%/libsoup/soup-value-utils.h
 include/libsoup-%%VERSION%%/libsoup/soup-version.h
 include/libsoup-%%VERSION%%/libsoup/soup-websocket-connection.h
+include/libsoup-%%VERSION%%/libsoup/soup-websocket-extension-deflate.h
+include/libsoup-%%VERSION%%/libsoup/soup-websocket-extension-manager.h
+include/libsoup-%%VERSION%%/libsoup/soup-websocket-extension.h
 include/libsoup-%%VERSION%%/libsoup/soup-websocket.h
 include/libsoup-%%VERSION%%/libsoup/soup-xmlrpc-old.h
 include/libsoup-%%VERSION%%/libsoup/soup-xmlrpc.h
@@ -75,6 +81,7 @@ share/locale/es/LC_MESSAGES/libsoup.mo
 share/locale/et/LC_MESSAGES/libsoup.mo
 share/locale/eu/LC_MESSAGES/libsoup.mo
 share/locale/fa/LC_MESSAGES/libsoup.mo
+share/locale/fi/LC_MESSAGES/libsoup.mo
 share/locale/fr/LC_MESSAGES/libsoup.mo
 share/locale/fur/LC_MESSAGES/libsoup.mo
 share/locale/gd/LC_MESSAGES/libsoup.mo
@@ -93,6 +100,7 @@ share/locale/lt/LC_MESSAGES/libsoup.mo
 share/locale/lv/LC_MESSAGES/libsoup.mo
 share/locale/ml/LC_MESSAGES/libsoup.mo
 share/locale/mr/LC_MESSAGES/libsoup.mo
+share/locale/ms/LC_MESSAGES/libsoup.mo
 share/locale/nb/LC_MESSAGES/libsoup.mo
 share/locale/ne/LC_MESSAGES/libsoup.mo
 share/locale/nl/LC_MESSAGES/libsoup.mo
