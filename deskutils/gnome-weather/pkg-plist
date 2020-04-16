@@ -14,6 +14,7 @@ share/locale/bg/LC_MESSAGES/org.gnome.Weather.mo
 share/locale/bs/LC_MESSAGES/org.gnome.Weather.mo
 share/locale/ca/LC_MESSAGES/org.gnome.Weather.mo
 share/locale/ca@valencia/LC_MESSAGES/org.gnome.Weather.mo
+share/locale/ckb/LC_MESSAGES/org.gnome.Weather.mo
 share/locale/cs/LC_MESSAGES/org.gnome.Weather.mo
 share/locale/da/LC_MESSAGES/org.gnome.Weather.mo
 share/locale/de/LC_MESSAGES/org.gnome.Weather.mo
@@ -42,7 +43,9 @@ share/locale/kn/LC_MESSAGES/org.gnome.Weather.mo
 share/locale/ko/LC_MESSAGES/org.gnome.Weather.mo
 share/locale/lt/LC_MESSAGES/org.gnome.Weather.mo
 share/locale/lv/LC_MESSAGES/org.gnome.Weather.mo
+share/locale/mjw/LC_MESSAGES/org.gnome.Weather.mo
 share/locale/ml/LC_MESSAGES/org.gnome.Weather.mo
+share/locale/ms/LC_MESSAGES/org.gnome.Weather.mo
 share/locale/nb/LC_MESSAGES/org.gnome.Weather.mo
 share/locale/ne/LC_MESSAGES/org.gnome.Weather.mo
 share/locale/nl/LC_MESSAGES/org.gnome.Weather.mo
@@ -58,6 +61,7 @@ share/locale/sl/LC_MESSAGES/org.gnome.Weather.mo
 share/locale/sr/LC_MESSAGES/org.gnome.Weather.mo
 share/locale/sr@latin/LC_MESSAGES/org.gnome.Weather.mo
 share/locale/sv/LC_MESSAGES/org.gnome.Weather.mo
+share/locale/ta/LC_MESSAGES/org.gnome.Weather.mo
 share/locale/te/LC_MESSAGES/org.gnome.Weather.mo
 share/locale/tg/LC_MESSAGES/org.gnome.Weather.mo
 share/locale/th/LC_MESSAGES/org.gnome.Weather.mo
