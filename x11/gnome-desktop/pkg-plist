@@ -7,12 +7,13 @@ include/gnome-desktop-3.0/libgnome-desktop/gnome-languages.h
 include/gnome-desktop-3.0/libgnome-desktop/gnome-pnp-ids.h
 include/gnome-desktop-3.0/libgnome-desktop/gnome-rr-config.h
 include/gnome-desktop-3.0/libgnome-desktop/gnome-rr.h
+include/gnome-desktop-3.0/libgnome-desktop/gnome-systemd.h
 include/gnome-desktop-3.0/libgnome-desktop/gnome-wall-clock.h
 include/gnome-desktop-3.0/libgnome-desktop/gnome-xkb-info.h
 lib/girepository-1.0/GnomeDesktop-3.0.typelib
 lib/libgnome-desktop-3.so
-lib/libgnome-desktop-3.so.17
-lib/libgnome-desktop-3.so.17.0.6
+lib/libgnome-desktop-3.so.19
+lib/libgnome-desktop-3.so.19.0.2
 libdata/pkgconfig/gnome-desktop-3.0.pc
 libexec/gnome-rr-debug
 share/gir-1.0/GnomeDesktop-3.0.gir
@@ -48,6 +49,7 @@ share/help/fr/gpl/index.docbook
 share/help/fr/lgpl/index.docbook
 share/help/gl/fdl/index.docbook
 share/help/gl/gpl/index.docbook
+share/help/gl/lgpl/index.docbook
 share/help/hu/fdl/index.docbook
 share/help/hu/gpl/index.docbook
 share/help/hu/lgpl/index.docbook
@@ -71,6 +73,9 @@ share/help/sr@latin/gpl/index.docbook
 share/help/sv/fdl/index.docbook
 share/help/sv/gpl/index.docbook
 share/help/sv/lgpl/index.docbook
+share/help/tr/fdl/index.docbook
+share/help/tr/gpl/index.docbook
+share/help/tr/lgpl/index.docbook
 share/help/uk/fdl/index.docbook
 share/help/uk/gpl/index.docbook
 share/help/uk/lgpl/index.docbook
@@ -96,6 +101,7 @@ share/locale/br/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/bs/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/ca/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/ca@valencia/LC_MESSAGES/gnome-desktop-3.0.mo
+share/locale/ckb/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/crh/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/cs/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/csb/LC_MESSAGES/gnome-desktop-3.0.mo
@@ -147,6 +153,7 @@ share/locale/lv/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/mai/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/mg/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/mi/LC_MESSAGES/gnome-desktop-3.0.mo
+share/locale/mjw/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/mk/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/ml/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/mn/LC_MESSAGES/gnome-desktop-3.0.mo
