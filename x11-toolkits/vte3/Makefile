@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	vte
-PORTVERSION=	0.56.4
+PORTVERSION=	0.60.1
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	3
@@ -21,15 +21,10 @@ LIB_DEPENDS=	libgnutls.so:security/gnutls \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		compiler:c++17-lang gettext gmake gnome gperf libtool localbase \
-		pathfix pkgconfig tar:xz
+USES=		compiler:c++17-lang gettext gnome gperf localbase meson \
+		pkgconfig tar:xz
 USE_LDCONFIG=	yes
-GNU_CONFIGURE=	yes
-USE_GNOME=	cairo gdkpixbuf2 gtk30 intltool referencehack \
-		introspection:build
-CONFIGURE_ARGS=	--enable-introspection \
-		--disable-static
-INSTALL_TARGET=	install-strip
+USE_GNOME=	cairo gdkpixbuf2 gtk30 intltool introspection:build
 
 PLIST_SUB=	VERSION=2.91
 
