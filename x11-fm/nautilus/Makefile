@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	nautilus
-PORTVERSION=	3.32.3
+PORTVERSION=	3.36.1.1
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -16,6 +16,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libgnome-autoar-0.so:archivers/gnome-autoar \
 		libgexiv2.so:graphics/gexiv2 \
 		libtracker-sparql-2.0.so:sysutils/tracker
+
+# needs the files miner's glib schema at least
+RUN_DEPENDS=	tracker-miners>0:sysutils/tracker-miners
 
 PORTSCOUT=	limitw:1,even
 
