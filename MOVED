@@ -14440,7 +14440,6 @@ russian/gimp-help||2020-03-01|Has expired: Broken
 security/hotssh||2020-03-01|Has expired: Old, uses EOLed python27
 security/zenmap||2020-03-01|Has expired: Old, uses EOLed python27
 x11/py-xdot06|x11/py-xdot|2020-03-01|Has expired: Old, uses EOLed python27
-x11/terminator||2020-03-01|Has expired: Old, uses EOLed python27
 x11-fm/sunflower||2020-03-01|Has expired: Old, uses EOLed python27
 x11-toolkits/hippo-canvas||2020-03-01|Has expired: Old, uses EOLed python27
 x11-toolkits/py-kiwi-gtk||2020-03-01|Has expired: Old, uses EOLed python27
@@ -14520,6 +14519,7 @@ www/py-puppetboard03|www/py-puppetboard|2020-04-01|Has expired: Use www/py-puppe
 net/librsync2|net/librsync|2020-04-02|Remove PKGNAMESUFFIX 3 years after librsync removal
 lang/beignet|lang/intel-compute-runtime|2020-04-02|Has expired: Deprecated upstream, use lang/intel-compute-runtime
 devel/rubygem-cucumber-tag_expressions|devel/rubygem-cucumber-tag-expressions|2020-04-04|Renamed by upstream
+math/mkl-dnn|math/onednn|2020-04-04|Project renamed
 devel/p5-Glib2|devel/p5-Glib|2020-04-07|Rename to match our p5- port naming
 devel/jucipp|editors/jucipp|2020-04-07|Remove duplicate
 www/py-django_polymorphic|www/py-django-polymorphic|2020-04-11|Match canonical/registered (PyPI/CHEESESHOP) name
@@ -14527,3 +14527,25 @@ dns/dnsmasq-devel|dns/dnsmasq|2020-04-12|dnsmasq is newer than dnsmasq-devel
 databases/mariadb55-server|databases/mariadb102-server|2020-04-12|Has expired: Upstream end-of-life 2020-04-11, switch to a newer version
 databases/mariadb55-client|databases/mariadb102-client|2020-04-12|Has expired: Upstream end-of-life 2020-04-11, switch to a newer version
 devel/aws-c-commons|devel/aws-c-common|2020-04-12|Renamed to the correct name
+textproc/itstool22|textproc/itstool|2020-04-14|Has expired: Uses deprecated version of python, use textproc/itstool instead
+science/ncnn|misc/ncnn|2020-04-14|Move to misc/ because ncnn isn't related to science
+archivers/lua51-zlib|archivers/lua-zlib@lua51|2020-04-14|Switched to use flavors
+audio/lua51-mpd|audio/lua-mpd@lua51|2020-04-14|Switched to use flavors
+converters/lua51-iconv|converters/lua-iconv@lua51|2020-04-14|Switched to use flavors
+devel/lua51-bitop|devel/lua-bitop@lua51|2020-04-14|Switched to use flavors
+devel/lua51-cjson|devel/lua-cjson@lua51|2020-04-14|Switched to use flavors
+devel/lua51-libevent|devel/lua-libevent@lua51|2020-04-14|Switched to use flavors
+devel/luafilesystem-51|devel/luafilesystem@lua51|2020-04-14|Switched to use flavors
+net/lualdap-51|net/lualdap@lua51|2020-04-14|Switched to use flavors
+net/luasocket-51|net/luasocket@lua51|2020-04-14|Switched to use flavors
+net/luasocket-53|net/luasocket@lua53|2020-04-14|Switched to use flavors
+security/luasec-51|security/luasec@lua51|2020-04-14|Switched to use flavors
+textproc/luaexpat-51|textproc/luaexpat@lua51|2020-04-14|Switched to use flavors
+devel/libevdevPlus|devel/libevdevplus|2020-04-18|lowercase
+devel/libuIntputPlus|devel/libuinputplus|2020-04-18|lowercase
+net/pjsip-extsrtp||2020-04-18|Remove slave port not used anymore
+www/py-django-caching-app-plugins||2020-04-18|Doesn't work with Django 1.9+ and Python 3, no longer maintained
+net/openmpi2||2020-04-19|Removed, deprecated by upstream
+www/py-ddgr|www/ddgr|2020-04-19|Duplicate port
+sysutils/py-halite||2020-04-19|Hasexpired: Uses deprecated version of python
+security/suricata5|security/suricata|2020-04-20|Has expired: security/suricata is already at version 5
