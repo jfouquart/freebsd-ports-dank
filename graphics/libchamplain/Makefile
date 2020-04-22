@@ -5,6 +5,7 @@ PORTNAME=	libchamplain
 PORTVERSION=	0.12.20
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	C library aimed to provide a Gtk+ widget to display rasterized maps and markers
@@ -12,7 +13,7 @@ COMMENT=	C library aimed to provide a Gtk+ widget to display rasterized maps and
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	vapigen:lang/vala
+BUILD_DEPENDS=	valac:lang/vala
 LIB_DEPENDS=	libcogl.so:graphics/cogl \
 		libclutter-1.0.so:graphics/clutter \
 		libclutter-gtk-1.0.so:graphics/clutter-gtk3 \
@@ -25,6 +26,7 @@ USES=		gettext-runtime gl gnome localbase meson \
 		pkgconfig sqlite tar:xz
 USE_GNOME=	cairo gdkpixbuf2 gtk30 introspection:build
 USE_GL=		egl
+USE_XORG=	x11 xcomposite xdamage xext xfixes xi xrandr
 USE_LDCONFIG=	yes
 
 PLIST_SUB=	VERSION=0.12

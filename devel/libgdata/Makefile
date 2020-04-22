@@ -6,7 +6,7 @@ PORTVERSION=	0.17.12
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 
-MAINTAINER=	kwm@FreeBSD.org
+MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GLib based implimentation of the GData protocol
 
 LICENSE=	LGPL21
@@ -15,6 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	valac:lang/vala \
 		gtkdoc-scan:textproc/gtk-doc
 LIB_DEPENDS=	libsoup-2.4.so:devel/libsoup \
+		libuhttpmock-0.0.so:net/uhttpmock \
 		libjson-glib-1.0.so:devel/json-glib \
 		libp11-kit.so:security/p11-kit \
 		libgoa-1.0.so:net/gnome-online-accounts \
@@ -22,8 +23,10 @@ LIB_DEPENDS=	libsoup-2.4.so:devel/libsoup \
 		liboauth.so:net/liboauth
 
 USES=		gettext gnome localbase meson pkgconfig tar:xz
-USE_GNOME=	glib20 intltool introspection:build libxml2
+USE_GNOME=	gdkpixbuf2 introspection:build libxml2
 USE_LDCONFIG=	yes
-MESON_ARGS=	-Dalways_build_tests=false
+
+MESON_ARGS=	-Dalways_build_tests=false \
+		-Dinstalled_tests=false
 
 .include <bsd.port.mk>

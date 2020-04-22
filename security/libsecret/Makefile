@@ -5,6 +5,7 @@ PORTNAME=	libsecret
 PORTVERSION=	0.20.3
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library to access the secret service API

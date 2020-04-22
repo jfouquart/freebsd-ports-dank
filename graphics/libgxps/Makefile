@@ -5,7 +5,7 @@ PORTNAME=	libgxps
 PORTVERSION=	0.3.1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GObject based library for rendering XPS documents

@@ -34,7 +34,6 @@ MESON_ARGS=	-Db_lundef=false \
 		-Dinstalled_tests=false \
 		-Dxattr=false
 BINARY_ALIAS=	python3=${PYTHON_VERSION}
-SSP_CFLAGS?=	-fstack-protector # XXX -strong crashes qemu-user-static
 
 LIBVERSION=	0.6400.2
 PLIST_SUB+=	LIBVERSION=${LIBVERSION}

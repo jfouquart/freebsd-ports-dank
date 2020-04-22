@@ -30,7 +30,7 @@ RUN_DEPENDS=	eog:graphics/eog
 PORTSCOUT=	limitw:1,even
 
 USE_GNOME=	cairo gdkpixbuf2 gtk30 introspection libxml2
-USES=		gettext gmake gnome libtool localbase pathfix pkgconfig tar:xz
+USES=		gettext gl gmake gnome libtool localbase pathfix pkgconfig tar:xz
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 

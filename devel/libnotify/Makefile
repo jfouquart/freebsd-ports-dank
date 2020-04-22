@@ -12,7 +12,7 @@ COMMENT=	Library for desktop notifications
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		gmake gnome libtool meson pkgconfig tar:xz
+USES=		gnome meson pkgconfig tar:xz
 USE_GNOME=	glib20 gdkpixbuf2 introspection:build
 USE_LDCONFIG=	yes
 

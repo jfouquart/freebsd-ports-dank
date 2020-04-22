@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-utils
-PORTVERSION=	3.26
+PORTVERSION=	3.32
 PORTEPOCH=	1
 CATEGORIES=	deskutils gnome
 
@@ -17,7 +17,6 @@ RUN_DEPENDS=	baobab>=3.0:deskutils/baobab \
 		gnome-contacts>=3.0:deskutils/gnome-contacts \
 		gnome-search-tool>=3.0:deskutils/gnome-search-tool \
 		gnome-dictionary>=3.0:deskutils/gnome-dictionary \
-		gnome-system-log>=3.0:deskutils/gnome-system-log \
 		gnome-font-viewer>=3.0:deskutils/gnome-font-viewer \
 		gnome-usage>=3.32:sysutils/gnome-usage \
 		gnome-system-monitor>=3.0:sysutils/gnome-system-monitor \
@@ -31,6 +30,7 @@ RUN_DEPENDS=	baobab>=3.0:deskutils/baobab \
 OPTIONS_DEFINE=	DOCS
 DOCS_DESC=	Build Gnome Documents (pulls in tracker)
 
-DOCS_RUN_DEPENDS+=	gnome-documents>=0:deskutils/gnome-documents
+DOCS_RUN_DEPENDS+=	gnome-documents>=0:deskutils/gnome-documents \
+			gnome-books>=3.32:deskutils/gnome-books \
 
 .include <bsd.port.mk>

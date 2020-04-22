@@ -12,11 +12,10 @@ COMMENT=	Text editor product line
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libuchardet.so:textproc/uchardet \
-		libamtk-5.so:x11-toolkits/amtk
+LIB_DEPENDS=	libuchardet.so:textproc/uchardet
 
 USES=		compiler:c11 gettext gmake gnome libtool pkgconfig tar:xz
-USE_GNOME=	cairo gdkpixbuf2 gtksourceview4 libxml2
+USE_GNOME=	amtk cairo gdkpixbuf2 gtksourceview4 libxml2
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 INSTALL_TARGET=	install-strip

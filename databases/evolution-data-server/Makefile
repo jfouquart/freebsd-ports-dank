@@ -5,7 +5,7 @@ PORTNAME=	evolution-data-server
 PORTVERSION=	3.36.1
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Data backends for the Evolution integrated mail/PIM suite
@@ -18,6 +18,8 @@ LIB_DEPENDS=	libsoup-2.4.so:devel/libsoup \
 		libfribidi.so:converters/fribidi \
 		libharfbuzz.so:print/harfbuzz \
 		libgcr-base-3.so:security/gcr \
+		libcanberra.so:audio/libcanberra \
+		libcanberra-gtk3.so:audio/libcanberra-gtk3 \
 		libgoa-1.0.so:net/gnome-online-accounts \
 		libgdata.so:devel/libgdata \
 		libical.so:devel/libical \
@@ -40,7 +42,6 @@ USE_LDCONFIG=	yes
 
 CMAKE_ARGS=	-DENABLE_VALA_BINDINGS=ON \
 		-DENABLE_INTROSPECTION=ON \
-		-DENABLE_CANBERRA=OFF \
 		-DENABLE_UOA=OFF
 
 CMAKE_ARGS+=	-DWITH_LIBDB_CFLAGS=-I${LOCALBASE}/include/db5 \
@@ -53,9 +54,11 @@ GLIB_SCHEMAS=	org.gnome.evolution-data-server.addressbook.gschema.xml \
 		org.gnome.evolution.eds-shell.gschema.xml \
 		org.gnome.evolution.shell.network-config.gschema.xml
 
+PLIST_SUB=	EVO_VERSION="1.2"
+
 OPTIONS_SUB=	yes
 OPTIONS_DEFINE=	WEATHER KERBEROS LDAP
-OPTIONS_DEFAULT=WEATHER LDAP
+OPTIONS_DEFAULT=WEATHER KERBEROS LDAP
 
 KERBEROS_CMAKE_ON=	-DWITH_KRB5=/usr
 KERBEROS_CMAKE_OFF=	-DWITH_KRB5=OFF

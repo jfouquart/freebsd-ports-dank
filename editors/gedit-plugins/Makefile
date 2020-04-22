@@ -15,8 +15,10 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	gedit>=0:editors/gedit \
 		valac:lang/vala \
+		appstream-builder:devel/appstream-glib \
 		itstool:textproc/itstool
 LIB_DEPENDS=	libpeas-1.0.so:devel/libpeas \
+		libzeitgeist-2.0.so:sysutils/zeitgeist \
 		libgit2-glib-1.0.so:devel/libgit2-glib
 RUN_DEPENDS=	gedit>=0:editors/gedit
 

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/lang/spidermonkey60/Makefile 517775 2019-11-16 20:08:55Z tcberner $
 
 PORTNAME=	spidermonkey
 DISTVERSION=	60.9.0

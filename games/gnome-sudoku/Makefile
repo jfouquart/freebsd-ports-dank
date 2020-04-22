@@ -2,14 +2,13 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-sudoku
-PORTVERSION=	3.28.0
-PORTREVISION=	2
+PORTVERSION=	3.32.0
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Sudoku game for gnome
+COMMENT=	Sudoku game for GNOME
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -23,11 +22,13 @@ LIB_DEPENDS=	libgee-0.8.so:devel/libgee \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		compiler:c++11-lang gettext gmake gnome pkgconfig tar:xz
+USES=		compiler:c++11-lang gettext gnome meson pkgconfig\
+		python:3.5+,build tar:xz
 USE_GNOME=	cairo gtk30
 INSTALLS_ICONS=	yes
-GNU_CONFIGURE=	yes
 
-GLIB_SCHEMAS=	org.gnome.sudoku.gschema.xml
+BINARY_ALIAS=	python3=${PYTHON_VERSION}
+
+GLIB_SCHEMAS=	org.gnome.Sudoku.gschema.xml
 
 .include <bsd.port.mk>

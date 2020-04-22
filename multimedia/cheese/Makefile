@@ -2,10 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	cheese
-PORTVERSION=	3.28.0
+PORTVERSION=	3.32.1
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Photobooth-inspired app for taking pictures and videos from webcam

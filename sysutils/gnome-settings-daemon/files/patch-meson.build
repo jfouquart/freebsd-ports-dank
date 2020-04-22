@@ -2,19 +2,34 @@ $OpenBSD: patch-meson_build,v 1.1 2018/04/23 15:37:34 ajacoutot Exp $
 
 XXX #define FOOBAR 0 does not do what you think it does...
 
-Index: meson.build
---- meson.build.orig
+--- meson.build.orig	2019-03-11 22:43:44 UTC
 +++ meson.build
-@@ -131,7 +131,7 @@ if enable_wayland
-   assert(enable_gudev, 'GUDev support is required for wayland support.')
+@@ -122,13 +122,13 @@ enable_gudev = get_option('gudev')
+ if enable_gudev
+   gudev_dep = dependency('gudev-1.0')
+ endif
+-config_h.set10('HAVE_GUDEV', enable_gudev)
++config_h.set('HAVE_GUDEV', enable_gudev)
+ if host_is_linux
+   assert(enable_gudev, 'GUdev is not optional on Linux platforms')
+ endif
+ 
+ has_timerfd_create = cc.has_function('timerfd_create')
+-config_h.set10('HAVE_TIMERFD', has_timerfd_create)
++config_h.set('HAVE_TIMERFD', has_timerfd_create)
+ 
+ # Check for wayland dependencies
+ enable_wayland = get_option('wayland')
+@@ -137,7 +137,7 @@ if enable_wayland
    wayland_client_dep = dependency('wayland-client')
+   wayland_gdk_dep = dependency('gdk-wayland-3.0')
  endif
 -config_h.set10('HAVE_WAYLAND', enable_wayland)
 +config_h.set('HAVE_WAYLAND', enable_wayland)
  
  # wacom (disabled for s390/s390x and non Linux platforms)
  enable_wacom = host_is_linux_not_s390
-@@ -139,7 +139,7 @@ if enable_wacom
+@@ -145,7 +145,7 @@ if enable_wacom
    assert(enable_gudev, 'GUDev support is required for wacom support.')
    libwacom_dep = dependency('libwacom', version: '>= 0.7')
  endif
@@ -23,3 +38,12 @@ Index: meson.build
  
  # smartcard section
  enable_smartcard = get_option('smartcard')
+@@ -198,7 +198,7 @@ if enable_network_manager
+   # network manager
+   libnm_dep = dependency('libnm', version: '>= 1.0')
+ endif
+-config_h.set10('HAVE_NETWORK_MANAGER', enable_network_manager)
++config_h.set('HAVE_NETWORK_MANAGER', enable_network_manager)
+ 
+ gnome = import('gnome')
+ i18n = import('i18n')

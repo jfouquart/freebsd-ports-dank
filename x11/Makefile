@@ -51,6 +51,7 @@
     SUBDIR += deskmenu
     SUBDIR += deskpaint
     SUBDIR += dmenu
+    SUBDIR += dmenu-wayland
     SUBDIR += dmenu2
     SUBDIR += docker-tray
     SUBDIR += dsbautostart
@@ -318,6 +319,7 @@
     SUBDIR += tabbed
     SUBDIR += temperature.app
     SUBDIR += terminal.app
+    SUBDIR += terminator
     SUBDIR += terminology
     SUBDIR += thinglaunch
     SUBDIR += thingylaunch

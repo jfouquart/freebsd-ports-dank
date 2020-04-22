@@ -5,6 +5,7 @@ PORTNAME=	meld
 PORTVERSION=	3.20.1
 CATEGORIES=	textproc devel python
 MASTER_SITES=	GNOME
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME visual diff and merge tool

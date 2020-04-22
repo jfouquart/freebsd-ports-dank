@@ -28,6 +28,7 @@ share/help/C/gnome-help/backup-what.page
 share/help/C/gnome-help/backup-where.page
 share/help/C/gnome-help/backup-why.page
 share/help/C/gnome-help/bluetooth-connect-device.page
+share/help/C/gnome-help/bluetooth-device-specific-pairing.page
 share/help/C/gnome-help/bluetooth-problem-connecting.page
 share/help/C/gnome-help/bluetooth-remove-connection.page
 share/help/C/gnome-help/bluetooth-send-file.page
@@ -77,6 +78,7 @@ share/help/C/gnome-help/disk.page
 share/help/C/gnome-help/display-blank.page
 share/help/C/gnome-help/display-brightness.page
 share/help/C/gnome-help/display-dual-monitors.page
+share/help/C/gnome-help/display-night-light.page
 share/help/C/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/C/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/C/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -105,7 +107,9 @@ share/help/C/gnome-help/figures/color-space.png
 share/help/C/gnome-help/figures/display-dual-monitors.webm
 share/help/C/gnome-help/figures/emblem-system-symbolic.svg
 share/help/C/gnome-help/figures/emblem-system.png
+share/help/C/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/C/gnome-help/figures/gnome.png
+share/help/C/gnome-help/figures/go-down-symbolic.svg
 share/help/C/gnome-help/figures/go-down.png
 share/help/C/gnome-help/figures/input-keyboard-symbolic.png
 share/help/C/gnome-help/figures/input-methods-switcher.png
@@ -393,6 +397,8 @@ share/help/C/gnome-help/wacom-multi-monitor.page
 share/help/C/gnome-help/wacom-stylus.page
 share/help/C/gnome-help/wacom.page
 share/help/C/system-admin-guide/appearance.page
+share/help/C/system-admin-guide/autostart-applications.page
+share/help/C/system-admin-guide/backgrounds-extra.page
 share/help/C/system-admin-guide/dconf-custom-defaults.page
 share/help/C/system-admin-guide/dconf-keyfiles.page
 share/help/C/system-admin-guide/dconf-lockdown.page
@@ -409,14 +415,18 @@ share/help/C/system-admin-guide/extensions-lockdown.page
 share/help/C/system-admin-guide/extensions.page
 share/help/C/system-admin-guide/fonts-user.page
 share/help/C/system-admin-guide/fonts.page
+share/help/C/system-admin-guide/gsettings-browse.page
 share/help/C/system-admin-guide/index.page
+share/help/C/system-admin-guide/keyboard-compose-key.page
 share/help/C/system-admin-guide/keyboard-layout.page
 share/help/C/system-admin-guide/legal.xml
 share/help/C/system-admin-guide/lockdown-command-line.page
 share/help/C/system-admin-guide/lockdown-file-saving.page
+share/help/C/system-admin-guide/lockdown-logout.page
 share/help/C/system-admin-guide/lockdown-online-accounts.page
 share/help/C/system-admin-guide/lockdown-printing.page
 share/help/C/system-admin-guide/lockdown-repartitioning.page
+share/help/C/system-admin-guide/lockdown-single-app-mode.page
 share/help/C/system-admin-guide/login-automatic.page
 share/help/C/system-admin-guide/login-banner.page
 share/help/C/system-admin-guide/login-enterprise.page
@@ -474,6 +484,7 @@ share/help/as/gnome-help/backup-what.page
 share/help/as/gnome-help/backup-where.page
 share/help/as/gnome-help/backup-why.page
 share/help/as/gnome-help/bluetooth-connect-device.page
+share/help/as/gnome-help/bluetooth-device-specific-pairing.page
 share/help/as/gnome-help/bluetooth-problem-connecting.page
 share/help/as/gnome-help/bluetooth-remove-connection.page
 share/help/as/gnome-help/bluetooth-send-file.page
@@ -523,6 +534,7 @@ share/help/as/gnome-help/disk.page
 share/help/as/gnome-help/display-blank.page
 share/help/as/gnome-help/display-brightness.page
 share/help/as/gnome-help/display-dual-monitors.page
+share/help/as/gnome-help/display-night-light.page
 share/help/as/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/as/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/as/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -551,7 +563,9 @@ share/help/as/gnome-help/figures/color-space.png
 share/help/as/gnome-help/figures/display-dual-monitors.webm
 share/help/as/gnome-help/figures/emblem-system-symbolic.svg
 share/help/as/gnome-help/figures/emblem-system.png
+share/help/as/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/as/gnome-help/figures/gnome.png
+share/help/as/gnome-help/figures/go-down-symbolic.svg
 share/help/as/gnome-help/figures/go-down.png
 share/help/as/gnome-help/figures/input-keyboard-symbolic.png
 share/help/as/gnome-help/figures/input-methods-switcher.png
@@ -868,6 +882,7 @@ share/help/ca/gnome-help/backup-what.page
 share/help/ca/gnome-help/backup-where.page
 share/help/ca/gnome-help/backup-why.page
 share/help/ca/gnome-help/bluetooth-connect-device.page
+share/help/ca/gnome-help/bluetooth-device-specific-pairing.page
 share/help/ca/gnome-help/bluetooth-problem-connecting.page
 share/help/ca/gnome-help/bluetooth-remove-connection.page
 share/help/ca/gnome-help/bluetooth-send-file.page
@@ -917,6 +932,7 @@ share/help/ca/gnome-help/disk.page
 share/help/ca/gnome-help/display-blank.page
 share/help/ca/gnome-help/display-brightness.page
 share/help/ca/gnome-help/display-dual-monitors.page
+share/help/ca/gnome-help/display-night-light.page
 share/help/ca/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/ca/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/ca/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -945,7 +961,9 @@ share/help/ca/gnome-help/figures/color-space.png
 share/help/ca/gnome-help/figures/display-dual-monitors.webm
 share/help/ca/gnome-help/figures/emblem-system-symbolic.svg
 share/help/ca/gnome-help/figures/emblem-system.png
+share/help/ca/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/ca/gnome-help/figures/gnome.png
+share/help/ca/gnome-help/figures/go-down-symbolic.svg
 share/help/ca/gnome-help/figures/go-down.png
 share/help/ca/gnome-help/figures/input-keyboard-symbolic.png
 share/help/ca/gnome-help/figures/input-methods-switcher.png
@@ -1262,6 +1280,7 @@ share/help/cs/gnome-help/backup-what.page
 share/help/cs/gnome-help/backup-where.page
 share/help/cs/gnome-help/backup-why.page
 share/help/cs/gnome-help/bluetooth-connect-device.page
+share/help/cs/gnome-help/bluetooth-device-specific-pairing.page
 share/help/cs/gnome-help/bluetooth-problem-connecting.page
 share/help/cs/gnome-help/bluetooth-remove-connection.page
 share/help/cs/gnome-help/bluetooth-send-file.page
@@ -1311,6 +1330,7 @@ share/help/cs/gnome-help/disk.page
 share/help/cs/gnome-help/display-blank.page
 share/help/cs/gnome-help/display-brightness.page
 share/help/cs/gnome-help/display-dual-monitors.page
+share/help/cs/gnome-help/display-night-light.page
 share/help/cs/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/cs/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/cs/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -1339,7 +1359,9 @@ share/help/cs/gnome-help/figures/color-space.png
 share/help/cs/gnome-help/figures/display-dual-monitors.webm
 share/help/cs/gnome-help/figures/emblem-system-symbolic.svg
 share/help/cs/gnome-help/figures/emblem-system.png
+share/help/cs/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/cs/gnome-help/figures/gnome.png
+share/help/cs/gnome-help/figures/go-down-symbolic.svg
 share/help/cs/gnome-help/figures/go-down.png
 share/help/cs/gnome-help/figures/input-keyboard-symbolic.png
 share/help/cs/gnome-help/figures/input-methods-switcher.png
@@ -1627,6 +1649,8 @@ share/help/cs/gnome-help/wacom-multi-monitor.page
 share/help/cs/gnome-help/wacom-stylus.page
 share/help/cs/gnome-help/wacom.page
 share/help/cs/system-admin-guide/appearance.page
+share/help/cs/system-admin-guide/autostart-applications.page
+share/help/cs/system-admin-guide/backgrounds-extra.page
 share/help/cs/system-admin-guide/dconf-custom-defaults.page
 share/help/cs/system-admin-guide/dconf-keyfiles.page
 share/help/cs/system-admin-guide/dconf-lockdown.page
@@ -1643,14 +1667,18 @@ share/help/cs/system-admin-guide/extensions-lockdown.page
 share/help/cs/system-admin-guide/extensions.page
 share/help/cs/system-admin-guide/fonts-user.page
 share/help/cs/system-admin-guide/fonts.page
+share/help/cs/system-admin-guide/gsettings-browse.page
 share/help/cs/system-admin-guide/index.page
+share/help/cs/system-admin-guide/keyboard-compose-key.page
 share/help/cs/system-admin-guide/keyboard-layout.page
 share/help/cs/system-admin-guide/legal.xml
 share/help/cs/system-admin-guide/lockdown-command-line.page
 share/help/cs/system-admin-guide/lockdown-file-saving.page
+share/help/cs/system-admin-guide/lockdown-logout.page
 share/help/cs/system-admin-guide/lockdown-online-accounts.page
 share/help/cs/system-admin-guide/lockdown-printing.page
 share/help/cs/system-admin-guide/lockdown-repartitioning.page
+share/help/cs/system-admin-guide/lockdown-single-app-mode.page
 share/help/cs/system-admin-guide/login-automatic.page
 share/help/cs/system-admin-guide/login-banner.page
 share/help/cs/system-admin-guide/login-enterprise.page
@@ -1708,6 +1736,7 @@ share/help/da/gnome-help/backup-what.page
 share/help/da/gnome-help/backup-where.page
 share/help/da/gnome-help/backup-why.page
 share/help/da/gnome-help/bluetooth-connect-device.page
+share/help/da/gnome-help/bluetooth-device-specific-pairing.page
 share/help/da/gnome-help/bluetooth-problem-connecting.page
 share/help/da/gnome-help/bluetooth-remove-connection.page
 share/help/da/gnome-help/bluetooth-send-file.page
@@ -1757,6 +1786,7 @@ share/help/da/gnome-help/disk.page
 share/help/da/gnome-help/display-blank.page
 share/help/da/gnome-help/display-brightness.page
 share/help/da/gnome-help/display-dual-monitors.page
+share/help/da/gnome-help/display-night-light.page
 share/help/da/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/da/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/da/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -1785,7 +1815,9 @@ share/help/da/gnome-help/figures/color-space.png
 share/help/da/gnome-help/figures/display-dual-monitors.webm
 share/help/da/gnome-help/figures/emblem-system-symbolic.svg
 share/help/da/gnome-help/figures/emblem-system.png
+share/help/da/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/da/gnome-help/figures/gnome.png
+share/help/da/gnome-help/figures/go-down-symbolic.svg
 share/help/da/gnome-help/figures/go-down.png
 share/help/da/gnome-help/figures/input-keyboard-symbolic.png
 share/help/da/gnome-help/figures/input-methods-switcher.png
@@ -2102,6 +2134,7 @@ share/help/de/gnome-help/backup-what.page
 share/help/de/gnome-help/backup-where.page
 share/help/de/gnome-help/backup-why.page
 share/help/de/gnome-help/bluetooth-connect-device.page
+share/help/de/gnome-help/bluetooth-device-specific-pairing.page
 share/help/de/gnome-help/bluetooth-problem-connecting.page
 share/help/de/gnome-help/bluetooth-remove-connection.page
 share/help/de/gnome-help/bluetooth-send-file.page
@@ -2151,6 +2184,7 @@ share/help/de/gnome-help/disk.page
 share/help/de/gnome-help/display-blank.page
 share/help/de/gnome-help/display-brightness.page
 share/help/de/gnome-help/display-dual-monitors.page
+share/help/de/gnome-help/display-night-light.page
 share/help/de/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/de/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/de/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -2179,7 +2213,9 @@ share/help/de/gnome-help/figures/color-space.png
 share/help/de/gnome-help/figures/display-dual-monitors.webm
 share/help/de/gnome-help/figures/emblem-system-symbolic.svg
 share/help/de/gnome-help/figures/emblem-system.png
+share/help/de/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/de/gnome-help/figures/gnome.png
+share/help/de/gnome-help/figures/go-down-symbolic.svg
 share/help/de/gnome-help/figures/go-down.png
 share/help/de/gnome-help/figures/input-keyboard-symbolic.png
 share/help/de/gnome-help/figures/input-methods-switcher.png
@@ -2467,6 +2503,8 @@ share/help/de/gnome-help/wacom-multi-monitor.page
 share/help/de/gnome-help/wacom-stylus.page
 share/help/de/gnome-help/wacom.page
 share/help/de/system-admin-guide/appearance.page
+share/help/de/system-admin-guide/autostart-applications.page
+share/help/de/system-admin-guide/backgrounds-extra.page
 share/help/de/system-admin-guide/dconf-custom-defaults.page
 share/help/de/system-admin-guide/dconf-keyfiles.page
 share/help/de/system-admin-guide/dconf-lockdown.page
@@ -2483,14 +2521,18 @@ share/help/de/system-admin-guide/extensions-lockdown.page
 share/help/de/system-admin-guide/extensions.page
 share/help/de/system-admin-guide/fonts-user.page
 share/help/de/system-admin-guide/fonts.page
+share/help/de/system-admin-guide/gsettings-browse.page
 share/help/de/system-admin-guide/index.page
+share/help/de/system-admin-guide/keyboard-compose-key.page
 share/help/de/system-admin-guide/keyboard-layout.page
 share/help/de/system-admin-guide/legal.xml
 share/help/de/system-admin-guide/lockdown-command-line.page
 share/help/de/system-admin-guide/lockdown-file-saving.page
+share/help/de/system-admin-guide/lockdown-logout.page
 share/help/de/system-admin-guide/lockdown-online-accounts.page
 share/help/de/system-admin-guide/lockdown-printing.page
 share/help/de/system-admin-guide/lockdown-repartitioning.page
+share/help/de/system-admin-guide/lockdown-single-app-mode.page
 share/help/de/system-admin-guide/login-automatic.page
 share/help/de/system-admin-guide/login-banner.page
 share/help/de/system-admin-guide/login-enterprise.page
@@ -2548,6 +2590,7 @@ share/help/el/gnome-help/backup-what.page
 share/help/el/gnome-help/backup-where.page
 share/help/el/gnome-help/backup-why.page
 share/help/el/gnome-help/bluetooth-connect-device.page
+share/help/el/gnome-help/bluetooth-device-specific-pairing.page
 share/help/el/gnome-help/bluetooth-problem-connecting.page
 share/help/el/gnome-help/bluetooth-remove-connection.page
 share/help/el/gnome-help/bluetooth-send-file.page
@@ -2597,6 +2640,7 @@ share/help/el/gnome-help/disk.page
 share/help/el/gnome-help/display-blank.page
 share/help/el/gnome-help/display-brightness.page
 share/help/el/gnome-help/display-dual-monitors.page
+share/help/el/gnome-help/display-night-light.page
 share/help/el/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/el/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/el/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -2625,7 +2669,9 @@ share/help/el/gnome-help/figures/color-space.png
 share/help/el/gnome-help/figures/display-dual-monitors.webm
 share/help/el/gnome-help/figures/emblem-system-symbolic.svg
 share/help/el/gnome-help/figures/emblem-system.png
+share/help/el/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/el/gnome-help/figures/gnome.png
+share/help/el/gnome-help/figures/go-down-symbolic.svg
 share/help/el/gnome-help/figures/go-down.png
 share/help/el/gnome-help/figures/input-keyboard-symbolic.png
 share/help/el/gnome-help/figures/input-methods-switcher.png
@@ -2942,6 +2988,7 @@ share/help/es/gnome-help/backup-what.page
 share/help/es/gnome-help/backup-where.page
 share/help/es/gnome-help/backup-why.page
 share/help/es/gnome-help/bluetooth-connect-device.page
+share/help/es/gnome-help/bluetooth-device-specific-pairing.page
 share/help/es/gnome-help/bluetooth-problem-connecting.page
 share/help/es/gnome-help/bluetooth-remove-connection.page
 share/help/es/gnome-help/bluetooth-send-file.page
@@ -2991,6 +3038,7 @@ share/help/es/gnome-help/disk.page
 share/help/es/gnome-help/display-blank.page
 share/help/es/gnome-help/display-brightness.page
 share/help/es/gnome-help/display-dual-monitors.page
+share/help/es/gnome-help/display-night-light.page
 share/help/es/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/es/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/es/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -3019,7 +3067,9 @@ share/help/es/gnome-help/figures/color-space.png
 share/help/es/gnome-help/figures/display-dual-monitors.webm
 share/help/es/gnome-help/figures/emblem-system-symbolic.svg
 share/help/es/gnome-help/figures/emblem-system.png
+share/help/es/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/es/gnome-help/figures/gnome.png
+share/help/es/gnome-help/figures/go-down-symbolic.svg
 share/help/es/gnome-help/figures/go-down.png
 share/help/es/gnome-help/figures/input-keyboard-symbolic.png
 share/help/es/gnome-help/figures/input-methods-switcher.png
@@ -3307,6 +3357,8 @@ share/help/es/gnome-help/wacom-multi-monitor.page
 share/help/es/gnome-help/wacom-stylus.page
 share/help/es/gnome-help/wacom.page
 share/help/es/system-admin-guide/appearance.page
+share/help/es/system-admin-guide/autostart-applications.page
+share/help/es/system-admin-guide/backgrounds-extra.page
 share/help/es/system-admin-guide/dconf-custom-defaults.page
 share/help/es/system-admin-guide/dconf-keyfiles.page
 share/help/es/system-admin-guide/dconf-lockdown.page
@@ -3323,14 +3375,18 @@ share/help/es/system-admin-guide/extensions-lockdown.page
 share/help/es/system-admin-guide/extensions.page
 share/help/es/system-admin-guide/fonts-user.page
 share/help/es/system-admin-guide/fonts.page
+share/help/es/system-admin-guide/gsettings-browse.page
 share/help/es/system-admin-guide/index.page
+share/help/es/system-admin-guide/keyboard-compose-key.page
 share/help/es/system-admin-guide/keyboard-layout.page
 share/help/es/system-admin-guide/legal.xml
 share/help/es/system-admin-guide/lockdown-command-line.page
 share/help/es/system-admin-guide/lockdown-file-saving.page
+share/help/es/system-admin-guide/lockdown-logout.page
 share/help/es/system-admin-guide/lockdown-online-accounts.page
 share/help/es/system-admin-guide/lockdown-printing.page
 share/help/es/system-admin-guide/lockdown-repartitioning.page
+share/help/es/system-admin-guide/lockdown-single-app-mode.page
 share/help/es/system-admin-guide/login-automatic.page
 share/help/es/system-admin-guide/login-banner.page
 share/help/es/system-admin-guide/login-enterprise.page
@@ -3388,6 +3444,7 @@ share/help/fi/gnome-help/backup-what.page
 share/help/fi/gnome-help/backup-where.page
 share/help/fi/gnome-help/backup-why.page
 share/help/fi/gnome-help/bluetooth-connect-device.page
+share/help/fi/gnome-help/bluetooth-device-specific-pairing.page
 share/help/fi/gnome-help/bluetooth-problem-connecting.page
 share/help/fi/gnome-help/bluetooth-remove-connection.page
 share/help/fi/gnome-help/bluetooth-send-file.page
@@ -3437,6 +3494,7 @@ share/help/fi/gnome-help/disk.page
 share/help/fi/gnome-help/display-blank.page
 share/help/fi/gnome-help/display-brightness.page
 share/help/fi/gnome-help/display-dual-monitors.page
+share/help/fi/gnome-help/display-night-light.page
 share/help/fi/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/fi/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/fi/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -3465,7 +3523,9 @@ share/help/fi/gnome-help/figures/color-space.png
 share/help/fi/gnome-help/figures/display-dual-monitors.webm
 share/help/fi/gnome-help/figures/emblem-system-symbolic.svg
 share/help/fi/gnome-help/figures/emblem-system.png
+share/help/fi/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/fi/gnome-help/figures/gnome.png
+share/help/fi/gnome-help/figures/go-down-symbolic.svg
 share/help/fi/gnome-help/figures/go-down.png
 share/help/fi/gnome-help/figures/input-keyboard-symbolic.png
 share/help/fi/gnome-help/figures/input-methods-switcher.png
@@ -3782,6 +3842,7 @@ share/help/fr/gnome-help/backup-what.page
 share/help/fr/gnome-help/backup-where.page
 share/help/fr/gnome-help/backup-why.page
 share/help/fr/gnome-help/bluetooth-connect-device.page
+share/help/fr/gnome-help/bluetooth-device-specific-pairing.page
 share/help/fr/gnome-help/bluetooth-problem-connecting.page
 share/help/fr/gnome-help/bluetooth-remove-connection.page
 share/help/fr/gnome-help/bluetooth-send-file.page
@@ -3831,6 +3892,7 @@ share/help/fr/gnome-help/disk.page
 share/help/fr/gnome-help/display-blank.page
 share/help/fr/gnome-help/display-brightness.page
 share/help/fr/gnome-help/display-dual-monitors.page
+share/help/fr/gnome-help/display-night-light.page
 share/help/fr/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/fr/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/fr/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -3859,7 +3921,9 @@ share/help/fr/gnome-help/figures/color-space.png
 share/help/fr/gnome-help/figures/display-dual-monitors.webm
 share/help/fr/gnome-help/figures/emblem-system-symbolic.svg
 share/help/fr/gnome-help/figures/emblem-system.png
+share/help/fr/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/fr/gnome-help/figures/gnome.png
+share/help/fr/gnome-help/figures/go-down-symbolic.svg
 share/help/fr/gnome-help/figures/go-down.png
 share/help/fr/gnome-help/figures/input-keyboard-symbolic.png
 share/help/fr/gnome-help/figures/input-methods-switcher.png
@@ -4176,6 +4240,7 @@ share/help/gl/gnome-help/backup-what.page
 share/help/gl/gnome-help/backup-where.page
 share/help/gl/gnome-help/backup-why.page
 share/help/gl/gnome-help/bluetooth-connect-device.page
+share/help/gl/gnome-help/bluetooth-device-specific-pairing.page
 share/help/gl/gnome-help/bluetooth-problem-connecting.page
 share/help/gl/gnome-help/bluetooth-remove-connection.page
 share/help/gl/gnome-help/bluetooth-send-file.page
@@ -4225,6 +4290,7 @@ share/help/gl/gnome-help/disk.page
 share/help/gl/gnome-help/display-blank.page
 share/help/gl/gnome-help/display-brightness.page
 share/help/gl/gnome-help/display-dual-monitors.page
+share/help/gl/gnome-help/display-night-light.page
 share/help/gl/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/gl/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/gl/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -4253,7 +4319,9 @@ share/help/gl/gnome-help/figures/color-space.png
 share/help/gl/gnome-help/figures/display-dual-monitors.webm
 share/help/gl/gnome-help/figures/emblem-system-symbolic.svg
 share/help/gl/gnome-help/figures/emblem-system.png
+share/help/gl/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/gl/gnome-help/figures/gnome.png
+share/help/gl/gnome-help/figures/go-down-symbolic.svg
 share/help/gl/gnome-help/figures/go-down.png
 share/help/gl/gnome-help/figures/input-keyboard-symbolic.png
 share/help/gl/gnome-help/figures/input-methods-switcher.png
@@ -4541,6 +4609,8 @@ share/help/gl/gnome-help/wacom-multi-monitor.page
 share/help/gl/gnome-help/wacom-stylus.page
 share/help/gl/gnome-help/wacom.page
 share/help/gl/system-admin-guide/appearance.page
+share/help/gl/system-admin-guide/autostart-applications.page
+share/help/gl/system-admin-guide/backgrounds-extra.page
 share/help/gl/system-admin-guide/dconf-custom-defaults.page
 share/help/gl/system-admin-guide/dconf-keyfiles.page
 share/help/gl/system-admin-guide/dconf-lockdown.page
@@ -4557,14 +4627,18 @@ share/help/gl/system-admin-guide/extensions-lockdown.page
 share/help/gl/system-admin-guide/extensions.page
 share/help/gl/system-admin-guide/fonts-user.page
 share/help/gl/system-admin-guide/fonts.page
+share/help/gl/system-admin-guide/gsettings-browse.page
 share/help/gl/system-admin-guide/index.page
+share/help/gl/system-admin-guide/keyboard-compose-key.page
 share/help/gl/system-admin-guide/keyboard-layout.page
 share/help/gl/system-admin-guide/legal.xml
 share/help/gl/system-admin-guide/lockdown-command-line.page
 share/help/gl/system-admin-guide/lockdown-file-saving.page
+share/help/gl/system-admin-guide/lockdown-logout.page
 share/help/gl/system-admin-guide/lockdown-online-accounts.page
 share/help/gl/system-admin-guide/lockdown-printing.page
 share/help/gl/system-admin-guide/lockdown-repartitioning.page
+share/help/gl/system-admin-guide/lockdown-single-app-mode.page
 share/help/gl/system-admin-guide/login-automatic.page
 share/help/gl/system-admin-guide/login-banner.page
 share/help/gl/system-admin-guide/login-enterprise.page
@@ -4622,6 +4696,7 @@ share/help/gu/gnome-help/backup-what.page
 share/help/gu/gnome-help/backup-where.page
 share/help/gu/gnome-help/backup-why.page
 share/help/gu/gnome-help/bluetooth-connect-device.page
+share/help/gu/gnome-help/bluetooth-device-specific-pairing.page
 share/help/gu/gnome-help/bluetooth-problem-connecting.page
 share/help/gu/gnome-help/bluetooth-remove-connection.page
 share/help/gu/gnome-help/bluetooth-send-file.page
@@ -4671,6 +4746,7 @@ share/help/gu/gnome-help/disk.page
 share/help/gu/gnome-help/display-blank.page
 share/help/gu/gnome-help/display-brightness.page
 share/help/gu/gnome-help/display-dual-monitors.page
+share/help/gu/gnome-help/display-night-light.page
 share/help/gu/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/gu/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/gu/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -4699,7 +4775,9 @@ share/help/gu/gnome-help/figures/color-space.png
 share/help/gu/gnome-help/figures/display-dual-monitors.webm
 share/help/gu/gnome-help/figures/emblem-system-symbolic.svg
 share/help/gu/gnome-help/figures/emblem-system.png
+share/help/gu/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/gu/gnome-help/figures/gnome.png
+share/help/gu/gnome-help/figures/go-down-symbolic.svg
 share/help/gu/gnome-help/figures/go-down.png
 share/help/gu/gnome-help/figures/input-keyboard-symbolic.png
 share/help/gu/gnome-help/figures/input-methods-switcher.png
@@ -5016,6 +5094,7 @@ share/help/he/gnome-help/backup-what.page
 share/help/he/gnome-help/backup-where.page
 share/help/he/gnome-help/backup-why.page
 share/help/he/gnome-help/bluetooth-connect-device.page
+share/help/he/gnome-help/bluetooth-device-specific-pairing.page
 share/help/he/gnome-help/bluetooth-problem-connecting.page
 share/help/he/gnome-help/bluetooth-remove-connection.page
 share/help/he/gnome-help/bluetooth-send-file.page
@@ -5065,6 +5144,7 @@ share/help/he/gnome-help/disk.page
 share/help/he/gnome-help/display-blank.page
 share/help/he/gnome-help/display-brightness.page
 share/help/he/gnome-help/display-dual-monitors.page
+share/help/he/gnome-help/display-night-light.page
 share/help/he/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/he/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/he/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -5093,7 +5173,9 @@ share/help/he/gnome-help/figures/color-space.png
 share/help/he/gnome-help/figures/display-dual-monitors.webm
 share/help/he/gnome-help/figures/emblem-system-symbolic.svg
 share/help/he/gnome-help/figures/emblem-system.png
+share/help/he/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/he/gnome-help/figures/gnome.png
+share/help/he/gnome-help/figures/go-down-symbolic.svg
 share/help/he/gnome-help/figures/go-down.png
 share/help/he/gnome-help/figures/input-keyboard-symbolic.png
 share/help/he/gnome-help/figures/input-methods-switcher.png
@@ -5410,6 +5492,7 @@ share/help/hi/gnome-help/backup-what.page
 share/help/hi/gnome-help/backup-where.page
 share/help/hi/gnome-help/backup-why.page
 share/help/hi/gnome-help/bluetooth-connect-device.page
+share/help/hi/gnome-help/bluetooth-device-specific-pairing.page
 share/help/hi/gnome-help/bluetooth-problem-connecting.page
 share/help/hi/gnome-help/bluetooth-remove-connection.page
 share/help/hi/gnome-help/bluetooth-send-file.page
@@ -5459,6 +5542,7 @@ share/help/hi/gnome-help/disk.page
 share/help/hi/gnome-help/display-blank.page
 share/help/hi/gnome-help/display-brightness.page
 share/help/hi/gnome-help/display-dual-monitors.page
+share/help/hi/gnome-help/display-night-light.page
 share/help/hi/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/hi/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/hi/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -5487,7 +5571,9 @@ share/help/hi/gnome-help/figures/color-space.png
 share/help/hi/gnome-help/figures/display-dual-monitors.webm
 share/help/hi/gnome-help/figures/emblem-system-symbolic.svg
 share/help/hi/gnome-help/figures/emblem-system.png
+share/help/hi/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/hi/gnome-help/figures/gnome.png
+share/help/hi/gnome-help/figures/go-down-symbolic.svg
 share/help/hi/gnome-help/figures/go-down.png
 share/help/hi/gnome-help/figures/input-keyboard-symbolic.png
 share/help/hi/gnome-help/figures/input-methods-switcher.png
@@ -5804,6 +5890,7 @@ share/help/hr/gnome-help/backup-what.page
 share/help/hr/gnome-help/backup-where.page
 share/help/hr/gnome-help/backup-why.page
 share/help/hr/gnome-help/bluetooth-connect-device.page
+share/help/hr/gnome-help/bluetooth-device-specific-pairing.page
 share/help/hr/gnome-help/bluetooth-problem-connecting.page
 share/help/hr/gnome-help/bluetooth-remove-connection.page
 share/help/hr/gnome-help/bluetooth-send-file.page
@@ -5853,6 +5940,7 @@ share/help/hr/gnome-help/disk.page
 share/help/hr/gnome-help/display-blank.page
 share/help/hr/gnome-help/display-brightness.page
 share/help/hr/gnome-help/display-dual-monitors.page
+share/help/hr/gnome-help/display-night-light.page
 share/help/hr/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/hr/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/hr/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -5881,7 +5969,9 @@ share/help/hr/gnome-help/figures/color-space.png
 share/help/hr/gnome-help/figures/display-dual-monitors.webm
 share/help/hr/gnome-help/figures/emblem-system-symbolic.svg
 share/help/hr/gnome-help/figures/emblem-system.png
+share/help/hr/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/hr/gnome-help/figures/gnome.png
+share/help/hr/gnome-help/figures/go-down-symbolic.svg
 share/help/hr/gnome-help/figures/go-down.png
 share/help/hr/gnome-help/figures/input-keyboard-symbolic.png
 share/help/hr/gnome-help/figures/input-methods-switcher.png
@@ -6198,6 +6288,7 @@ share/help/hu/gnome-help/backup-what.page
 share/help/hu/gnome-help/backup-where.page
 share/help/hu/gnome-help/backup-why.page
 share/help/hu/gnome-help/bluetooth-connect-device.page
+share/help/hu/gnome-help/bluetooth-device-specific-pairing.page
 share/help/hu/gnome-help/bluetooth-problem-connecting.page
 share/help/hu/gnome-help/bluetooth-remove-connection.page
 share/help/hu/gnome-help/bluetooth-send-file.page
@@ -6247,6 +6338,7 @@ share/help/hu/gnome-help/disk.page
 share/help/hu/gnome-help/display-blank.page
 share/help/hu/gnome-help/display-brightness.page
 share/help/hu/gnome-help/display-dual-monitors.page
+share/help/hu/gnome-help/display-night-light.page
 share/help/hu/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/hu/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/hu/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -6275,7 +6367,9 @@ share/help/hu/gnome-help/figures/color-space.png
 share/help/hu/gnome-help/figures/display-dual-monitors.webm
 share/help/hu/gnome-help/figures/emblem-system-symbolic.svg
 share/help/hu/gnome-help/figures/emblem-system.png
+share/help/hu/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/hu/gnome-help/figures/gnome.png
+share/help/hu/gnome-help/figures/go-down-symbolic.svg
 share/help/hu/gnome-help/figures/go-down.png
 share/help/hu/gnome-help/figures/input-keyboard-symbolic.png
 share/help/hu/gnome-help/figures/input-methods-switcher.png
@@ -6563,6 +6657,8 @@ share/help/hu/gnome-help/wacom-multi-monitor.page
 share/help/hu/gnome-help/wacom-stylus.page
 share/help/hu/gnome-help/wacom.page
 share/help/hu/system-admin-guide/appearance.page
+share/help/hu/system-admin-guide/autostart-applications.page
+share/help/hu/system-admin-guide/backgrounds-extra.page
 share/help/hu/system-admin-guide/dconf-custom-defaults.page
 share/help/hu/system-admin-guide/dconf-keyfiles.page
 share/help/hu/system-admin-guide/dconf-lockdown.page
@@ -6579,14 +6675,18 @@ share/help/hu/system-admin-guide/extensions-lockdown.page
 share/help/hu/system-admin-guide/extensions.page
 share/help/hu/system-admin-guide/fonts-user.page
 share/help/hu/system-admin-guide/fonts.page
+share/help/hu/system-admin-guide/gsettings-browse.page
 share/help/hu/system-admin-guide/index.page
+share/help/hu/system-admin-guide/keyboard-compose-key.page
 share/help/hu/system-admin-guide/keyboard-layout.page
 share/help/hu/system-admin-guide/legal.xml
 share/help/hu/system-admin-guide/lockdown-command-line.page
 share/help/hu/system-admin-guide/lockdown-file-saving.page
+share/help/hu/system-admin-guide/lockdown-logout.page
 share/help/hu/system-admin-guide/lockdown-online-accounts.page
 share/help/hu/system-admin-guide/lockdown-printing.page
 share/help/hu/system-admin-guide/lockdown-repartitioning.page
+share/help/hu/system-admin-guide/lockdown-single-app-mode.page
 share/help/hu/system-admin-guide/login-automatic.page
 share/help/hu/system-admin-guide/login-banner.page
 share/help/hu/system-admin-guide/login-enterprise.page
@@ -6644,6 +6744,7 @@ share/help/id/gnome-help/backup-what.page
 share/help/id/gnome-help/backup-where.page
 share/help/id/gnome-help/backup-why.page
 share/help/id/gnome-help/bluetooth-connect-device.page
+share/help/id/gnome-help/bluetooth-device-specific-pairing.page
 share/help/id/gnome-help/bluetooth-problem-connecting.page
 share/help/id/gnome-help/bluetooth-remove-connection.page
 share/help/id/gnome-help/bluetooth-send-file.page
@@ -6693,6 +6794,7 @@ share/help/id/gnome-help/disk.page
 share/help/id/gnome-help/display-blank.page
 share/help/id/gnome-help/display-brightness.page
 share/help/id/gnome-help/display-dual-monitors.page
+share/help/id/gnome-help/display-night-light.page
 share/help/id/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/id/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/id/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -6721,7 +6823,9 @@ share/help/id/gnome-help/figures/color-space.png
 share/help/id/gnome-help/figures/display-dual-monitors.webm
 share/help/id/gnome-help/figures/emblem-system-symbolic.svg
 share/help/id/gnome-help/figures/emblem-system.png
+share/help/id/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/id/gnome-help/figures/gnome.png
+share/help/id/gnome-help/figures/go-down-symbolic.svg
 share/help/id/gnome-help/figures/go-down.png
 share/help/id/gnome-help/figures/input-keyboard-symbolic.png
 share/help/id/gnome-help/figures/input-methods-switcher.png
@@ -7038,6 +7142,7 @@ share/help/it/gnome-help/backup-what.page
 share/help/it/gnome-help/backup-where.page
 share/help/it/gnome-help/backup-why.page
 share/help/it/gnome-help/bluetooth-connect-device.page
+share/help/it/gnome-help/bluetooth-device-specific-pairing.page
 share/help/it/gnome-help/bluetooth-problem-connecting.page
 share/help/it/gnome-help/bluetooth-remove-connection.page
 share/help/it/gnome-help/bluetooth-send-file.page
@@ -7087,6 +7192,7 @@ share/help/it/gnome-help/disk.page
 share/help/it/gnome-help/display-blank.page
 share/help/it/gnome-help/display-brightness.page
 share/help/it/gnome-help/display-dual-monitors.page
+share/help/it/gnome-help/display-night-light.page
 share/help/it/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/it/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/it/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -7115,7 +7221,9 @@ share/help/it/gnome-help/figures/color-space.png
 share/help/it/gnome-help/figures/display-dual-monitors.webm
 share/help/it/gnome-help/figures/emblem-system-symbolic.svg
 share/help/it/gnome-help/figures/emblem-system.png
+share/help/it/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/it/gnome-help/figures/gnome.png
+share/help/it/gnome-help/figures/go-down-symbolic.svg
 share/help/it/gnome-help/figures/go-down.png
 share/help/it/gnome-help/figures/input-keyboard-symbolic.png
 share/help/it/gnome-help/figures/input-methods-switcher.png
@@ -7432,6 +7540,7 @@ share/help/ja/gnome-help/backup-what.page
 share/help/ja/gnome-help/backup-where.page
 share/help/ja/gnome-help/backup-why.page
 share/help/ja/gnome-help/bluetooth-connect-device.page
+share/help/ja/gnome-help/bluetooth-device-specific-pairing.page
 share/help/ja/gnome-help/bluetooth-problem-connecting.page
 share/help/ja/gnome-help/bluetooth-remove-connection.page
 share/help/ja/gnome-help/bluetooth-send-file.page
@@ -7481,6 +7590,7 @@ share/help/ja/gnome-help/disk.page
 share/help/ja/gnome-help/display-blank.page
 share/help/ja/gnome-help/display-brightness.page
 share/help/ja/gnome-help/display-dual-monitors.page
+share/help/ja/gnome-help/display-night-light.page
 share/help/ja/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/ja/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/ja/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -7509,7 +7619,9 @@ share/help/ja/gnome-help/figures/color-space.png
 share/help/ja/gnome-help/figures/display-dual-monitors.webm
 share/help/ja/gnome-help/figures/emblem-system-symbolic.svg
 share/help/ja/gnome-help/figures/emblem-system.png
+share/help/ja/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/ja/gnome-help/figures/gnome.png
+share/help/ja/gnome-help/figures/go-down-symbolic.svg
 share/help/ja/gnome-help/figures/go-down.png
 share/help/ja/gnome-help/figures/input-keyboard-symbolic.png
 share/help/ja/gnome-help/figures/input-methods-switcher.png
@@ -7826,6 +7938,7 @@ share/help/kn/gnome-help/backup-what.page
 share/help/kn/gnome-help/backup-where.page
 share/help/kn/gnome-help/backup-why.page
 share/help/kn/gnome-help/bluetooth-connect-device.page
+share/help/kn/gnome-help/bluetooth-device-specific-pairing.page
 share/help/kn/gnome-help/bluetooth-problem-connecting.page
 share/help/kn/gnome-help/bluetooth-remove-connection.page
 share/help/kn/gnome-help/bluetooth-send-file.page
@@ -7875,6 +7988,7 @@ share/help/kn/gnome-help/disk.page
 share/help/kn/gnome-help/display-blank.page
 share/help/kn/gnome-help/display-brightness.page
 share/help/kn/gnome-help/display-dual-monitors.page
+share/help/kn/gnome-help/display-night-light.page
 share/help/kn/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/kn/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/kn/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -7903,7 +8017,9 @@ share/help/kn/gnome-help/figures/color-space.png
 share/help/kn/gnome-help/figures/display-dual-monitors.webm
 share/help/kn/gnome-help/figures/emblem-system-symbolic.svg
 share/help/kn/gnome-help/figures/emblem-system.png
+share/help/kn/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/kn/gnome-help/figures/gnome.png
+share/help/kn/gnome-help/figures/go-down-symbolic.svg
 share/help/kn/gnome-help/figures/go-down.png
 share/help/kn/gnome-help/figures/input-keyboard-symbolic.png
 share/help/kn/gnome-help/figures/input-methods-switcher.png
@@ -8191,6 +8307,8 @@ share/help/kn/gnome-help/wacom-multi-monitor.page
 share/help/kn/gnome-help/wacom-stylus.page
 share/help/kn/gnome-help/wacom.page
 share/help/ko/system-admin-guide/appearance.page
+share/help/ko/system-admin-guide/autostart-applications.page
+share/help/ko/system-admin-guide/backgrounds-extra.page
 share/help/ko/system-admin-guide/dconf-custom-defaults.page
 share/help/ko/system-admin-guide/dconf-keyfiles.page
 share/help/ko/system-admin-guide/dconf-lockdown.page
@@ -8207,14 +8325,18 @@ share/help/ko/system-admin-guide/extensions-lockdown.page
 share/help/ko/system-admin-guide/extensions.page
 share/help/ko/system-admin-guide/fonts-user.page
 share/help/ko/system-admin-guide/fonts.page
+share/help/ko/system-admin-guide/gsettings-browse.page
 share/help/ko/system-admin-guide/index.page
+share/help/ko/system-admin-guide/keyboard-compose-key.page
 share/help/ko/system-admin-guide/keyboard-layout.page
 share/help/ko/system-admin-guide/legal.xml
 share/help/ko/system-admin-guide/lockdown-command-line.page
 share/help/ko/system-admin-guide/lockdown-file-saving.page
+share/help/ko/system-admin-guide/lockdown-logout.page
 share/help/ko/system-admin-guide/lockdown-online-accounts.page
 share/help/ko/system-admin-guide/lockdown-printing.page
 share/help/ko/system-admin-guide/lockdown-repartitioning.page
+share/help/ko/system-admin-guide/lockdown-single-app-mode.page
 share/help/ko/system-admin-guide/login-automatic.page
 share/help/ko/system-admin-guide/login-banner.page
 share/help/ko/system-admin-guide/login-enterprise.page
@@ -8272,6 +8394,7 @@ share/help/lv/gnome-help/backup-what.page
 share/help/lv/gnome-help/backup-where.page
 share/help/lv/gnome-help/backup-why.page
 share/help/lv/gnome-help/bluetooth-connect-device.page
+share/help/lv/gnome-help/bluetooth-device-specific-pairing.page
 share/help/lv/gnome-help/bluetooth-problem-connecting.page
 share/help/lv/gnome-help/bluetooth-remove-connection.page
 share/help/lv/gnome-help/bluetooth-send-file.page
@@ -8321,6 +8444,7 @@ share/help/lv/gnome-help/disk.page
 share/help/lv/gnome-help/display-blank.page
 share/help/lv/gnome-help/display-brightness.page
 share/help/lv/gnome-help/display-dual-monitors.page
+share/help/lv/gnome-help/display-night-light.page
 share/help/lv/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/lv/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/lv/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -8349,7 +8473,9 @@ share/help/lv/gnome-help/figures/color-space.png
 share/help/lv/gnome-help/figures/display-dual-monitors.webm
 share/help/lv/gnome-help/figures/emblem-system-symbolic.svg
 share/help/lv/gnome-help/figures/emblem-system.png
+share/help/lv/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/lv/gnome-help/figures/gnome.png
+share/help/lv/gnome-help/figures/go-down-symbolic.svg
 share/help/lv/gnome-help/figures/go-down.png
 share/help/lv/gnome-help/figures/input-keyboard-symbolic.png
 share/help/lv/gnome-help/figures/input-methods-switcher.png
@@ -8666,6 +8792,7 @@ share/help/mr/gnome-help/backup-what.page
 share/help/mr/gnome-help/backup-where.page
 share/help/mr/gnome-help/backup-why.page
 share/help/mr/gnome-help/bluetooth-connect-device.page
+share/help/mr/gnome-help/bluetooth-device-specific-pairing.page
 share/help/mr/gnome-help/bluetooth-problem-connecting.page
 share/help/mr/gnome-help/bluetooth-remove-connection.page
 share/help/mr/gnome-help/bluetooth-send-file.page
@@ -8715,6 +8842,7 @@ share/help/mr/gnome-help/disk.page
 share/help/mr/gnome-help/display-blank.page
 share/help/mr/gnome-help/display-brightness.page
 share/help/mr/gnome-help/display-dual-monitors.page
+share/help/mr/gnome-help/display-night-light.page
 share/help/mr/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/mr/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/mr/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -8743,7 +8871,9 @@ share/help/mr/gnome-help/figures/color-space.png
 share/help/mr/gnome-help/figures/display-dual-monitors.webm
 share/help/mr/gnome-help/figures/emblem-system-symbolic.svg
 share/help/mr/gnome-help/figures/emblem-system.png
+share/help/mr/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/mr/gnome-help/figures/gnome.png
+share/help/mr/gnome-help/figures/go-down-symbolic.svg
 share/help/mr/gnome-help/figures/go-down.png
 share/help/mr/gnome-help/figures/input-keyboard-symbolic.png
 share/help/mr/gnome-help/figures/input-methods-switcher.png
@@ -9060,6 +9190,7 @@ share/help/nl/gnome-help/backup-what.page
 share/help/nl/gnome-help/backup-where.page
 share/help/nl/gnome-help/backup-why.page
 share/help/nl/gnome-help/bluetooth-connect-device.page
+share/help/nl/gnome-help/bluetooth-device-specific-pairing.page
 share/help/nl/gnome-help/bluetooth-problem-connecting.page
 share/help/nl/gnome-help/bluetooth-remove-connection.page
 share/help/nl/gnome-help/bluetooth-send-file.page
@@ -9109,6 +9240,7 @@ share/help/nl/gnome-help/disk.page
 share/help/nl/gnome-help/display-blank.page
 share/help/nl/gnome-help/display-brightness.page
 share/help/nl/gnome-help/display-dual-monitors.page
+share/help/nl/gnome-help/display-night-light.page
 share/help/nl/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/nl/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/nl/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -9137,7 +9269,9 @@ share/help/nl/gnome-help/figures/color-space.png
 share/help/nl/gnome-help/figures/display-dual-monitors.webm
 share/help/nl/gnome-help/figures/emblem-system-symbolic.svg
 share/help/nl/gnome-help/figures/emblem-system.png
+share/help/nl/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/nl/gnome-help/figures/gnome.png
+share/help/nl/gnome-help/figures/go-down-symbolic.svg
 share/help/nl/gnome-help/figures/go-down.png
 share/help/nl/gnome-help/figures/input-keyboard-symbolic.png
 share/help/nl/gnome-help/figures/input-methods-switcher.png
@@ -9454,6 +9588,7 @@ share/help/pa/gnome-help/backup-what.page
 share/help/pa/gnome-help/backup-where.page
 share/help/pa/gnome-help/backup-why.page
 share/help/pa/gnome-help/bluetooth-connect-device.page
+share/help/pa/gnome-help/bluetooth-device-specific-pairing.page
 share/help/pa/gnome-help/bluetooth-problem-connecting.page
 share/help/pa/gnome-help/bluetooth-remove-connection.page
 share/help/pa/gnome-help/bluetooth-send-file.page
@@ -9503,6 +9638,7 @@ share/help/pa/gnome-help/disk.page
 share/help/pa/gnome-help/display-blank.page
 share/help/pa/gnome-help/display-brightness.page
 share/help/pa/gnome-help/display-dual-monitors.page
+share/help/pa/gnome-help/display-night-light.page
 share/help/pa/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/pa/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/pa/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -9531,7 +9667,9 @@ share/help/pa/gnome-help/figures/color-space.png
 share/help/pa/gnome-help/figures/display-dual-monitors.webm
 share/help/pa/gnome-help/figures/emblem-system-symbolic.svg
 share/help/pa/gnome-help/figures/emblem-system.png
+share/help/pa/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/pa/gnome-help/figures/gnome.png
+share/help/pa/gnome-help/figures/go-down-symbolic.svg
 share/help/pa/gnome-help/figures/go-down.png
 share/help/pa/gnome-help/figures/input-keyboard-symbolic.png
 share/help/pa/gnome-help/figures/input-methods-switcher.png
@@ -9848,6 +9986,7 @@ share/help/pl/gnome-help/backup-what.page
 share/help/pl/gnome-help/backup-where.page
 share/help/pl/gnome-help/backup-why.page
 share/help/pl/gnome-help/bluetooth-connect-device.page
+share/help/pl/gnome-help/bluetooth-device-specific-pairing.page
 share/help/pl/gnome-help/bluetooth-problem-connecting.page
 share/help/pl/gnome-help/bluetooth-remove-connection.page
 share/help/pl/gnome-help/bluetooth-send-file.page
@@ -9897,6 +10036,7 @@ share/help/pl/gnome-help/disk.page
 share/help/pl/gnome-help/display-blank.page
 share/help/pl/gnome-help/display-brightness.page
 share/help/pl/gnome-help/display-dual-monitors.page
+share/help/pl/gnome-help/display-night-light.page
 share/help/pl/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/pl/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/pl/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -9925,7 +10065,9 @@ share/help/pl/gnome-help/figures/color-space.png
 share/help/pl/gnome-help/figures/display-dual-monitors.webm
 share/help/pl/gnome-help/figures/emblem-system-symbolic.svg
 share/help/pl/gnome-help/figures/emblem-system.png
+share/help/pl/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/pl/gnome-help/figures/gnome.png
+share/help/pl/gnome-help/figures/go-down-symbolic.svg
 share/help/pl/gnome-help/figures/go-down.png
 share/help/pl/gnome-help/figures/input-keyboard-symbolic.png
 share/help/pl/gnome-help/figures/input-methods-switcher.png
@@ -10242,6 +10384,7 @@ share/help/pt/gnome-help/backup-what.page
 share/help/pt/gnome-help/backup-where.page
 share/help/pt/gnome-help/backup-why.page
 share/help/pt/gnome-help/bluetooth-connect-device.page
+share/help/pt/gnome-help/bluetooth-device-specific-pairing.page
 share/help/pt/gnome-help/bluetooth-problem-connecting.page
 share/help/pt/gnome-help/bluetooth-remove-connection.page
 share/help/pt/gnome-help/bluetooth-send-file.page
@@ -10291,6 +10434,7 @@ share/help/pt/gnome-help/disk.page
 share/help/pt/gnome-help/display-blank.page
 share/help/pt/gnome-help/display-brightness.page
 share/help/pt/gnome-help/display-dual-monitors.page
+share/help/pt/gnome-help/display-night-light.page
 share/help/pt/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/pt/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/pt/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -10319,7 +10463,9 @@ share/help/pt/gnome-help/figures/color-space.png
 share/help/pt/gnome-help/figures/display-dual-monitors.webm
 share/help/pt/gnome-help/figures/emblem-system-symbolic.svg
 share/help/pt/gnome-help/figures/emblem-system.png
+share/help/pt/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/pt/gnome-help/figures/gnome.png
+share/help/pt/gnome-help/figures/go-down-symbolic.svg
 share/help/pt/gnome-help/figures/go-down.png
 share/help/pt/gnome-help/figures/input-keyboard-symbolic.png
 share/help/pt/gnome-help/figures/input-methods-switcher.png
@@ -10636,6 +10782,7 @@ share/help/pt_BR/gnome-help/backup-what.page
 share/help/pt_BR/gnome-help/backup-where.page
 share/help/pt_BR/gnome-help/backup-why.page
 share/help/pt_BR/gnome-help/bluetooth-connect-device.page
+share/help/pt_BR/gnome-help/bluetooth-device-specific-pairing.page
 share/help/pt_BR/gnome-help/bluetooth-problem-connecting.page
 share/help/pt_BR/gnome-help/bluetooth-remove-connection.page
 share/help/pt_BR/gnome-help/bluetooth-send-file.page
@@ -10685,6 +10832,7 @@ share/help/pt_BR/gnome-help/disk.page
 share/help/pt_BR/gnome-help/display-blank.page
 share/help/pt_BR/gnome-help/display-brightness.page
 share/help/pt_BR/gnome-help/display-dual-monitors.page
+share/help/pt_BR/gnome-help/display-night-light.page
 share/help/pt_BR/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/pt_BR/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/pt_BR/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -10713,7 +10861,9 @@ share/help/pt_BR/gnome-help/figures/color-space.png
 share/help/pt_BR/gnome-help/figures/display-dual-monitors.webm
 share/help/pt_BR/gnome-help/figures/emblem-system-symbolic.svg
 share/help/pt_BR/gnome-help/figures/emblem-system.png
+share/help/pt_BR/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/pt_BR/gnome-help/figures/gnome.png
+share/help/pt_BR/gnome-help/figures/go-down-symbolic.svg
 share/help/pt_BR/gnome-help/figures/go-down.png
 share/help/pt_BR/gnome-help/figures/input-keyboard-symbolic.png
 share/help/pt_BR/gnome-help/figures/input-methods-switcher.png
@@ -11001,6 +11151,8 @@ share/help/pt_BR/gnome-help/wacom-multi-monitor.page
 share/help/pt_BR/gnome-help/wacom-stylus.page
 share/help/pt_BR/gnome-help/wacom.page
 share/help/pt_BR/system-admin-guide/appearance.page
+share/help/pt_BR/system-admin-guide/autostart-applications.page
+share/help/pt_BR/system-admin-guide/backgrounds-extra.page
 share/help/pt_BR/system-admin-guide/dconf-custom-defaults.page
 share/help/pt_BR/system-admin-guide/dconf-keyfiles.page
 share/help/pt_BR/system-admin-guide/dconf-lockdown.page
@@ -11017,14 +11169,18 @@ share/help/pt_BR/system-admin-guide/extensions-lockdown.page
 share/help/pt_BR/system-admin-guide/extensions.page
 share/help/pt_BR/system-admin-guide/fonts-user.page
 share/help/pt_BR/system-admin-guide/fonts.page
+share/help/pt_BR/system-admin-guide/gsettings-browse.page
 share/help/pt_BR/system-admin-guide/index.page
+share/help/pt_BR/system-admin-guide/keyboard-compose-key.page
 share/help/pt_BR/system-admin-guide/keyboard-layout.page
 share/help/pt_BR/system-admin-guide/legal.xml
 share/help/pt_BR/system-admin-guide/lockdown-command-line.page
 share/help/pt_BR/system-admin-guide/lockdown-file-saving.page
+share/help/pt_BR/system-admin-guide/lockdown-logout.page
 share/help/pt_BR/system-admin-guide/lockdown-online-accounts.page
 share/help/pt_BR/system-admin-guide/lockdown-printing.page
 share/help/pt_BR/system-admin-guide/lockdown-repartitioning.page
+share/help/pt_BR/system-admin-guide/lockdown-single-app-mode.page
 share/help/pt_BR/system-admin-guide/login-automatic.page
 share/help/pt_BR/system-admin-guide/login-banner.page
 share/help/pt_BR/system-admin-guide/login-enterprise.page
@@ -11082,6 +11238,7 @@ share/help/ro/gnome-help/backup-what.page
 share/help/ro/gnome-help/backup-where.page
 share/help/ro/gnome-help/backup-why.page
 share/help/ro/gnome-help/bluetooth-connect-device.page
+share/help/ro/gnome-help/bluetooth-device-specific-pairing.page
 share/help/ro/gnome-help/bluetooth-problem-connecting.page
 share/help/ro/gnome-help/bluetooth-remove-connection.page
 share/help/ro/gnome-help/bluetooth-send-file.page
@@ -11131,6 +11288,7 @@ share/help/ro/gnome-help/disk.page
 share/help/ro/gnome-help/display-blank.page
 share/help/ro/gnome-help/display-brightness.page
 share/help/ro/gnome-help/display-dual-monitors.page
+share/help/ro/gnome-help/display-night-light.page
 share/help/ro/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/ro/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/ro/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -11159,7 +11317,9 @@ share/help/ro/gnome-help/figures/color-space.png
 share/help/ro/gnome-help/figures/display-dual-monitors.webm
 share/help/ro/gnome-help/figures/emblem-system-symbolic.svg
 share/help/ro/gnome-help/figures/emblem-system.png
+share/help/ro/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/ro/gnome-help/figures/gnome.png
+share/help/ro/gnome-help/figures/go-down-symbolic.svg
 share/help/ro/gnome-help/figures/go-down.png
 share/help/ro/gnome-help/figures/input-keyboard-symbolic.png
 share/help/ro/gnome-help/figures/input-methods-switcher.png
@@ -11476,6 +11636,7 @@ share/help/ru/gnome-help/backup-what.page
 share/help/ru/gnome-help/backup-where.page
 share/help/ru/gnome-help/backup-why.page
 share/help/ru/gnome-help/bluetooth-connect-device.page
+share/help/ru/gnome-help/bluetooth-device-specific-pairing.page
 share/help/ru/gnome-help/bluetooth-problem-connecting.page
 share/help/ru/gnome-help/bluetooth-remove-connection.page
 share/help/ru/gnome-help/bluetooth-send-file.page
@@ -11525,6 +11686,7 @@ share/help/ru/gnome-help/disk.page
 share/help/ru/gnome-help/display-blank.page
 share/help/ru/gnome-help/display-brightness.page
 share/help/ru/gnome-help/display-dual-monitors.page
+share/help/ru/gnome-help/display-night-light.page
 share/help/ru/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/ru/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/ru/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -11553,7 +11715,9 @@ share/help/ru/gnome-help/figures/color-space.png
 share/help/ru/gnome-help/figures/display-dual-monitors.webm
 share/help/ru/gnome-help/figures/emblem-system-symbolic.svg
 share/help/ru/gnome-help/figures/emblem-system.png
+share/help/ru/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/ru/gnome-help/figures/gnome.png
+share/help/ru/gnome-help/figures/go-down-symbolic.svg
 share/help/ru/gnome-help/figures/go-down.png
 share/help/ru/gnome-help/figures/input-keyboard-symbolic.png
 share/help/ru/gnome-help/figures/input-methods-switcher.png
@@ -11870,6 +12034,7 @@ share/help/sl/gnome-help/backup-what.page
 share/help/sl/gnome-help/backup-where.page
 share/help/sl/gnome-help/backup-why.page
 share/help/sl/gnome-help/bluetooth-connect-device.page
+share/help/sl/gnome-help/bluetooth-device-specific-pairing.page
 share/help/sl/gnome-help/bluetooth-problem-connecting.page
 share/help/sl/gnome-help/bluetooth-remove-connection.page
 share/help/sl/gnome-help/bluetooth-send-file.page
@@ -11919,6 +12084,7 @@ share/help/sl/gnome-help/disk.page
 share/help/sl/gnome-help/display-blank.page
 share/help/sl/gnome-help/display-brightness.page
 share/help/sl/gnome-help/display-dual-monitors.page
+share/help/sl/gnome-help/display-night-light.page
 share/help/sl/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/sl/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/sl/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -11947,7 +12113,9 @@ share/help/sl/gnome-help/figures/color-space.png
 share/help/sl/gnome-help/figures/display-dual-monitors.webm
 share/help/sl/gnome-help/figures/emblem-system-symbolic.svg
 share/help/sl/gnome-help/figures/emblem-system.png
+share/help/sl/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/sl/gnome-help/figures/gnome.png
+share/help/sl/gnome-help/figures/go-down-symbolic.svg
 share/help/sl/gnome-help/figures/go-down.png
 share/help/sl/gnome-help/figures/input-keyboard-symbolic.png
 share/help/sl/gnome-help/figures/input-methods-switcher.png
@@ -12264,6 +12432,7 @@ share/help/sr/gnome-help/backup-what.page
 share/help/sr/gnome-help/backup-where.page
 share/help/sr/gnome-help/backup-why.page
 share/help/sr/gnome-help/bluetooth-connect-device.page
+share/help/sr/gnome-help/bluetooth-device-specific-pairing.page
 share/help/sr/gnome-help/bluetooth-problem-connecting.page
 share/help/sr/gnome-help/bluetooth-remove-connection.page
 share/help/sr/gnome-help/bluetooth-send-file.page
@@ -12313,6 +12482,7 @@ share/help/sr/gnome-help/disk.page
 share/help/sr/gnome-help/display-blank.page
 share/help/sr/gnome-help/display-brightness.page
 share/help/sr/gnome-help/display-dual-monitors.page
+share/help/sr/gnome-help/display-night-light.page
 share/help/sr/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/sr/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/sr/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -12341,7 +12511,9 @@ share/help/sr/gnome-help/figures/color-space.png
 share/help/sr/gnome-help/figures/display-dual-monitors.webm
 share/help/sr/gnome-help/figures/emblem-system-symbolic.svg
 share/help/sr/gnome-help/figures/emblem-system.png
+share/help/sr/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/sr/gnome-help/figures/gnome.png
+share/help/sr/gnome-help/figures/go-down-symbolic.svg
 share/help/sr/gnome-help/figures/go-down.png
 share/help/sr/gnome-help/figures/input-keyboard-symbolic.png
 share/help/sr/gnome-help/figures/input-methods-switcher.png
@@ -12658,6 +12830,7 @@ share/help/sr@latin/gnome-help/backup-what.page
 share/help/sr@latin/gnome-help/backup-where.page
 share/help/sr@latin/gnome-help/backup-why.page
 share/help/sr@latin/gnome-help/bluetooth-connect-device.page
+share/help/sr@latin/gnome-help/bluetooth-device-specific-pairing.page
 share/help/sr@latin/gnome-help/bluetooth-problem-connecting.page
 share/help/sr@latin/gnome-help/bluetooth-remove-connection.page
 share/help/sr@latin/gnome-help/bluetooth-send-file.page
@@ -12707,6 +12880,7 @@ share/help/sr@latin/gnome-help/disk.page
 share/help/sr@latin/gnome-help/display-blank.page
 share/help/sr@latin/gnome-help/display-brightness.page
 share/help/sr@latin/gnome-help/display-dual-monitors.page
+share/help/sr@latin/gnome-help/display-night-light.page
 share/help/sr@latin/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/sr@latin/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/sr@latin/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -12735,7 +12909,9 @@ share/help/sr@latin/gnome-help/figures/color-space.png
 share/help/sr@latin/gnome-help/figures/display-dual-monitors.webm
 share/help/sr@latin/gnome-help/figures/emblem-system-symbolic.svg
 share/help/sr@latin/gnome-help/figures/emblem-system.png
+share/help/sr@latin/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/sr@latin/gnome-help/figures/gnome.png
+share/help/sr@latin/gnome-help/figures/go-down-symbolic.svg
 share/help/sr@latin/gnome-help/figures/go-down.png
 share/help/sr@latin/gnome-help/figures/input-keyboard-symbolic.png
 share/help/sr@latin/gnome-help/figures/input-methods-switcher.png
@@ -13052,6 +13228,7 @@ share/help/sv/gnome-help/backup-what.page
 share/help/sv/gnome-help/backup-where.page
 share/help/sv/gnome-help/backup-why.page
 share/help/sv/gnome-help/bluetooth-connect-device.page
+share/help/sv/gnome-help/bluetooth-device-specific-pairing.page
 share/help/sv/gnome-help/bluetooth-problem-connecting.page
 share/help/sv/gnome-help/bluetooth-remove-connection.page
 share/help/sv/gnome-help/bluetooth-send-file.page
@@ -13101,6 +13278,7 @@ share/help/sv/gnome-help/disk.page
 share/help/sv/gnome-help/display-blank.page
 share/help/sv/gnome-help/display-brightness.page
 share/help/sv/gnome-help/display-dual-monitors.page
+share/help/sv/gnome-help/display-night-light.page
 share/help/sv/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/sv/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/sv/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -13129,7 +13307,9 @@ share/help/sv/gnome-help/figures/color-space.png
 share/help/sv/gnome-help/figures/display-dual-monitors.webm
 share/help/sv/gnome-help/figures/emblem-system-symbolic.svg
 share/help/sv/gnome-help/figures/emblem-system.png
+share/help/sv/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/sv/gnome-help/figures/gnome.png
+share/help/sv/gnome-help/figures/go-down-symbolic.svg
 share/help/sv/gnome-help/figures/go-down.png
 share/help/sv/gnome-help/figures/input-keyboard-symbolic.png
 share/help/sv/gnome-help/figures/input-methods-switcher.png
@@ -13417,6 +13597,8 @@ share/help/sv/gnome-help/wacom-multi-monitor.page
 share/help/sv/gnome-help/wacom-stylus.page
 share/help/sv/gnome-help/wacom.page
 share/help/sv/system-admin-guide/appearance.page
+share/help/sv/system-admin-guide/autostart-applications.page
+share/help/sv/system-admin-guide/backgrounds-extra.page
 share/help/sv/system-admin-guide/dconf-custom-defaults.page
 share/help/sv/system-admin-guide/dconf-keyfiles.page
 share/help/sv/system-admin-guide/dconf-lockdown.page
@@ -13433,14 +13615,18 @@ share/help/sv/system-admin-guide/extensions-lockdown.page
 share/help/sv/system-admin-guide/extensions.page
 share/help/sv/system-admin-guide/fonts-user.page
 share/help/sv/system-admin-guide/fonts.page
+share/help/sv/system-admin-guide/gsettings-browse.page
 share/help/sv/system-admin-guide/index.page
+share/help/sv/system-admin-guide/keyboard-compose-key.page
 share/help/sv/system-admin-guide/keyboard-layout.page
 share/help/sv/system-admin-guide/legal.xml
 share/help/sv/system-admin-guide/lockdown-command-line.page
 share/help/sv/system-admin-guide/lockdown-file-saving.page
+share/help/sv/system-admin-guide/lockdown-logout.page
 share/help/sv/system-admin-guide/lockdown-online-accounts.page
 share/help/sv/system-admin-guide/lockdown-printing.page
 share/help/sv/system-admin-guide/lockdown-repartitioning.page
+share/help/sv/system-admin-guide/lockdown-single-app-mode.page
 share/help/sv/system-admin-guide/login-automatic.page
 share/help/sv/system-admin-guide/login-banner.page
 share/help/sv/system-admin-guide/login-enterprise.page
@@ -13498,6 +13684,7 @@ share/help/ta/gnome-help/backup-what.page
 share/help/ta/gnome-help/backup-where.page
 share/help/ta/gnome-help/backup-why.page
 share/help/ta/gnome-help/bluetooth-connect-device.page
+share/help/ta/gnome-help/bluetooth-device-specific-pairing.page
 share/help/ta/gnome-help/bluetooth-problem-connecting.page
 share/help/ta/gnome-help/bluetooth-remove-connection.page
 share/help/ta/gnome-help/bluetooth-send-file.page
@@ -13547,6 +13734,7 @@ share/help/ta/gnome-help/disk.page
 share/help/ta/gnome-help/display-blank.page
 share/help/ta/gnome-help/display-brightness.page
 share/help/ta/gnome-help/display-dual-monitors.page
+share/help/ta/gnome-help/display-night-light.page
 share/help/ta/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/ta/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/ta/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -13575,7 +13763,9 @@ share/help/ta/gnome-help/figures/color-space.png
 share/help/ta/gnome-help/figures/display-dual-monitors.webm
 share/help/ta/gnome-help/figures/emblem-system-symbolic.svg
 share/help/ta/gnome-help/figures/emblem-system.png
+share/help/ta/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/ta/gnome-help/figures/gnome.png
+share/help/ta/gnome-help/figures/go-down-symbolic.svg
 share/help/ta/gnome-help/figures/go-down.png
 share/help/ta/gnome-help/figures/input-keyboard-symbolic.png
 share/help/ta/gnome-help/figures/input-methods-switcher.png
@@ -13892,6 +14082,7 @@ share/help/te/gnome-help/backup-what.page
 share/help/te/gnome-help/backup-where.page
 share/help/te/gnome-help/backup-why.page
 share/help/te/gnome-help/bluetooth-connect-device.page
+share/help/te/gnome-help/bluetooth-device-specific-pairing.page
 share/help/te/gnome-help/bluetooth-problem-connecting.page
 share/help/te/gnome-help/bluetooth-remove-connection.page
 share/help/te/gnome-help/bluetooth-send-file.page
@@ -13941,6 +14132,7 @@ share/help/te/gnome-help/disk.page
 share/help/te/gnome-help/display-blank.page
 share/help/te/gnome-help/display-brightness.page
 share/help/te/gnome-help/display-dual-monitors.page
+share/help/te/gnome-help/display-night-light.page
 share/help/te/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/te/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/te/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -13969,7 +14161,9 @@ share/help/te/gnome-help/figures/color-space.png
 share/help/te/gnome-help/figures/display-dual-monitors.webm
 share/help/te/gnome-help/figures/emblem-system-symbolic.svg
 share/help/te/gnome-help/figures/emblem-system.png
+share/help/te/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/te/gnome-help/figures/gnome.png
+share/help/te/gnome-help/figures/go-down-symbolic.svg
 share/help/te/gnome-help/figures/go-down.png
 share/help/te/gnome-help/figures/input-keyboard-symbolic.png
 share/help/te/gnome-help/figures/input-methods-switcher.png
@@ -14286,6 +14480,7 @@ share/help/vi/gnome-help/backup-what.page
 share/help/vi/gnome-help/backup-where.page
 share/help/vi/gnome-help/backup-why.page
 share/help/vi/gnome-help/bluetooth-connect-device.page
+share/help/vi/gnome-help/bluetooth-device-specific-pairing.page
 share/help/vi/gnome-help/bluetooth-problem-connecting.page
 share/help/vi/gnome-help/bluetooth-remove-connection.page
 share/help/vi/gnome-help/bluetooth-send-file.page
@@ -14335,6 +14530,7 @@ share/help/vi/gnome-help/disk.page
 share/help/vi/gnome-help/display-blank.page
 share/help/vi/gnome-help/display-brightness.page
 share/help/vi/gnome-help/display-dual-monitors.page
+share/help/vi/gnome-help/display-night-light.page
 share/help/vi/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/vi/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/vi/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -14363,7 +14559,9 @@ share/help/vi/gnome-help/figures/color-space.png
 share/help/vi/gnome-help/figures/display-dual-monitors.webm
 share/help/vi/gnome-help/figures/emblem-system-symbolic.svg
 share/help/vi/gnome-help/figures/emblem-system.png
+share/help/vi/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/vi/gnome-help/figures/gnome.png
+share/help/vi/gnome-help/figures/go-down-symbolic.svg
 share/help/vi/gnome-help/figures/go-down.png
 share/help/vi/gnome-help/figures/input-keyboard-symbolic.png
 share/help/vi/gnome-help/figures/input-methods-switcher.png
@@ -14680,6 +14878,7 @@ share/help/zh_CN/gnome-help/backup-what.page
 share/help/zh_CN/gnome-help/backup-where.page
 share/help/zh_CN/gnome-help/backup-why.page
 share/help/zh_CN/gnome-help/bluetooth-connect-device.page
+share/help/zh_CN/gnome-help/bluetooth-device-specific-pairing.page
 share/help/zh_CN/gnome-help/bluetooth-problem-connecting.page
 share/help/zh_CN/gnome-help/bluetooth-remove-connection.page
 share/help/zh_CN/gnome-help/bluetooth-send-file.page
@@ -14729,6 +14928,7 @@ share/help/zh_CN/gnome-help/disk.page
 share/help/zh_CN/gnome-help/display-blank.page
 share/help/zh_CN/gnome-help/display-brightness.page
 share/help/zh_CN/gnome-help/display-dual-monitors.page
+share/help/zh_CN/gnome-help/display-night-light.page
 share/help/zh_CN/gnome-help/figures/audio-volume-high-symbolic.svg
 share/help/zh_CN/gnome-help/figures/audio-volume-low-symbolic.svg
 share/help/zh_CN/gnome-help/figures/audio-volume-medium-symbolic.svg
@@ -14757,7 +14957,9 @@ share/help/zh_CN/gnome-help/figures/color-space.png
 share/help/zh_CN/gnome-help/figures/display-dual-monitors.webm
 share/help/zh_CN/gnome-help/figures/emblem-system-symbolic.svg
 share/help/zh_CN/gnome-help/figures/emblem-system.png
+share/help/zh_CN/gnome-help/figures/emoji-flags-symbolic.svg
 share/help/zh_CN/gnome-help/figures/gnome.png
+share/help/zh_CN/gnome-help/figures/go-down-symbolic.svg
 share/help/zh_CN/gnome-help/figures/go-down.png
 share/help/zh_CN/gnome-help/figures/input-keyboard-symbolic.png
 share/help/zh_CN/gnome-help/figures/input-methods-switcher.png

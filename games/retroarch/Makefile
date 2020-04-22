@@ -33,8 +33,8 @@ WAYLAND_DESC=	Wayland display support
 UDEV_DESC=	udev device hotplug support
 QT_DESC=	Qt based desktop-style GUI
 
-CACA_LIB_DEPENDS= libcaca.so:graphics/libcaca
-CACA_CONFIGURE_ENABLE=  caca
+CACA_LIB_DEPENDS=	libcaca.so:graphics/libcaca
+CACA_CONFIGURE_ENABLE=	caca
 FFMPEG_LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg
 FFMPEG_CONFIGURE_ENABLE=ffmpeg
 OSS_CONFIGURE_ENABLE=	oss
@@ -70,14 +70,14 @@ UDEV_CONFIGURE_ENABLE=	udev
 QT_USES=		qt:5
 QT_USE=			QT=core,gui,widgets,concurrent,network
 QT_CONFIGURE_ENABLE=	qt
-X11_USES=   xorg
-X11_USE=    XORG=x11,xcb,xext,xinerama,xv,xxf86vm,xrandr
+X11_USES=		xorg
+X11_USE=		XORG=x11,xcb,xext,xinerama,xv,xxf86vm,xrandr
 X11_CONFIGURE_ENABLE=	x11
 
 LDFLAGS_i386=	-Wl,-znotext
 CONFIGURE_ARGS+=--enable-threads --disable-discord
 CONFIGURE_ENV+=	MAN_DIR=${MANPREFIX}/man
-SHEBANG_FILES=  libretro-common/glsym/glgen.py libretro-common/glsym/rglgen.py \
+SHEBANG_FILES=	libretro-common/glsym/glgen.py libretro-common/glsym/rglgen.py \
 		tools/cg2glsl.py tools/vulkan_loader_generator.py
 
 USES=		compiler:c++11-lib gmake pkgconfig python:3.6+ shebangfix ssl

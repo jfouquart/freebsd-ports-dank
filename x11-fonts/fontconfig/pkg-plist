@@ -13,7 +13,7 @@ etc/fonts/conf.avail/10-autohint.conf
 etc/fonts/conf.avail/10-hinting-full.conf
 etc/fonts/conf.avail/10-hinting-medium.conf
 etc/fonts/conf.avail/10-hinting-none.conf
-etc/fonts/conf.avail/10-hinting-slight.conf
+etc/fonts/conf.avail/10-hinting-%%PREFERRED_HINTING%%.conf
 etc/fonts/conf.avail/10-no-sub-pixel.conf
 etc/fonts/conf.avail/10-scale-bitmap-fonts.conf
 etc/fonts/conf.avail/10-sub-pixel-bgr.conf

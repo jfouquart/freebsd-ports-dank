@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome3
-PORTVERSION=	3.28
-PORTREVISION=	2
+PORTVERSION=	3.32
 CATEGORIES?=	x11 gnome
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -62,16 +61,13 @@ RUN_DEPENDS+=	epiphany>=3.0.0:www/epiphany \
 		gnome-utils>=3.6.0:deskutils/gnome-utils \
 		file-roller>=3.0.0:archivers/file-roller \
 		evince>=3.0.0:graphics/evince \
-		vino>=3.0.0:net/vino \
-		vinagre>=3.0.0:net/vinagre \
-		gnome-games>=3.0.0:games/gnome-games \
+		gnome-games-meta>=3.0.0:games/gnome-games-meta \
 		totem>=3.0.0:multimedia/totem \
 		gconf-editor>=3.0.0:sysutils/gconf-editor \
 		gdm>=3.0.0:x11/gdm \
 		gnome-color-manager>=0:graphics/gnome-color-manager \
 		evolution>=3.0.0:mail/evolution \
-		cheese>=3.0.0:multimedia/cheese \
-		ekiga:net-im/ekiga
+		cheese>=3.0.0:multimedia/cheese
 
 .endif # !gnome3-lite section
 

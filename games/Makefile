@@ -322,7 +322,7 @@
     SUBDIR += gnarr
     SUBDIR += gnome-2048
     SUBDIR += gnome-chess
-    SUBDIR += gnome-games
+    SUBDIR += gnome-games-meta
     SUBDIR += gnome-klotski
     SUBDIR += gnome-mahjongg
     SUBDIR += gnome-mines
@@ -478,7 +478,11 @@
     SUBDIR += libkmahjongg
     SUBDIR += liblcf
     SUBDIR += libmaitretarot
+    SUBDIR += libmanette
     SUBDIR += libmt_client
+    SUBDIR += libretro-core-info
+    SUBDIR += libretro-shaders-glsl
+    SUBDIR += libretro-shaders-slang
     SUBDIR += libshhcards
     SUBDIR += libtmcg
     SUBDIR += lightsoff
@@ -507,6 +511,7 @@
     SUBDIR += linux-quake4-demo
     SUBDIR += linux-ssamtfe
     SUBDIR += linux-ssamtse
+    SUBDIR += linux-steam-utils
     SUBDIR += linux-unigine-heaven
     SUBDIR += linux-unigine-valley
     SUBDIR += linux-unrealgold
@@ -779,6 +784,7 @@
     SUBDIR += rescue
     SUBDIR += residualvm
     SUBDIR += retroarch
+    SUBDIR += retroarch-assets
     SUBDIR += rezerwar
     SUBDIR += rfksay
     SUBDIR += ri-li

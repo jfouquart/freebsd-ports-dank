@@ -19,8 +19,9 @@ LIB_DEPENDS=	libmozjs-68.so:lang/spidermonkey68 \
 		libffi.so:devel/libffi
 
 USES=		compiler:c++14-lang gettext gnome libtool \
-		localbase meson pkgconfig python:build readline tar:xz
+		localbase meson pkgconfig python:build readline tar:xz xorg
 USE_GNOME=	cairo gdkpixbuf2 gtk30 introspection
+USE_XORG=	x11 xext
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>

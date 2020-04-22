@@ -32,7 +32,7 @@ USE_LDCONFIG=	yes
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 
 MESON_ARGS=	-Dbluez_backend=false
-# CONFIGURE_ENV+=	ac_cv_path_EGREP=${LOCALBASE}/bin/egrep
+SHEBANG_FILES=	tests/tools/manager-file.py
 
 GLIB_SCHEMAS=	org.freedesktop.folks.gschema.xml
 

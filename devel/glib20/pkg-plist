@@ -2,6 +2,7 @@ bin/gapplication
 bin/gdbus
 bin/gdbus-codegen
 bin/gio
+bin/gio-launch-desktop
 bin/gio-querymodules
 bin/glib-compile-resources
 bin/glib-compile-schemas

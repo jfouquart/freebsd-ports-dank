@@ -55,6 +55,7 @@
     SUBDIR += gcalcli
     SUBDIR += genius
     SUBDIR += glabels
+    SUBDIR += gnome-books
     SUBDIR += gnome-calendar
     SUBDIR += gnome-characters
     SUBDIR += gnome-clocks
@@ -82,7 +83,6 @@
     SUBDIR += gnome-shell-extension-windowoverlay-icons
     SUBDIR += gnome-shell-extra-extensions
     SUBDIR += gnome-sound-recorder
-    SUBDIR += gnome-system-log
     SUBDIR += gnome-todo
     SUBDIR += gnome-tweaks
     SUBDIR += gnome-utils
@@ -261,6 +261,7 @@
     SUBDIR += xpostitPlus
     SUBDIR += xrolo
     SUBDIR += xwrits
+    SUBDIR += ydotool
     SUBDIR += zanshin
     SUBDIR += zim
     SUBDIR += znotes

@@ -8,7 +8,7 @@ MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Map application for GNOME 3
+COMMENT=	Map application for GNOME
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -31,12 +31,15 @@ RUN_DEPENDS=	geoclue>=0:net/geoclue
 
 PORTSCOUT=	limitw:1,even
 
-USES=		desktop-file-utils gettext gl gnome meson \
-		pkgconfig tar:xz
+USES=		desktop-file-utils gettext gl gnome localbase meson \
+		pkgconfig python:3.5+,build tar:xz xorg
 USE_GNOME=	cairo gtk30 intltool libxml2
 USE_GL=		egl
 USE_LDCONFIG=	yes
+USE_XORG=	x11 xcomposite xdamage xext xfixes xi xrandr
 INSTALLS_ICONS=	yes
+
+BINARY_ALIAS=	python3=${PYTHON_VERSION}
 
 GLIB_SCHEMAS=	org.gnome.Maps.gschema.xml
 

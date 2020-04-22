@@ -13,7 +13,8 @@ LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		compiler:c11 gettext gmake gnome libtool pkgconfig tar:xz
-USE_GNOME=	glib20 gtk30
+USE_GNOME=	cairo gdkpixbuf2 gtk30
+
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 INSTALL_TARGET=	install-strip

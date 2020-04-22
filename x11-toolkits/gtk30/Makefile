@@ -43,11 +43,13 @@ RUN_DEPENDS+=	hicolor-icon-theme>=0:misc/hicolor-icon-theme \
 		at-spi2-atk>=0:accessibility/at-spi2-atk \
 		librsvg2-rust>=0:graphics/librsvg2-rust
 
+USES=		compiler:c11 gettext gnome meson localbase:ldflags \
+		pathfix perl5 python:3.5+ pkgconfig shared-mime-info tar:xz xorg
 USE_PERL5=	build
 USE_LDCONFIG=	yes
 USE_GNOME=	atk cairo gdkpixbuf2 introspection:build pango
-USES=		compiler:c11 gettext gnome meson localbase:ldflags \
-		pathfix perl5 python:3.5+ pkgconfig shared-mime-info tar:xz
+USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes xdamage \
+		xcomposite
 CPPFLAGS+=	-fno-omit-frame-pointer
 # INSTALLS_ICONS=	yes # <DankBSD> we're the gtk-update-icon-cache, this would be a self dep
 

@@ -231,6 +231,7 @@
     SUBDIR += bingrep
     SUBDIR += binutils
     SUBDIR += bison
+    SUBDIR += bitkeeper
     SUBDIR += blame
     SUBDIR += blitz
     SUBDIR += bloaty
@@ -1174,6 +1175,7 @@
     SUBDIR += libestr
     SUBDIR += libev
     SUBDIR += libevdev
+    SUBDIR += libevdevplus
     SUBDIR += libevent
     SUBDIR += libevt
     SUBDIR += libevtx
@@ -1326,6 +1328,7 @@
     SUBDIR += libshhopt
     SUBDIR += libsigc++12
     SUBDIR += libsigc++20
+    SUBDIR += libsigc++30
     SUBDIR += libsigrok
     SUBDIR += libsigrokdecode
     SUBDIR += libsigscan
@@ -1363,6 +1366,7 @@
     SUBDIR += libublio
     SUBDIR += libubox
     SUBDIR += libudev-devd
+    SUBDIR += libuinputplus
     SUBDIR += libukcprog
     SUBDIR += libunicode
     SUBDIR += libuninum
@@ -4455,6 +4459,7 @@
     SUBDIR += py-hash_ring
     SUBDIR += py-heapdict
     SUBDIR += py-hghooks
+    SUBDIR += py-hglib
     SUBDIR += py-hgtools
     SUBDIR += py-holidays
     SUBDIR += py-http-prompt

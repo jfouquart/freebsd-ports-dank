@@ -40,4 +40,6 @@ post-patch:
 
 .include <bsd.port.mk>
 
+.else
+PORTSCOUT=	ignore:1
 .endif

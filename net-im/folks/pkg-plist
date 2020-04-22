@@ -35,7 +35,6 @@ libdata/pkgconfig/folks-eds.pc
 libdata/pkgconfig/folks-telepathy.pc
 %%TRACKER%%libdata/pkgconfig/folks-tracker.pc
 libdata/pkgconfig/folks.pc
-share/GConf/gsettings/folks.convert
 share/gir-1.0/Folks-0.6.gir
 share/gir-1.0/FolksDummy-0.6.gir
 share/gir-1.0/FolksEds-0.6.gir

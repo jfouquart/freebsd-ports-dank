@@ -2,10 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	yelp-xsl
-PORTVERSION=	3.28.0
+PORTVERSION=	3.32.1
 CATEGORIES=	textproc gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	DocBook XSLT stylesheets for yelp

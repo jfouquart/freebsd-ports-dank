@@ -2,14 +2,13 @@
 # $FreeBSD$
 
 PORTNAME=	bijiben
-PORTVERSION=	3.28.3
-PORTREVISION=	2
+PORTVERSION=	3.32.2
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Note editor designed to remain simple to use
+COMMENT=	GNOME Note editor designed to remain simple to use
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -33,7 +32,7 @@ INSTALLS_ICONS=	yes
 MESON_ARGS=	-Dzeitgeist=true
 SHEBANG_FILES=	${WRKSRC}/build-aux/meson_post_install.py
 
-GLIB_SCHEMAS=	org.gnome.bijiben.gschema.xml \
+GLIB_SCHEMAS=	org.gnome.Notes.gschema.xml \
 		org.gnome.bijiben.enums.xml
 
 .include <bsd.port.mk>

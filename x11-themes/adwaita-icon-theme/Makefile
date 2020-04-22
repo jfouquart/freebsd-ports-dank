@@ -5,7 +5,7 @@ PORTNAME=	adwaita-icon-theme
 PORTVERSION=	3.36.0
 CATEGORIES=	x11-themes gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME Symbolic Icons
